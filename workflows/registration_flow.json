@@ -1,0 +1,61 @@
+{
+  "workflow": "user_registration_and_dashboard",
+  "steps": [
+    {
+      "navigate": "https://sauce-demo.myshopify.com/account/register"
+    },
+    {
+      "capture_locators": {
+        "checkpoint_name": "registration_page_loaded",
+        "description": "Initial registration page state"
+      }
+    },
+    {
+      "fill": {
+        "field_label": "First Name",
+        "value": "Agent1",
+        "find_by": "label"
+      }
+    },
+    {
+      "fill": {
+        "field_label": "Last Name",
+        "value": "Yser1",
+        "find_by": "label"
+      }
+    },
+    {
+      "fill": {
+        "field_label": "Email",
+        "value": "agentuser1@email.com",
+        "find_by": "label"
+      }
+    },
+    {
+      "fill": {
+        "field_label": "Password",
+        "value": "Welcome10",
+        "find_by": "label"
+      }
+    },
+    {
+      "capture_locators": {
+        "checkpoint_name": "form_filled",
+        "description": "All fields populated"
+      }
+    },
+    {
+      "click": {
+        "button_text": "Create",
+        "find_by": "button_text",
+        "wait_for_navigation": true
+      }
+    },
+    {
+      "capture_locators": {
+        "checkpoint_name": "after_submission",
+        "description": "Post-registration state"
+      }
+    }
+  ]
+}

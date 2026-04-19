@@ -1,0 +1,26 @@
+{
+  "page_name": "products_page",
+  "url_pattern": "saucedemo.com/inventory",
+  "elements": {
+    "inventory_list": {
+      "selector": ".inventory_list",
+      "type": "div",
+      "desc": "Products list"
+    },
+    "add_to_cart": {
+      "selector": "button[data-test*=\"add-to-cart\"]",
+      "type": "button",
+      "desc": "Add to cart"
+    },
+    "cart_link": {
+      "selector": "a.shopping_cart_link",
+      "type": "link",
+      "desc": "Cart link"
+    },
+    "title": {
+      "selector": "h3.title",
+      "type": "text",
+      "desc": "Page title"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+ID,Title,Test Steps,Test Data,Expected Result (ER)
+TC01,Verify download of a missing/deleted file,1. Attempt to download a file that has been removed from the server.,missing.pdf,"An error message is displayed (e.g., ""File not found"") rather than a corrupted file."
+TC02,Verify download with no internet connectivity,"1. Initiate download.
+2. Disconnect internet immediately.",any.doc,The browser handles the interruption gracefully (pauses or gives a network error) without crashing.
+TC03,Verify download for unauthorized user,"1. Log in as a user without download permissions.
+2. Attempt to click the download link.",Valid URL but restricted user,Access denied error or button is disabled
+TC04,Verify successful download of a PDF document,"1. Navigate to the documents page.
+2. Click on the ""Download"" button for a PDF file.
+3. Verify file prompt or auto-download.",manual.pdf,"The PDF file downloads successfully, is not corrupted, and content matches the server version."
+TC05,Verify download functionality for different file types,"1. Click download for .zip, .csv, and .docx files respectively.
+2. Click download.","data.zip, report.csv",All file types download with correct extensions and file sizes.
+TC06,Verify download with special characters in file name,1. Locate file 2026@Report#!.pdf.,2026@Report#!.pdf,"File downloads without errors, and the filename is preserved."
+TC07,Verify download for large files,1. Click download for a large file (>100MB).,large.zip (100MB+),The browser does not time out; a progress indicator appears.
+TC08,Verify multiple simultaneous downloads,1. Click download on three different files at the same time.,3 distinct files,All files download successfully without corrupting each other.

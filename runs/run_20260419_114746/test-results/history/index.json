@@ -1,0 +1,3197 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-04-19T06:17:52.438666+00:00",
+  "runs": [
+    {
+      "run_id": "20260419T061752",
+      "started_at": "2026-04-19T06:17:52.438666+00:00",
+      "duration_ms": 17292,
+      "summary": {
+        "total": 127,
+        "passed": 127,
+        "failed": 0,
+        "broken": 0,
+        "skipped": 0,
+        "pass_rate": 100.0
+      },
+      "manifest_path": "20260419T061752/run_manifest.json"
+    }
+  ],
+  "tests": {
+    "tests/test_automation.py::test_cart_operations": {
+      "stable_id": "tests/test_automation.py::test_cart_operations",
+      "display_name": "test_cart_operations",
+      "nodeid": "tests/test_automation.py::test_cart_operations",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 285,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[ACCOUNT_TC_009]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[ACCOUNT_TC_009]",
+      "display_name": "test_login_error_scenarios[ACCOUNT_TC_009]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[ACCOUNT_TC_009]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "ACCOUNT_TC_009",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 110,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[ACCOUNT_TC_018]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[ACCOUNT_TC_018]",
+      "display_name": "test_login_error_scenarios[ACCOUNT_TC_018]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[ACCOUNT_TC_018]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "ACCOUNT_TC_018",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 121,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_002_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_002_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 117,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_002_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_002_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_002_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_002_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_002_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 111,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_003_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_003_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 135,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_003_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_003_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 113,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_003_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_003_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_003_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 106,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_004_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_004_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 106,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_004_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_004_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 182,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_004_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_004_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_004_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 113,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_005_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_005_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 110,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_005_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_005_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 134,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_005_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_005_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_005_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_007_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_007_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 106,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_007_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_007_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 103,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_007_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_007_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_007_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 136,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_008_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_008_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 119,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_008_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_008_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 104,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_008_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_008_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_008_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 155,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_012_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_012_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 124,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_012_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_012_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 128,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_012_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_012_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_012_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 130,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_019_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_019_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 130,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_019_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_019_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 105,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_019_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_019_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_019_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 128,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_021_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_021_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 119,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_021_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_021_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 109,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_021_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_021_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_021_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 122,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_024_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_024_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 123,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_024_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_024_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_024_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_024_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_024_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 118,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_0]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_026_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_026_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 119,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_1]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_026_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_026_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 121,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_2]",
+      "display_name": "test_login_error_scenarios[AUTH_TC_026_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[AUTH_TC_026_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "AUTH_TC_026_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 110,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CART_TC_009]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CART_TC_009]",
+      "display_name": "test_login_error_scenarios[CART_TC_009]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CART_TC_009]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CART_TC_009",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 118,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CART_TC_012]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CART_TC_012]",
+      "display_name": "test_login_error_scenarios[CART_TC_012]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CART_TC_012]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CART_TC_012",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 124,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CART_TC_015]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CART_TC_015]",
+      "display_name": "test_login_error_scenarios[CART_TC_015]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CART_TC_015]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CART_TC_015",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 120,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_0]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_002_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_002_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 113,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_1]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_002_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_002_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 151,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_2]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_002_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_002_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_002_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 122,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_0]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_003_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_003_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_1]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_003_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_003_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 123,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_2]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_003_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_003_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_003_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 196,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_0]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_004_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_004_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 124,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_1]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_004_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_004_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 105,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_2]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_004_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_004_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_004_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 116,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_0]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_007_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_007_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 113,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_1]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_007_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_007_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 130,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_2]",
+      "display_name": "test_login_error_scenarios[CHECKOUT1_TC_007_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT1_TC_007_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT1_TC_007_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 119,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_002]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_002]",
+      "display_name": "test_login_error_scenarios[CHECKOUT_TC_002]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_002]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT_TC_002",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 123,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_004]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_004]",
+      "display_name": "test_login_error_scenarios[CHECKOUT_TC_004]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_004]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT_TC_004",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 118,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_009]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_009]",
+      "display_name": "test_login_error_scenarios[CHECKOUT_TC_009]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_009]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT_TC_009",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 122,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_010]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_010]",
+      "display_name": "test_login_error_scenarios[CHECKOUT_TC_010]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_010]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT_TC_010",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 131,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_011]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_011]",
+      "display_name": "test_login_error_scenarios[CHECKOUT_TC_011]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_011]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT_TC_011",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 125,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_015]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_015]",
+      "display_name": "test_login_error_scenarios[CHECKOUT_TC_015]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_015]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT_TC_015",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 111,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_017]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_017]",
+      "display_name": "test_login_error_scenarios[CHECKOUT_TC_017]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[CHECKOUT_TC_017]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "CHECKOUT_TC_017",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 117,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_001]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_001]",
+      "display_name": "test_login_error_scenarios[ERROR_EDGE_TC_001]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_001]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "ERROR_EDGE_TC_001",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 110,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_007]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_007]",
+      "display_name": "test_login_error_scenarios[ERROR_EDGE_TC_007]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_007]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "ERROR_EDGE_TC_007",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 128,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_013]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_013]",
+      "display_name": "test_login_error_scenarios[ERROR_EDGE_TC_013]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_013]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "ERROR_EDGE_TC_013",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 111,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_015]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_015]",
+      "display_name": "test_login_error_scenarios[ERROR_EDGE_TC_015]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_015]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "ERROR_EDGE_TC_015",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 105,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_020]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_020]",
+      "display_name": "test_login_error_scenarios[ERROR_EDGE_TC_020]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[ERROR_EDGE_TC_020]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "ERROR_EDGE_TC_020",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 114,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_0]",
+      "display_name": "test_login_error_scenarios[HOMEPAGE_TC_013_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "HOMEPAGE_TC_013_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 123,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_1]",
+      "display_name": "test_login_error_scenarios[HOMEPAGE_TC_013_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "HOMEPAGE_TC_013_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 127,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_2]",
+      "display_name": "test_login_error_scenarios[HOMEPAGE_TC_013_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[HOMEPAGE_TC_013_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "HOMEPAGE_TC_013_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_0]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_002_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_002_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 116,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_1]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_002_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_002_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 121,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_2]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_002_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_002_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_002_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_0]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_003_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_003_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 106,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_1]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_003_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_003_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 106,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_2]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_003_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_003_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_003_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 122,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_0]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_004_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_004_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_1]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_004_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_004_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_2]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_004_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_004_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_004_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_0]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_005_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_005_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 124,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_1]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_005_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_005_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_2]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_005_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_005_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_005_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 114,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_0]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_006_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_006_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 107,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_1]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_006_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_006_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 111,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_2]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_006_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_006_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_006_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 111,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_0]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_007_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_007_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 107,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_1]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_007_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_007_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 148,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_2]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_007_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_007_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_007_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 112,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_0]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_010_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_010_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 113,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_1]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_010_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_010_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 181,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_2]",
+      "display_name": "test_login_error_scenarios[LOGIN_TC_010_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[LOGIN_TC_010_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "LOGIN_TC_010_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 139,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[MOBILE_RESP_TC_008]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[MOBILE_RESP_TC_008]",
+      "display_name": "test_login_error_scenarios[MOBILE_RESP_TC_008]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[MOBILE_RESP_TC_008]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "MOBILE_RESP_TC_008",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 121,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PAYMENT_TC_001]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PAYMENT_TC_001]",
+      "display_name": "test_login_error_scenarios[PAYMENT_TC_001]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PAYMENT_TC_001]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PAYMENT_TC_001",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 104,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PAYMENT_TC_010]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PAYMENT_TC_010]",
+      "display_name": "test_login_error_scenarios[PAYMENT_TC_010]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PAYMENT_TC_010]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PAYMENT_TC_010",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_0]",
+      "display_name": "test_login_error_scenarios[PRODUCT_DETAIL_TC_007_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PRODUCT_DETAIL_TC_007_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 114,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_1]",
+      "display_name": "test_login_error_scenarios[PRODUCT_DETAIL_TC_007_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PRODUCT_DETAIL_TC_007_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 116,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_2]",
+      "display_name": "test_login_error_scenarios[PRODUCT_DETAIL_TC_007_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_007_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PRODUCT_DETAIL_TC_007_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 119,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_0]",
+      "display_name": "test_login_error_scenarios[PRODUCT_DETAIL_TC_009_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PRODUCT_DETAIL_TC_009_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 113,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_1]",
+      "display_name": "test_login_error_scenarios[PRODUCT_DETAIL_TC_009_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PRODUCT_DETAIL_TC_009_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 120,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_2]",
+      "display_name": "test_login_error_scenarios[PRODUCT_DETAIL_TC_009_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_009_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PRODUCT_DETAIL_TC_009_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 143,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_013]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_013]",
+      "display_name": "test_login_error_scenarios[PRODUCT_DETAIL_TC_013]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_013]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PRODUCT_DETAIL_TC_013",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 103,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_019]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_019]",
+      "display_name": "test_login_error_scenarios[PRODUCT_DETAIL_TC_019]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[PRODUCT_DETAIL_TC_019]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "PRODUCT_DETAIL_TC_019",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 121,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_02_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_02_0]",
+      "display_name": "test_login_error_scenarios[TC_02_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_02_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_02_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_02_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_02_1]",
+      "display_name": "test_login_error_scenarios[TC_02_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_02_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_02_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 122,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_02_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_02_2]",
+      "display_name": "test_login_error_scenarios[TC_02_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_02_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_02_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 122,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_03_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_03_0]",
+      "display_name": "test_login_error_scenarios[TC_03_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_03_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_03_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 124,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_03_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_03_1]",
+      "display_name": "test_login_error_scenarios[TC_03_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_03_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_03_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 106,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_03_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_03_2]",
+      "display_name": "test_login_error_scenarios[TC_03_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_03_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_03_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 112,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_04_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_04_0]",
+      "display_name": "test_login_error_scenarios[TC_04_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_04_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_04_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 116,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_04_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_04_1]",
+      "display_name": "test_login_error_scenarios[TC_04_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_04_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_04_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 107,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_04_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_04_2]",
+      "display_name": "test_login_error_scenarios[TC_04_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_04_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_04_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 127,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_05_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_05_0]",
+      "display_name": "test_login_error_scenarios[TC_05_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_05_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_05_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 105,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_05_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_05_1]",
+      "display_name": "test_login_error_scenarios[TC_05_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_05_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_05_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 118,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_05_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_05_2]",
+      "display_name": "test_login_error_scenarios[TC_05_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_05_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_05_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 106,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_06_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_06_0]",
+      "display_name": "test_login_error_scenarios[TC_06_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_06_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_06_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 114,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_06_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_06_1]",
+      "display_name": "test_login_error_scenarios[TC_06_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_06_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_06_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 122,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_06_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_06_2]",
+      "display_name": "test_login_error_scenarios[TC_06_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_06_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_06_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 105,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_07_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_07_0]",
+      "display_name": "test_login_error_scenarios[TC_07_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_07_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_07_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 119,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_07_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_07_1]",
+      "display_name": "test_login_error_scenarios[TC_07_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_07_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_07_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 118,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_07_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_07_2]",
+      "display_name": "test_login_error_scenarios[TC_07_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_07_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_07_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 109,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_27_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_27_0]",
+      "display_name": "test_login_error_scenarios[TC_27_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_27_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_27_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 119,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_27_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_27_1]",
+      "display_name": "test_login_error_scenarios[TC_27_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_27_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_27_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 116,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_27_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_27_2]",
+      "display_name": "test_login_error_scenarios[TC_27_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_27_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_27_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 104,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_28_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_28_0]",
+      "display_name": "test_login_error_scenarios[TC_28_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_28_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_28_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 120,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_28_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_28_1]",
+      "display_name": "test_login_error_scenarios[TC_28_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_28_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_28_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 114,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_28_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_28_2]",
+      "display_name": "test_login_error_scenarios[TC_28_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_28_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_28_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 114,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_29_0]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_29_0]",
+      "display_name": "test_login_error_scenarios[TC_29_0]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_29_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_29_0",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 114,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_29_1]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_29_1]",
+      "display_name": "test_login_error_scenarios[TC_29_1]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_29_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_29_1",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 115,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[TC_29_2]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[TC_29_2]",
+      "display_name": "test_login_error_scenarios[TC_29_2]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[TC_29_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_29_2",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 103,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_error_scenarios[UI_UX_TC_005]": {
+      "stable_id": "tests/test_automation.py::test_login_error_scenarios[UI_UX_TC_005]",
+      "display_name": "test_login_error_scenarios[UI_UX_TC_005]",
+      "nodeid": "tests/test_automation.py::test_login_error_scenarios[UI_UX_TC_005]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "UI_UX_TC_005",
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 134,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    },
+    "tests/test_automation.py::test_login_success": {
+      "stable_id": "tests/test_automation.py::test_login_success",
+      "display_name": "test_login_success",
+      "nodeid": "tests/test_automation.py::test_login_success",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "runs": [
+        {
+          "run_id": "20260419T061752",
+          "started_at": "2026-04-19T06:17:52.438666+00:00",
+          "status": "passed",
+          "duration_ms": 2104,
+          "failure_message": "",
+          "artifacts": {
+            "screenshot": null,
+            "trace": null,
+            "video": []
+          },
+          "page": {
+            "url": "-"
+          }
+        }
+      ]
+    }
+  }
+}

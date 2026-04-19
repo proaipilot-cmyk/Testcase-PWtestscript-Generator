@@ -1,0 +1,113 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - search:
+          - button "Submit" [ref=e6] [cursor=pointer]
+          - textbox "Search" [ref=e7]
+      - navigation [ref=e9]:
+        - link "Search" [ref=e10] [cursor=pointer]:
+          - /url: /search
+        - link "About Us" [ref=e11] [cursor=pointer]:
+          - /url: /pages/about-us
+        - link "Log In" [ref=e12] [cursor=pointer]:
+          - /url: /account/login
+        - link "Sign up" [ref=e13] [cursor=pointer]:
+          - /url: /account/register
+      - generic [ref=e15]:
+        - link "My Cart (0)" [ref=e16] [cursor=pointer]:
+          - /url: "#"
+        - link "Check Out" [ref=e17] [cursor=pointer]:
+          - /url: /cart
+    - generic [ref=e20]:
+      - heading "Sauce Demo" [level=1] [ref=e22]:
+        - link "Sauce Demo" [ref=e23] [cursor=pointer]:
+          - /url: /
+          - img "Sauce Demo" [ref=e24]
+      - heading "Just a demo site showing off what Sauce can do." [level=3] [ref=e27]
+  - generic [ref=e28]:
+    - navigation [ref=e30]:
+      - list [ref=e31]:
+        - listitem [ref=e32]:
+          - link "Home" [ref=e33] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e34]:
+          - link "Catalog" [ref=e35] [cursor=pointer]:
+            - /url: /collections/all
+        - listitem [ref=e36]:
+          - link "Blog" [ref=e37] [cursor=pointer]:
+            - /url: /blogs/news
+        - listitem [ref=e38]:
+          - link "About Us" [ref=e39] [cursor=pointer]:
+            - /url: /pages/about-us
+        - listitem [ref=e40]:
+          - link "Wish list" [ref=e41] [cursor=pointer]:
+            - /url: "#sauce-show-wish-list"
+        - listitem [ref=e42]:
+          - link "Refer a friend" [ref=e43] [cursor=pointer]:
+            - /url: "#sauce-show-refer-friend"
+      - generic [ref=e44]:
+        - link [ref=e45] [cursor=pointer]:
+          - /url: http://www.facebook.com/shopify
+        - link [ref=e46] [cursor=pointer]:
+          - /url: http://www.twitter.com/sauce_io
+        - link [ref=e47] [cursor=pointer]:
+          - /url: http://www.instagram.com/shopify
+        - link [ref=e48] [cursor=pointer]:
+          - /url: http://www.pinterest.com/chrisjhoughton/awesome-facebook-integration/
+        - link [ref=e49] [cursor=pointer]:
+          - /url: /blogs/news.atom
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - link "Home" [ref=e53] [cursor=pointer]:
+          - /url: /
+        - text: —
+        - link "Register" [ref=e54] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e56]:
+        - heading "Create Account" [level=1] [ref=e57]
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: First Name
+            - textbox [ref=e61]
+          - generic [ref=e62]:
+            - generic [ref=e63]: Last Name
+            - textbox [ref=e64]
+          - generic [ref=e65]:
+            - generic [ref=e66]: Email Address
+            - textbox [ref=e67]
+          - generic [ref=e68]:
+            - generic [ref=e69]: Password
+            - textbox [ref=e70]
+          - button "Create" [ref=e72] [cursor=pointer]
+    - contentinfo [ref=e73]:
+      - generic [ref=e74]:
+        - navigation [ref=e76]:
+          - heading "Footer" [level=2] [ref=e77]
+          - link "Search" [ref=e78] [cursor=pointer]:
+            - /url: /search
+          - link "About Us" [ref=e79] [cursor=pointer]:
+            - /url: /pages/about-us
+        - generic [ref=e81]:
+          - heading "About Us" [level=2] [ref=e82]
+          - paragraph [ref=e84]:
+            - strong [ref=e85]:
+              - text: This is a demo site created for
+              - link "Sauce" [ref=e86] [cursor=pointer]:
+                - /url: http://sauceapp.io
+            - text: ", an awesome new way to make your Shopify site social. Sauce allows you to let customers to share what they purchase to their friends, and see what their friends have purchased or \"wanted\" on your store."
+        - generic [ref=e88]:
+          - img "We accept Amex" [ref=e89]
+          - img "We accept Visa" [ref=e90]
+          - img "We accept Mastercard" [ref=e91]
+      - generic [ref=e92]:
+        - generic [ref=e94]:
+          - text: Copyright © 2026 Sauce Demo.
+          - link "Shopping Cart by Shopify" [ref=e95] [cursor=pointer]:
+            - /url: https://www.shopify.co.uk/tour/shopping-cart?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+          - text: .
+        - navigation [ref=e97]:
+          - link "Search" [ref=e98] [cursor=pointer]:
+            - /url: /search
+          - link "About Us" [ref=e99] [cursor=pointer]:
+            - /url: /pages/about-us

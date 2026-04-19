@@ -1,0 +1,26 @@
+{
+  "page_name": "login_page",
+  "url_pattern": "saucedemo.com",
+  "elements": {
+    "username": {
+      "selector": "input[data-test=\"username\"]",
+      "type": "input",
+      "desc": "Username input"
+    },
+    "password": {
+      "selector": "input[data-test=\"password\"]",
+      "type": "input",
+      "desc": "Password input"
+    },
+    "login_button": {
+      "selector": "input[data-test=\"login-button\"]",
+      "type": "button",
+      "desc": "Login submit"
+    },
+    "error_message": {
+      "selector": "h3[data-test=\"error\"]",
+      "type": "text",
+      "desc": "Error display"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+// {
+// 	"servers": {
+// 		"microsoft/playwright-mcp": {
+// 			"type": "stdio",
+// 			"command": "npx",
+// 			"args": [
+// 				"@playwright/mcp@latest"
+// 			],
+// 			"gallery": "https://api.mcp.github.com",
+// 			"version": "0.0.1-seed"
+// 		},
+
+// 	"inputs": []
+// }
+
+{
+  "servers": {
+    "playwright-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  },
+  "inputs": [
+    {
+      "id": "navigate",
+      "type": "command",
+      "command": "browser_navigate",
+      "args": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "snapshot",
+      "type": "command",
+      "command": "browser_snapshot",
+      "args": [
+        {
+          "name": "filename",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "ref",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "selector",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "depth",
+          "type": "number",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "capture_url_then_snapshot",
+      "type": "command",
+      "command": "browser_run_code",
+      "args": [
+        {
+          "name": "code",
+          "type": "string",
+          "required": false,
+          "description": "Optional inline JS to run. If omitted, provide `url` below and the default code navigates then snapshots."
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Optional URL to navigate to before snapshot (used by default code)."
+        },
+        {
+          "name": "filename",
+          "type": "string",
+          "required": false,
+          "description": "Optional filename to save the snapshot when using default code."
+        }
+      ]
+    },
+    {
+      "id": "capture_with_locators",
+      "type": "command",
+      "command": "browser_run_code",
+      "args": [
+        {
+          "name": "code",
+          "type": "string",
+          "required": true,
+          "description": "Python command to run enrich_snapshot_with_locators.py. Example: `python tools/enrich_snapshot_with_locators.py https://example.com`"
+        }
+      ]
+    }
+  ]
+}

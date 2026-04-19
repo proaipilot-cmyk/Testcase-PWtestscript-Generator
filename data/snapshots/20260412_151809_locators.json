@@ -1,0 +1,1948 @@
+{
+  "metadata": {
+    "extracted_at": "2026-04-12T15:18:09.857497",
+    "url": "https://sauce-demo.myshopify.com/account/register",
+    "title": "Create Account \u2013 Sauce Demo",
+    "total_elements": 38,
+    "workflow_steps": 3
+  },
+  "workflow_checkpoints": [
+    {
+      "step": 2,
+      "checkpoint": "registration_page_loaded",
+      "url": "https://sauce-demo.myshopify.com/account/register",
+      "title": "Create Account \u2013 Sauce Demo",
+      "locators_count": 36
+    },
+    {
+      "step": 7,
+      "checkpoint": "form_filled",
+      "url": "https://sauce-demo.myshopify.com/account/register",
+      "title": "Create Account \u2013 Sauce Demo",
+      "locators_count": 38
+    },
+    {
+      "step": 9,
+      "checkpoint": "after_submission",
+      "url": "https://sauce-demo.myshopify.com/account/register",
+      "title": "Create Account \u2013 Sauce Demo",
+      "locators_count": 38
+    }
+  ],
+  "locators_by_type": {
+    "form": [
+      {
+        "element_id": "elem_0",
+        "tag_name": "form",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "search-form",
+          "type": "ref: <Node>",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": "search",
+          "title": ""
+        },
+        "locators": [
+          "locator(\".search-form\")"
+        ],
+        "best_locator": "locator(\".search-form\")",
+        "element_type": "form"
+      },
+      {
+        "element_id": "elem_28",
+        "tag_name": "form",
+        "label": null,
+        "text_content": "First Name\n\t        \n\t      \n\t      \n\t        Last Name\n\t        \n\t      \n\t      \n\t        Email Address\n\t        \n\t      \n\t      \n\t        Password",
+        "attributes": {
+          "id": "create_customer",
+          "name": "",
+          "class": "",
+          "type": null,
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#create_customer\")",
+          "getByRole(\"form\", { name: \"First Name\n\t        \n\t      \n\t      \n\t        Last\" })"
+        ],
+        "best_locator": "locator(\"#create_customer\")",
+        "element_type": "form"
+      }
+    ],
+    "form_field": [
+      {
+        "element_id": "elem_2",
+        "tag_name": "input",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "search-submit",
+          "name": "",
+          "class": "icon ",
+          "type": "submit",
+          "value": "",
+          "placeholder": "",
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#search-submit\")",
+          "locator(\".icon.\")"
+        ],
+        "best_locator": "locator(\"#search-submit\")",
+        "element_type": "form_field"
+      },
+      {
+        "element_id": "elem_3",
+        "tag_name": "input",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "search-field",
+          "name": "q",
+          "class": "search",
+          "type": "text",
+          "value": "",
+          "placeholder": "Search",
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#search-field\")",
+          "locator(\"[name=\\\"q\\\"]\")",
+          "locator(\"[placeholder=\\\"Search\\\"]\")",
+          "locator(\".search\")"
+        ],
+        "best_locator": "locator(\"#search-field\")",
+        "element_type": "form_field"
+      },
+      {
+        "element_id": "elem_31",
+        "tag_name": "input",
+        "label": "First Name",
+        "text_content": "",
+        "attributes": {
+          "id": "first_name",
+          "name": "customer[first_name]",
+          "class": "long",
+          "type": "text",
+          "value": "Agent1",
+          "placeholder": "",
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#first_name\")",
+          "locator(\"[name=\\\"customer[first_name]\\\"]\")",
+          "locator(\".long\")"
+        ],
+        "best_locator": "locator(\"#first_name\")",
+        "element_type": "form_field"
+      },
+      {
+        "element_id": "elem_32",
+        "tag_name": "input",
+        "label": "Last Name",
+        "text_content": "",
+        "attributes": {
+          "id": "last_name",
+          "name": "customer[last_name]",
+          "class": "long",
+          "type": "text",
+          "value": "Yser1",
+          "placeholder": "",
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#last_name\")",
+          "locator(\"[name=\\\"customer[last_name]\\\"]\")",
+          "locator(\".long\")"
+        ],
+        "best_locator": "locator(\"#last_name\")",
+        "element_type": "form_field"
+      },
+      {
+        "element_id": "elem_33",
+        "tag_name": "input",
+        "label": "Email Address",
+        "text_content": "",
+        "attributes": {
+          "id": "email",
+          "name": "customer[email]",
+          "class": "long",
+          "type": "email",
+          "value": "agentuser1@email.com",
+          "placeholder": "",
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#email\")",
+          "locator(\"[name=\\\"customer[email]\\\"]\")",
+          "locator(\".long\")"
+        ],
+        "best_locator": "locator(\"#email\")",
+        "element_type": "form_field"
+      },
+      {
+        "element_id": "elem_34",
+        "tag_name": "input",
+        "label": "Password",
+        "text_content": "",
+        "attributes": {
+          "id": "password",
+          "name": "customer[password]",
+          "class": "long",
+          "type": "password",
+          "value": "Welcome10",
+          "placeholder": "",
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#password\")",
+          "locator(\"[name=\\\"customer[password]\\\"]\")",
+          "locator(\".long\")"
+        ],
+        "best_locator": "locator(\"#password\")",
+        "element_type": "form_field"
+      },
+      {
+        "element_id": "elem_35",
+        "tag_name": "input",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "submit",
+          "value": "Create",
+          "placeholder": "",
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [],
+        "best_locator": null,
+        "element_type": "form_field"
+      }
+    ],
+    "link": [
+      {
+        "element_id": "elem_4",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Search",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Search\" })",
+          "locator(\"text=Search\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Search\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_5",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "About Us",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"About Us\" })",
+          "locator(\"text=About Us\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"About Us\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_6",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Log In",
+        "attributes": {
+          "id": "customer_login_link",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#customer_login_link\")",
+          "getByRole(\"link\", { name: \"Log In\" })",
+          "locator(\"text=Log In\")"
+        ],
+        "best_locator": "locator(\"#customer_login_link\")",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_7",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Sign up",
+        "attributes": {
+          "id": "customer_register_link",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\"#customer_register_link\")",
+          "getByRole(\"link\", { name: \"Sign up\" })",
+          "locator(\"text=Sign up\")"
+        ],
+        "best_locator": "locator(\"#customer_register_link\")",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_8",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "My Cart (0)",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "toggle-drawer cart desktop ",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"My Cart (0)\" })",
+          "locator(\".toggle-drawer.cart.desktop.\")",
+          "locator(\"text=My Cart (0)\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"My Cart (0)\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_10",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Check Out",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "checkout",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Check Out\" })",
+          "locator(\".checkout\")",
+          "locator(\"text=Check Out\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Check Out\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_11",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [],
+        "best_locator": null,
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_13",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Home",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Home\" })",
+          "locator(\"text=Home\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Home\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_14",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Catalog",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Catalog\" })",
+          "locator(\"text=Catalog\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Catalog\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_15",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Blog",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Blog\" })",
+          "locator(\"text=Blog\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Blog\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_16",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "About Us",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"About Us\" })",
+          "locator(\"text=About Us\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"About Us\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_17",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Wish list",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Wish list\" })",
+          "locator(\"text=Wish list\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Wish list\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_18",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Refer a friend",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Refer a friend\" })",
+          "locator(\"text=Refer a friend\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Refer a friend\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_21",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "facebook ",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\".facebook.\")"
+        ],
+        "best_locator": "locator(\".facebook.\")",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_22",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "twitter ",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\".twitter.\")"
+        ],
+        "best_locator": "locator(\".twitter.\")",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_23",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "instagram ",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\".instagram.\")"
+        ],
+        "best_locator": "locator(\".instagram.\")",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_24",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "pinterest ",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\".pinterest.\")"
+        ],
+        "best_locator": "locator(\".pinterest.\")",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_25",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "rss ",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "locator(\".rss.\")"
+        ],
+        "best_locator": "locator(\".rss.\")",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_26",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Home",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Home\" })",
+          "locator(\"text=Home\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Home\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_27",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Register",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "active",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Register\" })",
+          "locator(\".active\")",
+          "locator(\"text=Register\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Register\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_38",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Search",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Search\" })",
+          "locator(\"text=Search\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Search\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_39",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "About Us",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"About Us\" })",
+          "locator(\"text=About Us\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"About Us\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_40",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Sauce",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": "Sauce"
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Sauce\" })",
+          "locator(\"text=Sauce\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Sauce\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_41",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Shopping Cart by Shopify",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Shopping Cart by Shopify\" })",
+          "locator(\"text=Shopping Cart by Shopify\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Shopping Cart by Shopify\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_42",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Search",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": "Search"
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Search\" })",
+          "locator(\"text=Search\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Search\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_43",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "About Us",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": "About Us"
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"About Us\" })",
+          "locator(\"text=About Us\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"About Us\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_45",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Privacy",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "privacy",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Privacy\" })",
+          "locator(\".privacy\")",
+          "locator(\"text=Privacy\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Privacy\" })",
+        "element_type": "link"
+      },
+      {
+        "element_id": "elem_46",
+        "tag_name": "a",
+        "label": null,
+        "text_content": "Terms",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "terms",
+          "type": "",
+          "value": null,
+          "placeholder": null,
+          "data-testid": null,
+          "aria-label": null,
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByRole(\"link\", { name: \"Terms\" })",
+          "locator(\".terms\")",
+          "locator(\"text=Terms\")"
+        ],
+        "best_locator": "getByRole(\"link\", { name: \"Terms\" })",
+        "element_type": "link"
+      }
+    ],
+    "button": [
+      {
+        "element_id": "elem_44",
+        "tag_name": "button",
+        "label": null,
+        "text_content": "",
+        "attributes": {
+          "id": "",
+          "name": "",
+          "class": "group relative z-50 flex size-6 cursor-pointer rounded-max",
+          "type": "button",
+          "value": "",
+          "placeholder": null,
+          "data-testid": "authorize-modal-close-button",
+          "aria-label": "Close",
+          "aria-labelledby": null,
+          "role": null,
+          "title": ""
+        },
+        "locators": [
+          "getByTestId(\"authorize-modal-close-button\")",
+          "getByLabel(\"Close\")",
+          "locator(\".group.relative.z-50.flex.size-6.cursor-pointer.rounded-max\")"
+        ],
+        "best_locator": "getByTestId(\"authorize-modal-close-button\")",
+        "element_type": "button"
+      }
+    ]
+  },
+  "all_locators": {
+    "elem_0": {
+      "element_id": "elem_0",
+      "tag_name": "form",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "search-form",
+        "type": "ref: <Node>",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": "search",
+        "title": ""
+      },
+      "locators": [
+        "locator(\".search-form\")"
+      ],
+      "best_locator": "locator(\".search-form\")",
+      "element_type": "form"
+    },
+    "elem_2": {
+      "element_id": "elem_2",
+      "tag_name": "input",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "search-submit",
+        "name": "",
+        "class": "icon ",
+        "type": "submit",
+        "value": "",
+        "placeholder": "",
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#search-submit\")",
+        "locator(\".icon.\")"
+      ],
+      "best_locator": "locator(\"#search-submit\")",
+      "element_type": "form_field"
+    },
+    "elem_3": {
+      "element_id": "elem_3",
+      "tag_name": "input",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "search-field",
+        "name": "q",
+        "class": "search",
+        "type": "text",
+        "value": "",
+        "placeholder": "Search",
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#search-field\")",
+        "locator(\"[name=\\\"q\\\"]\")",
+        "locator(\"[placeholder=\\\"Search\\\"]\")",
+        "locator(\".search\")"
+      ],
+      "best_locator": "locator(\"#search-field\")",
+      "element_type": "form_field"
+    },
+    "elem_4": {
+      "element_id": "elem_4",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Search",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Search\" })",
+        "locator(\"text=Search\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Search\" })",
+      "element_type": "link"
+    },
+    "elem_5": {
+      "element_id": "elem_5",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "About Us",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"About Us\" })",
+        "locator(\"text=About Us\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"About Us\" })",
+      "element_type": "link"
+    },
+    "elem_6": {
+      "element_id": "elem_6",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Log In",
+      "attributes": {
+        "id": "customer_login_link",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#customer_login_link\")",
+        "getByRole(\"link\", { name: \"Log In\" })",
+        "locator(\"text=Log In\")"
+      ],
+      "best_locator": "locator(\"#customer_login_link\")",
+      "element_type": "link"
+    },
+    "elem_7": {
+      "element_id": "elem_7",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Sign up",
+      "attributes": {
+        "id": "customer_register_link",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#customer_register_link\")",
+        "getByRole(\"link\", { name: \"Sign up\" })",
+        "locator(\"text=Sign up\")"
+      ],
+      "best_locator": "locator(\"#customer_register_link\")",
+      "element_type": "link"
+    },
+    "elem_8": {
+      "element_id": "elem_8",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "My Cart (0)",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "toggle-drawer cart desktop ",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"My Cart (0)\" })",
+        "locator(\".toggle-drawer.cart.desktop.\")",
+        "locator(\"text=My Cart (0)\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"My Cart (0)\" })",
+      "element_type": "link"
+    },
+    "elem_10": {
+      "element_id": "elem_10",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Check Out",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "checkout",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Check Out\" })",
+        "locator(\".checkout\")",
+        "locator(\"text=Check Out\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Check Out\" })",
+      "element_type": "link"
+    },
+    "elem_11": {
+      "element_id": "elem_11",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [],
+      "best_locator": null,
+      "element_type": "link"
+    },
+    "elem_13": {
+      "element_id": "elem_13",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Home",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Home\" })",
+        "locator(\"text=Home\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Home\" })",
+      "element_type": "link"
+    },
+    "elem_14": {
+      "element_id": "elem_14",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Catalog",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Catalog\" })",
+        "locator(\"text=Catalog\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Catalog\" })",
+      "element_type": "link"
+    },
+    "elem_15": {
+      "element_id": "elem_15",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Blog",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Blog\" })",
+        "locator(\"text=Blog\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Blog\" })",
+      "element_type": "link"
+    },
+    "elem_16": {
+      "element_id": "elem_16",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "About Us",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"About Us\" })",
+        "locator(\"text=About Us\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"About Us\" })",
+      "element_type": "link"
+    },
+    "elem_17": {
+      "element_id": "elem_17",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Wish list",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Wish list\" })",
+        "locator(\"text=Wish list\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Wish list\" })",
+      "element_type": "link"
+    },
+    "elem_18": {
+      "element_id": "elem_18",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Refer a friend",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Refer a friend\" })",
+        "locator(\"text=Refer a friend\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Refer a friend\" })",
+      "element_type": "link"
+    },
+    "elem_21": {
+      "element_id": "elem_21",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "facebook ",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\".facebook.\")"
+      ],
+      "best_locator": "locator(\".facebook.\")",
+      "element_type": "link"
+    },
+    "elem_22": {
+      "element_id": "elem_22",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "twitter ",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\".twitter.\")"
+      ],
+      "best_locator": "locator(\".twitter.\")",
+      "element_type": "link"
+    },
+    "elem_23": {
+      "element_id": "elem_23",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "instagram ",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\".instagram.\")"
+      ],
+      "best_locator": "locator(\".instagram.\")",
+      "element_type": "link"
+    },
+    "elem_24": {
+      "element_id": "elem_24",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "pinterest ",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\".pinterest.\")"
+      ],
+      "best_locator": "locator(\".pinterest.\")",
+      "element_type": "link"
+    },
+    "elem_25": {
+      "element_id": "elem_25",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "rss ",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\".rss.\")"
+      ],
+      "best_locator": "locator(\".rss.\")",
+      "element_type": "link"
+    },
+    "elem_26": {
+      "element_id": "elem_26",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Home",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Home\" })",
+        "locator(\"text=Home\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Home\" })",
+      "element_type": "link"
+    },
+    "elem_27": {
+      "element_id": "elem_27",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Register",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "active",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Register\" })",
+        "locator(\".active\")",
+        "locator(\"text=Register\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Register\" })",
+      "element_type": "link"
+    },
+    "elem_28": {
+      "element_id": "elem_28",
+      "tag_name": "form",
+      "label": null,
+      "text_content": "First Name\n\t        \n\t      \n\t      \n\t        Last Name\n\t        \n\t      \n\t      \n\t        Email Address\n\t        \n\t      \n\t      \n\t        Password",
+      "attributes": {
+        "id": "create_customer",
+        "name": "",
+        "class": "",
+        "type": null,
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#create_customer\")",
+        "getByRole(\"form\", { name: \"First Name\n\t        \n\t      \n\t      \n\t        Last\" })"
+      ],
+      "best_locator": "locator(\"#create_customer\")",
+      "element_type": "form"
+    },
+    "elem_31": {
+      "element_id": "elem_31",
+      "tag_name": "input",
+      "label": "First Name",
+      "text_content": "",
+      "attributes": {
+        "id": "first_name",
+        "name": "customer[first_name]",
+        "class": "long",
+        "type": "text",
+        "value": "Agent1",
+        "placeholder": "",
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#first_name\")",
+        "locator(\"[name=\\\"customer[first_name]\\\"]\")",
+        "locator(\".long\")"
+      ],
+      "best_locator": "locator(\"#first_name\")",
+      "element_type": "form_field"
+    },
+    "elem_32": {
+      "element_id": "elem_32",
+      "tag_name": "input",
+      "label": "Last Name",
+      "text_content": "",
+      "attributes": {
+        "id": "last_name",
+        "name": "customer[last_name]",
+        "class": "long",
+        "type": "text",
+        "value": "Yser1",
+        "placeholder": "",
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#last_name\")",
+        "locator(\"[name=\\\"customer[last_name]\\\"]\")",
+        "locator(\".long\")"
+      ],
+      "best_locator": "locator(\"#last_name\")",
+      "element_type": "form_field"
+    },
+    "elem_33": {
+      "element_id": "elem_33",
+      "tag_name": "input",
+      "label": "Email Address",
+      "text_content": "",
+      "attributes": {
+        "id": "email",
+        "name": "customer[email]",
+        "class": "long",
+        "type": "email",
+        "value": "agentuser1@email.com",
+        "placeholder": "",
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#email\")",
+        "locator(\"[name=\\\"customer[email]\\\"]\")",
+        "locator(\".long\")"
+      ],
+      "best_locator": "locator(\"#email\")",
+      "element_type": "form_field"
+    },
+    "elem_34": {
+      "element_id": "elem_34",
+      "tag_name": "input",
+      "label": "Password",
+      "text_content": "",
+      "attributes": {
+        "id": "password",
+        "name": "customer[password]",
+        "class": "long",
+        "type": "password",
+        "value": "Welcome10",
+        "placeholder": "",
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "locator(\"#password\")",
+        "locator(\"[name=\\\"customer[password]\\\"]\")",
+        "locator(\".long\")"
+      ],
+      "best_locator": "locator(\"#password\")",
+      "element_type": "form_field"
+    },
+    "elem_35": {
+      "element_id": "elem_35",
+      "tag_name": "input",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "submit",
+        "value": "Create",
+        "placeholder": "",
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [],
+      "best_locator": null,
+      "element_type": "form_field"
+    },
+    "elem_38": {
+      "element_id": "elem_38",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Search",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Search\" })",
+        "locator(\"text=Search\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Search\" })",
+      "element_type": "link"
+    },
+    "elem_39": {
+      "element_id": "elem_39",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "About Us",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"About Us\" })",
+        "locator(\"text=About Us\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"About Us\" })",
+      "element_type": "link"
+    },
+    "elem_40": {
+      "element_id": "elem_40",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Sauce",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": "Sauce"
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Sauce\" })",
+        "locator(\"text=Sauce\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Sauce\" })",
+      "element_type": "link"
+    },
+    "elem_41": {
+      "element_id": "elem_41",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Shopping Cart by Shopify",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Shopping Cart by Shopify\" })",
+        "locator(\"text=Shopping Cart by Shopify\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Shopping Cart by Shopify\" })",
+      "element_type": "link"
+    },
+    "elem_42": {
+      "element_id": "elem_42",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Search",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": "Search"
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Search\" })",
+        "locator(\"text=Search\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Search\" })",
+      "element_type": "link"
+    },
+    "elem_43": {
+      "element_id": "elem_43",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "About Us",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": "About Us"
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"About Us\" })",
+        "locator(\"text=About Us\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"About Us\" })",
+      "element_type": "link"
+    },
+    "elem_44": {
+      "element_id": "elem_44",
+      "tag_name": "button",
+      "label": null,
+      "text_content": "",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "group relative z-50 flex size-6 cursor-pointer rounded-max",
+        "type": "button",
+        "value": "",
+        "placeholder": null,
+        "data-testid": "authorize-modal-close-button",
+        "aria-label": "Close",
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByTestId(\"authorize-modal-close-button\")",
+        "getByLabel(\"Close\")",
+        "locator(\".group.relative.z-50.flex.size-6.cursor-pointer.rounded-max\")"
+      ],
+      "best_locator": "getByTestId(\"authorize-modal-close-button\")",
+      "element_type": "button"
+    },
+    "elem_45": {
+      "element_id": "elem_45",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Privacy",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "privacy",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Privacy\" })",
+        "locator(\".privacy\")",
+        "locator(\"text=Privacy\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Privacy\" })",
+      "element_type": "link"
+    },
+    "elem_46": {
+      "element_id": "elem_46",
+      "tag_name": "a",
+      "label": null,
+      "text_content": "Terms",
+      "attributes": {
+        "id": "",
+        "name": "",
+        "class": "terms",
+        "type": "",
+        "value": null,
+        "placeholder": null,
+        "data-testid": null,
+        "aria-label": null,
+        "aria-labelledby": null,
+        "role": null,
+        "title": ""
+      },
+      "locators": [
+        "getByRole(\"link\", { name: \"Terms\" })",
+        "locator(\".terms\")",
+        "locator(\"text=Terms\")"
+      ],
+      "best_locator": "getByRole(\"link\", { name: \"Terms\" })",
+      "element_type": "link"
+    }
+  }
+}

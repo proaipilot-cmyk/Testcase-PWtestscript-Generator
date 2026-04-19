@@ -1,0 +1,103 @@
+[
+  {
+    "id": "TC01",
+    "title": "Verify download of a missing/deleted file",
+    "precondition": "",
+    "steps": [
+      "Attempt to download a file that has been removed from the server."
+    ],
+    "test_data": {},
+    "expected_result": "An error message is displayed (e.g., \"File not found\") rather than a corrupted file.",
+    "row_number": 2,
+    "human_approval": "pending"
+  },
+  {
+    "id": "TC02",
+    "title": "Verify download with no internet connectivity",
+    "precondition": "",
+    "steps": [
+      "Initiate download.",
+      "Disconnect internet immediately."
+    ],
+    "test_data": {},
+    "expected_result": "The browser handles the interruption gracefully (pauses or gives a network error) without crashing.",
+    "row_number": 3,
+    "human_approval": "pending"
+  },
+  {
+    "id": "TC03",
+    "title": "Verify download for unauthorized user",
+    "precondition": "",
+    "steps": [
+      "Log in as a user without download permissions.",
+      "Attempt to click the download link."
+    ],
+    "test_data": {},
+    "expected_result": "Access denied error or button is disabled",
+    "row_number": 4,
+    "human_approval": "pending"
+  },
+  {
+    "id": "TC04",
+    "title": "Verify successful download of a PDF document",
+    "precondition": "",
+    "steps": [
+      "Navigate to the documents page.",
+      "Click on the \"Download\" button for a PDF file.",
+      "Verify file prompt or auto-download."
+    ],
+    "test_data": {},
+    "expected_result": "The PDF file downloads successfully, is not corrupted, and content matches the server version.",
+    "row_number": 5,
+    "human_approval": "pending"
+  },
+  {
+    "id": "TC05",
+    "title": "Verify download functionality for different file types",
+    "precondition": "",
+    "steps": [
+      "Click download for .zip, .csv, and .docx files respectively.",
+      "Click download."
+    ],
+    "test_data": {},
+    "expected_result": "All file types download with correct extensions and file sizes.",
+    "row_number": 6,
+    "human_approval": "pending"
+  },
+  {
+    "id": "TC06",
+    "title": "Verify download with special characters in file name",
+    "precondition": "",
+    "steps": [
+      "Locate file\u00a02026@Report#!.pdf."
+    ],
+    "test_data": {},
+    "expected_result": "File downloads without errors, and the filename is preserved.",
+    "row_number": 7,
+    "human_approval": "pending"
+  },
+  {
+    "id": "TC07",
+    "title": "Verify download for large files",
+    "precondition": "",
+    "steps": [
+      "Click download for a large file (>100MB)."
+    ],
+    "test_data": {},
+    "expected_result": "The browser does not time out; a progress indicator appears.",
+    "row_number": 8,
+    "human_approval": "pending"
+  },
+  {
+    "id": "TC08",
+    "title": "Verify multiple simultaneous downloads",
+    "precondition": "",
+    "steps": [
+      "Click download on three different files at the same time."
+    ],
+    "test_data": {},
+    "expected_result": "All files download successfully without corrupting each other.",
+    "row_number": 9,
+    "human_approval": "pending"
+  }
+]

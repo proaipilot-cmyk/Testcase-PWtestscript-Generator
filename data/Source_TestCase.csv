@@ -1,0 +1,793 @@
+ID,Title,Pre-condition,Test Steps,Test Data,Expected Result (ER),
+TC_01,Verify that the user is able to login successfully with valid credentials,User is on the login page,"1. Launch browser and navigate to Sauce Demo URL
+2. Enter valid username
+3. Enter valid password
+4. Click on Login button","Username: standard_user
+Password: secret_sauce",User is redirected to Products page and inventory items are displayed,
+TC_02,Verify that login is denied for locked out user,User is on the login page,"1. Enter Username: locked_out_user
+2. Enter Password: secret_sauce
+3. Click Login button","Username: locked_out_user
+Password: secret_sauce","Error message displayed: ""Sorry, this user has been locked out.""",
+TC_03,Verify that login fails with invalid username,User is on the login page,"1. Enter invalid username
+2. Enter valid password
+3. Click Login","Username: invalid_user
+Password: secret_sauce","Error message: ""Epic sadface: Username and password do not match any user in this service""",
+TC_04,Verify that login fails with invalid password,User is on the login page,"1. Enter valid username
+2. Enter invalid password
+3. Click Login","Username: standard_user
+Password: wrong_pass","Error message: ""Epic sadface: Username and password do not match any user in this service""",
+TC_05,Verify that login fails when username is empty,User is on the login page,"1. Leave username field empty
+2. Enter any password
+3. Click Login","Username: (empty)
+Password: secret_sauce","Error message: ""Epic sadface: Username is required""",
+TC_06,Verify that login fails when password is empty,User is on the login page,"1. Enter valid username
+2. Leave password field empty
+3. Click Login","Username: standard_user
+Password: (empty)","Error message: ""Epic sadface: Password is required""",
+TC_07,Verify that login fails when both fields are empty,User is on the login page,"1. Leave both username and password empty
+2. Click Login","Username: (empty)
+Password: (empty)","Error message: ""Epic sadface: Username is required""",
+TC_08,Verify error message is displayed for performance glitch user,User is on the login page,"1. Enter Username: performance_glitch_user
+2. Enter Password: secret_sauce
+3. Click Login","Username: performance_glitch_user
+Password: secret_sauce",Login succeeds but page may load slowly or show glitch behavior,
+TC_09,Verify UI elements on login page,User is on the login page,"1. Observe login page elements
+2. Verify logo, input fields, buttons are visible",N/A,"Sauce Labs logo, Username field, Password field, Login button, Footer text are visible",
+TC_10,Verify placeholder text in input fields,User is on the login page,"1. Check username field placeholder
+2. Check password field placeholder",N/A,"Username field shows ""Username"", Password field shows ""Password""",
+TC_11,Verify Login button is enabled by default,User is on the login page,"1. Load login page
+2. Check Login button state",N/A,Login button is enabled and clickable,
+TC_12,Verify footer text on login page,User is on the login page,1. Scroll to bottom of login page,N/A,"Footer displays: ""Swag Labs is all about selling the coolest swag...""",
+TC_13,Verify social media icons on login page,User is on the login page,"1. Locate social media section
+2. Verify Twitter, Facebook, LinkedIn icons",N/A,All three social media icons are visible and clickable,
+TC_14,Verify all products are displayed on inventory page,User is logged in successfully,"1. Login with valid credentials
+2. Observe product grid","Username: standard_user
+Password: secret_sauce","All 6 products are displayed with image, name, description, price, and Add to Cart button",
+TC_15,Verify product sort functionality,User is on Products page,"1. Click sort dropdown
+2. Select different sort options (Name A-Z, Name Z-A, Price Low-High, Price High-Low)","Sort options: Name (A to Z), Name (Z to A), Price (low to high), Price (high to low)",Products reorder according to selected sort criteria,
+TC_16,Verify product details display correctly,User is on Products page,1. Observe each product card,N/A,"Each product shows: Image, Name, Description, Price, Add to Cart button",
+TC_17,Verify Add to Cart button changes to Remove after click,User is on Products page,"1. Click ""Add to Cart"" for any product
+2. Observe button text change",Any product,"Button text changes from ""Add to Cart"" to ""Remove""",
+TC_18,Verify cart badge count increments on adding product,User is on Products page,"1. Click Add to Cart for a product
+2. Check cart icon badge",N/A,"Cart badge shows ""1"" after adding one item",
+TC_19,Verify cart badge count decrements on removing product,User has items in cart,"1. Click ""Remove"" for an item in cart
+2. Check cart badge",N/A,Cart badge count decreases by 1,
+TC_20,Verify navigation to cart page,User has items in cart,1. Click cart icon in header,N/A,User is redirected to Cart page showing added items,
+TC_21,Verify product quantity can be updated in cart,User is on Cart page,"1. Change quantity dropdown for an item
+2. Observe price update","Quantity: 1, 2, 3...",Total price updates according to quantity selected,
+TC_22,Verify Remove button works in cart page,User is on Cart page with items,"1. Click Remove button for any item
+2. Verify item disappears from list",N/A,Item is removed from cart and badge count updates,
+TC_23,Verify Continue Shopping button navigates back to products,User is on Cart page,"1. Click ""Continue Shopping"" button",N/A,User is redirected back to Products/Inventory page,
+TC_24,Verify Checkout button is enabled when cart has items,User has items in cart,"1. Navigate to Cart page
+2. Check Checkout button state",N/A,Checkout button is enabled and clickable,
+TC_25,Verify Checkout button is disabled when cart is empty,User has empty cart,"1. Navigate to Cart page with no items
+2. Check Checkout button",N/A,Checkout button is disabled or not visible,
+TC_26,Verify Checkout: Information page loads correctly,User has items in cart and clicks Checkout,"1. Add item to cart
+2. Click Checkout button",N/A,"User is redirected to Checkout: Your Information page with First Name, Last Name, Postal Code fields",
+TC_27,Verify Checkout fails when First Name is empty,User is on Checkout: Information page,"1. Leave First Name empty
+2. Fill Last Name and Postal Code
+3. Click Continue","First Name: (empty)
+Last Name: Doe
+Postal Code: 12345","Error message: ""Error: First Name is required""",
+TC_28,Verify Checkout fails when Last Name is empty,User is on Checkout: Information page,"1. Fill First Name
+2. Leave Last Name empty
+3. Fill Postal Code
+4. Click Continue","First Name: John
+Last Name: (empty)
+Postal Code: 12345","Error message: ""Error: Last Name is required""",
+TC_29,Verify Checkout fails when Postal Code is empty,User is on Checkout: Information page,"1. Fill First Name and Last Name
+2. Leave Postal Code empty
+3. Click Continue","First Name: John
+Last Name: Doe
+Postal Code: (empty)","Error message: ""Error: Postal Code is required""",
+TC_30,Verify Checkout succeeds with valid information,User is on Checkout: Information page,"1. Enter valid First Name, Last Name, Postal Code
+2. Click Continue","First Name: John
+Last Name: Doe
+Postal Code: 12345",User is redirected to Checkout: Overview page showing order summary,
+TC_31,Verify order summary displays correct items and total,User is on Checkout: Overview page,1. Review order summary section,N/A,"Page shows: Item list, Quantity, Price, Tax, Total amount correctly calculated",
+TC_32,Verify Cancel button on Checkout: Overview page,User is on Checkout: Overview page,1. Click Cancel button,N/A,"User is redirected back to Products page, cart items retained",
+TC_33,Verify Finish button completes order,User is on Checkout: Overview page,1. Click Finish button,N/A,User is redirected to Checkout: Complete page with confirmation message,
+TC_34,Verify order confirmation message and details,User is on Checkout: Complete page,1. Observe confirmation page content,N/A,"Page shows: ""Thank you for your order!"", Order ID, and ""Back Home"" button",
+TC_35,Verify Back Home button navigates to Products page,User is on Checkout: Complete page,"1. Click ""Back Home"" button",N/A,"User is redirected to Products page, cart is emptied",
+TC_36,Verify hamburger menu opens and displays options,User is logged in on Products page,"1. Click hamburger menu icon (top-left)
+2. Observe menu options",N/A,"Menu displays: All Items, About, Logout, Reset App, Twitter, Facebook, LinkedIn",
+TC_37,Verify Logout functionality,User is logged in,"1. Open hamburger menu
+2. Click Logout option",N/A,User is logged out and redirected to Login page,
+TC_38,Verify Reset App State functionality,User has items in cart or modified state,"1. Open hamburger menu
+2. Click ""Reset App State""
+3. Confirm reset",N/A,"App state resets: cart emptied, filters cleared, user remains logged in",
+TC_39,Verify About page opens in new tab,User is logged in,"1. Open hamburger menu
+2. Click ""About"" link",N/A,Sauce Labs about page opens in new browser tab,
+LOGIN_TC_001,Verify login with valid credentials,User is on the login page,"1. Open the login page
+2. Enter valid username & password
+3. Click login","Username: standard_user
+Password: secret_sauce",User successfully logs in and is redirected to the homepage,
+LOGIN_TC_002,Verify login with an invalid username,User is on the login page,"1. Open the login page
+2. Enter invalid username & valid password
+3. Click login","Username: invalid_user
+Password: secret_sauce","Error message: ""Username and password do not match""",
+LOGIN_TC_003,Verify login with an invalid password,User is on the login page,"1. Open the login page
+2. Enter valid username & invalid password
+3. Click login","Username: standard_user
+Password: wrong_pass","Error message: ""Username and password do not match""",
+LOGIN_TC_004,Verify login when username and password are empty,User is on the login page,"1. Open the login page
+2. Leave username & password blank
+3. Click login","Username: (empty)
+Password: (empty)","Error message: ""Username is required""",
+LOGIN_TC_005,Verify login with only username entered,User is on the login page,"1. Open the login page
+2. Enter valid username & leave password blank
+3. Click login","Username: standard_user
+Password: (empty)","Error message: ""Username is required""",
+LOGIN_TC_006,Verify login with only password entered,User is on the login page,"1. Open the login page
+2. Leave username blank & enter valid password
+3. Click login","Username: (empty)
+Password: secret_sauce","Error message: ""Username and password do not match""",
+LOGIN_TC_007,Verify login with case-sensitive username/password,User is on the login page,"1. Open the login page
+2. Enter username/password in incorrect case
+3. Click login","Username: Standard_User
+Password: Secret_Sauce",Error message or unsuccessful login,
+LOGIN_TC_008,Verify UI elements on the login page,User is on the login page,"1. Open the login page
+2. Check for username, password fields, and login button",N/A,All elements should be present and properly aligned,
+LOGIN_TC_009,Verify that password can't be copied from password field,User is on the login page,"1. Open the login page
+2. Enter valid username & leave password
+3. Try to copy password and paste it somewhere else",N/A,Password can't be copied,
+LOGIN_TC_010,Verify login with SQL injection attempt,User is on the login page,"1. Open the login page
+2. Enter ' OR '1'='1 in username/password fields
+3. Click login","Username: ' OR '1'='1
+Password: ' OR '1'='1","Error message: ""Password is required"" or login blocked",
+PRODUCT_TC_001,Verify that all products are displayed,User is logged in successfully,"1. Login with valid credentials
+2. Navigate to the Product page
+3. Check the product list","Username: standard_user
+Password: secret_sauce","Page should load with product listings, filter, and cart icon visible. All products should be visible with images, titles, prices, and Add to Cart buttons",
+PRODUCT_TC_002,Verify navigation to the cart page,User is on Products page with items in cart,"1. Login and go to products
+2. Click Add to Cart for any product
+3. Click the cart icon on products page",Any product,User should be redirected to the cart page,
+PRODUCT_TC_003,Verify added product appears in cart,User is on Products page,"1. Login and go to products
+2. Click Add to Cart for any product
+3. Check the cart icon number",Any product,Cart icon should display correct number of added products. Product should be added to cart, button should change to Remove
+PRODUCT_TC_004,Verify product removal from cart,User has items in cart,"1. Add a product to the cart
+2. Navigate to the cart page
+3. Click Remove button",Any product,Product should be removed from cart, button should change back to Add to Cart
+PRODUCT_TC_005,Verify cart icon updates when adding/removing products,User is on Products page,"1. Add a product to the cart
+2. Check the cart icon number
+3. Remove product and verify badge updates",N/A,Cart icon should display correct number of added products and update on removal,
+PRODUCT_TC_006,Verify UI elements on the products page,User is logged in,"1. Login and navigate to product page
+2. Check for all elements like product list, cart icon, sorting dropdown",N/A,All elements should be properly aligned and functional,
+PRODUCT_TC_007,Verify product sorting functionality,User is on Products page,"1. Select sorting dropdown
+2. Choose an option (e.g., Price: Low to High)",Sort: Price (low to high),Products should be sorted accordingly,
+PRODUCT_TC_008,Verify logout functionality,User is logged in,"1. Click menu button
+2. Click Logout",N/A,User should be redirected to login page,
+PRODUCT_TC_009,Verify restricted access to product page without login,User is not logged in,1. Try to access product page directly without logging in,N/A,User should be redirected to login page,
+CART_TC_001,Verify that the cart page loads correctly,User has items in cart,"1. Login and add a product to the cart
+2. Navigate to the cart page",N/A,Cart page should load with added products displayed,
+CART_TC_002,Verify that the cart page displays correctly when empty,User has empty cart,1. Login and go to cart page without adding any items,N/A,"Cart page should display ""Your cart is empty"" message",
+CART_TC_003,Verify Continue Shopping button functionality,User is on Cart page,"1. Go to cart page
+2. Click Continue Shopping",N/A,User should be redirected back to the inventory page,
+CART_TC_004,Verify Checkout button navigates to checkout page,User has items in cart,"1. Go to cart page
+2. Click Checkout",N/A,User should be redirected to checkout page,
+CART_TC_005,Verify that cart items persist after logout and re-login,User has items in cart,"1. Add items to cart
+2. Logout and login again",N/A,Items should still be present in the cart,
+CART_TC_006,Verify restricted access to cart page without login,User is not logged in,1. Try to access cart page directly without logging in,N/A,User should be redirected to login page,
+CART_TC_007,Verify product quantity display in cart,User has multiple quantities of a product,"1. Add multiple quantities of a product
+2. Go to cart page",Quantity: 2+,The correct quantity should be displayed,
+CHECKOUT1_TC_001,Verify that the checkout step one page loads correctly,User has items in cart and clicks Checkout,"1. Login and add products to cart
+2. Navigate to the cart page
+3. Click Checkout",N/A,Checkout step one page should load with input fields,
+CHECKOUT1_TC_002,Verify that the first name field is required,User is on Checkout Step One,"1. Go to checkout step one page
+2. Enter last name and postal code only
+3. Click Continue","First Name: (empty)
+Last Name: Doe
+Postal Code: 12345","Error message: ""First Name is required""",
+CHECKOUT1_TC_003,Verify that the last name field is required,User is on Checkout Step One,"1. Go to checkout step one page
+2. Enter first name and postal code only
+3. Click Continue","First Name: John
+Last Name: (empty)
+Postal Code: 12345","Error message: ""Last Name is required""",
+CHECKOUT1_TC_004,Verify that the postal code field is required,User is on Checkout Step One,"1. Go to checkout step one page
+2. Enter first name and last name only
+3. Click Continue","First Name: John
+Last Name: Doe
+Postal Code: (empty)","Error message: ""Postal Code is required""",
+CHECKOUT1_TC_005,Verify successful checkout step one submission,User is on Checkout Step One,"1. Enter valid first name, last name, and postal code
+2. Click Continue","First Name: John
+Last Name: Doe
+Postal Code: 12345",User should be redirected to checkout step two page,
+CHECKOUT1_TC_006,Verify Cancel button navigates back to cart,User is on Checkout Step One,"1. Go to checkout step one page
+2. Click Cancel",N/A,User should be redirected back to cart page,
+CHECKOUT1_TC_007,Verify invalid postal code handling,User is on Checkout Step One,"1. Go to checkout step one page
+2. Enter invalid postal code (e.g., abc)
+3. Click Continue","First Name: John
+Last Name: Doe
+Postal Code: abc",Error message should appear for invalid postal code,
+CHECKOUT2_TC_001,Verify that the checkout step two page loads correctly,User completed checkout step one,"1. Login and add products to cart
+2. Complete checkout step one
+3. Navigate to checkout step two",N/A,Checkout step two page should load with order summary,
+CHECKOUT2_TC_002,Verify that selected products are displayed in order summary,User is on Checkout Step Two,"1. Add products to cart
+2. Proceed to checkout step two",N/A,"Cart list, product details, buttons, and total price should be correctly displayed",
+CHECKOUT2_TC_003,Verify total price calculation (including tax),User is on Checkout Step Two,"1. Add multiple products to cart
+2. Proceed to checkout step two",N/A,Total price should match sum of item prices + tax,
+CHECKOUT2_TC_004,Verify Finish button completes the checkout,User is on Checkout Step Two,"1. Navigate to checkout step two
+2. Click Finish",N/A,User should be redirected to order confirmation page,
+CHECKOUT2_TC_005,Verify Cancel button navigates back to inventory page,User is on Checkout Step Two,"1. Navigate to checkout step two
+2. Click Cancel",N/A,User should be redirected to inventory page,
+CHECKOUT2_TC_006,Verify user cannot skip step one and directly access step two,User has not completed step one,1. Try to access checkout step two URL without completing step one,N/A,User should be redirected to checkout step one,
+CHECKOUT2_TC_007,Verify tax is calculated correctly on total price,User is on Checkout Step Two,"1. Add products to cart
+2. Proceed to checkout step two",N/A,Tax should be applied as per the correct rate,
+CHECKOUT2_TC_008,Verify product details are correct in order summary,User is on Checkout Step Two,"1. Add products to cart
+2. Proceed to checkout step two",N/A,Product details should match what was selected in inventory,
+AUTH_TC_001,Verify user can register with valid email and password,User is on registration page,"1. Navigate to /account/register
+2. Enter valid email
+3. Enter valid password (8+ chars)
+4. Confirm password
+5. Click Create account","Email: testuser@example.com
+Password: SecurePass123!
+Confirm: SecurePass123!","Account created successfully, user redirected to account dashboard, confirmation email sent",
+AUTH_TC_002,Verify registration fails with invalid email format,User is on registration page,"1. Navigate to /account/register
+2. Enter invalid email format
+3. Enter valid password
+4. Click Create account","Email: invalid-email
+Password: SecurePass123!","Error message: ""Please enter a valid email address"", form not submitted",
+AUTH_TC_003,Verify registration fails when passwords don't match,User is on registration page,"1. Navigate to /account/register
+2. Enter valid email
+3. Enter password
+4. Enter different confirm password
+5. Click Create account","Email: test@example.com
+Password: Pass123!
+Confirm: WrongPass456!","Error message: ""Passwords do not match"", form remains on page",
+AUTH_TC_004,Verify registration fails with weak password,User is on registration page,"1. Navigate to /account/register
+2. Enter valid email
+3. Enter weak password (<8 chars)
+4. Click Create account","Email: test@example.com
+Password: weak","Error message: ""Password must be at least 8 characters and include uppercase, lowercase, and number""",
+AUTH_TC_005,Verify registration fails when email already exists,User is on registration page,"1. Navigate to /account/register
+2. Enter existing registered email
+3. Enter valid password
+4. Click Create account","Email: existing@example.com
+Password: SecurePass123!","Error message: ""This email is already registered. Please login or use a different email.""",
+AUTH_TC_006,Verify user can login with valid credentials,User is on login page,"1. Navigate to /account/login
+2. Enter registered email
+3. Enter correct password
+4. Click Sign in","Email: testuser@example.com
+Password: SecurePass123!","User authenticated, redirected to account dashboard, session cookie set",
+AUTH_TC_007,Verify login fails with incorrect password,User is on login page,"1. Navigate to /account/login
+2. Enter valid email
+3. Enter wrong password
+4. Click Sign in","Email: testuser@example.com
+Password: WrongPass!","Error message: ""Invalid email or password"", user remains on login page",
+AUTH_TC_008,Verify login fails with unregistered email,User is on login page,"1. Navigate to /account/login
+2. Enter unregistered email
+3. Enter any password
+4. Click Sign in","Email: unknown@example.com
+Password: AnyPass123!","Error message: ""Invalid email or password"", no indication if email exists (security)",
+AUTH_TC_009,Verify login fails when email field is empty,User is on login page,"1. Navigate to /account/login
+2. Leave email empty
+3. Enter password
+4. Click Sign in","Email: (empty)
+Password: SecurePass123!","Inline validation: ""Email is required"", form not submitted",
+AUTH_TC_010,Verify login fails when password field is empty,User is on login page,"1. Navigate to /account/login
+2. Enter email
+3. Leave password empty
+4. Click Sign in","Email: test@example.com
+Password: (empty)","Inline validation: ""Password is required"", form not submitted",
+AUTH_TC_011,Verify forgot password flow initiates correctly,User is on login page,"1. Click ""Forgot your password?""
+2. Enter registered email
+3. Click Reset password",Email: testuser@example.com,"Confirmation message: ""If an account exists, you'll receive reset instructions"", email sent",
+AUTH_TC_012,Verify password reset link expires after 24 hours,User has received reset email,"1. Wait 24+ hours after receiving email
+2. Click reset link in email",Reset token: expired,"Error page: ""This password reset link has expired. Please request a new one.""",
+AUTH_TC_013,Verify password reset with valid new password,User clicked valid reset link,"1. Open reset link
+2. Enter new strong password
+3. Confirm new password
+4. Click Update password","New Password: NewSecure456!
+Confirm: NewSecure456!","Success message, user redirected to login, can login with new password",
+AUTH_TC_014,Verify logout functionality clears session,User is logged in,"1. Click account icon
+2. Select Logout
+3. Verify navigation",N/A,"User redirected to homepage, session cleared, cart persisted if guest, account menu shows login option",
+AUTH_TC_015,Verify session timeout after inactivity,User is logged in and idle,"1. Login successfully
+2. Remain inactive for 30 minutes
+3. Attempt to access account page",Session timeout: 30 min,"User redirected to login with message: ""Session expired. Please login again.""",
+AUTH_TC_016,Verify remember me checkbox persists login,User is on login page,"1. Check ""Remember me""
+2. Enter valid credentials
+3. Login
+4. Close browser
+5. Reopen site","Email: test@example.com
+Password: SecurePass123!
+Remember me: checked",User remains logged in after browser restart (persistent cookie),
+AUTH_TC_017,Verify login with social account (Google),User is on login page,"1. Click ""Continue with Google""
+2. Select Google account
+3. Authorize access",OAuth: Google,"User authenticated via Google, account created/linked, redirected to dashboard",
+AUTH_TC_018,Verify login with social account (Facebook),User is on login page,"1. Click ""Continue with Facebook""
+2. Enter Facebook credentials
+3. Authorize access",OAuth: Facebook,"User authenticated via Facebook, account created/linked, redirected to dashboard",
+AUTH_TC_019,Verify account lockout after 5 failed attempts,User is on login page,"1. Enter valid email
+2. Enter wrong password 5 times consecutively","Email: test@example.com
+Password: wrong1-5","After 5th attempt: ""Account temporarily locked. Try again in 15 minutes"" or CAPTCHA shown",
+AUTH_TC_020,Verify CAPTCHA appears after suspicious activity,User triggers rate limiting,"1. Make rapid login attempts
+2. Observe login form",Activity: rapid requests,reCAPTCHA or hCaptcha challenge appears before allowing further attempts,
+AUTH_TC_021,Verify email verification required after registration,User just registered,"1. Register with new email
+2. Try to login immediately
+3. Check inbox for verification",Email: newuser@example.com,"Login blocked with message: ""Please verify your email first"", verification email sent",
+AUTH_TC_022,Verify email verification link works correctly,User received verification email,"1. Click verification link in email
+2. Observe page behavior",Verification token: valid,"Success message: ""Email verified! You can now login"", redirected to login page",
+AUTH_TC_023,Verify verification link can only be used once,User already verified email,1. Click same verification link again,Verification token: used,"Message: ""This verification link has already been used"" or redirects to login",
+AUTH_TC_024,Verify password change requires current password,User is logged in and on account settings,"1. Navigate to Change Password
+2. Enter wrong current password
+3. Enter new password
+4. Submit","Current: WrongPass!
+New: NewPass123!
+Confirm: NewPass123!","Error: ""Current password is incorrect"", password not changed",
+AUTH_TC_025,Verify password change with correct current password,User is logged in,"1. Navigate to Change Password
+2. Enter correct current password
+3. Enter strong new password
+4. Submit","Current: SecurePass123!
+New: UpdatedPass456!
+Confirm: UpdatedPass456!","Success message, user logged out and prompted to login with new password",
+AUTH_TC_026,Verify new password cannot match old password,User changing password,"1. Enter current password
+2. Enter same password as new
+3. Submit","Current: SamePass123!
+New: SamePass123!","Error: ""New password cannot be the same as your current password""",
+AUTH_TC_027,Verify account deletion requires confirmation,User on account settings,"1. Click ""Delete Account""
+2. Enter password to confirm
+3. Confirm deletion",Password: SecurePass123!,"Account soft-deleted, user logged out, confirmation email sent, data retained per policy",
+AUTH_TC_028,Verify guest checkout option is available,User browsing as guest,"1. Add product to cart
+2. Proceed to checkout
+3. Observe checkout options",Cart: has items,"Option to ""Continue as guest"" visible alongside login/register options",
+AUTH_TC_029,Verify guest can complete purchase without account,User selected guest checkout,"1. Enter shipping details as guest
+2. Enter payment info
+3. Place order",Guest data: valid,"Order confirmed, order number displayed, guest receipt email sent, no account created",
+AUTH_TC_030,Verify guest can create account after purchase,User completed guest checkout,"1. On order confirmation page
+2. Click ""Create account with this email""
+3. Set password","Email: guest@example.com
+Password: GuestPass123!","Account created with order history linked, user logged in automatically",
+HOMEPAGE_TC_001,Verify homepage loads within 3 seconds,User accesses root URL,"1. Navigate to https://sauce-demo.myshopify.com
+2. Measure load time with DevTools",Network: 3G simulation,"Page fully loads (LCP) in ?3 seconds, Core Web Vitals pass",
+HOMEPAGE_TC_002,Verify homepage displays featured products carousel,User on homepage,"1. Scroll to featured section
+2. Observe product cards",Section: Featured Products,"Carousel shows 4-6 products with images, titles, prices, Add to Cart buttons",
+HOMEPAGE_TC_003,Verify homepage hero banner displays correctly,User on homepage,1. Observe top section of page,Hero section,Large promotional image/banner with CTA button visible and clickable,
+HOMEPAGE_TC_004,Verify navigation menu expands on hover (desktop),User on homepage desktop,1. Hover over main menu categories,"Menu: Collections, Products","Dropdown submenu appears with category links, stays visible while hovering",
+HOMEPAGE_TC_005,Verify mobile hamburger menu toggles correctly,User on homepage mobile,"1. Click hamburger icon (mobile)
+2. Observe menu
+3. Click close/X",Viewport: <768px,"Menu slides in from side, shows all navigation links, close button works",
+HOMEPAGE_TC_006,Verify search icon opens search bar,User on homepage,"1. Click search icon in header
+2. Observe search input",Header: search icon,"Search bar expands/focuses, keyboard appears on mobile, can type query",
+HOMEPAGE_TC_007,Verify cart icon shows item count badge,User added items to cart,"1. Add 2 products to cart
+2. Observe cart icon in header",Cart: 2 items,"Cart icon displays badge with number ""2"", updates dynamically",
+HOMEPAGE_TC_008,Verify footer contains required links and info,User scrolls to homepage bottom,"1. Scroll to footer
+2. Verify sections",Footer sections,"Contains: About, Contact, Privacy Policy, Terms, Social icons, Copyright, Payment methods",
+HOMEPAGE_TC_009,Verify homepage is responsive across breakpoints,User resizes browser,"1. Test at 320px, 768px, 1024px, 1440px widths","Viewports: mobile, tablet, desktop","Layout adapts correctly, no horizontal scroll, elements reflow appropriately",
+HOMEPAGE_TC_010,Verify homepage SEO meta tags are present,User views page source,"1. Right-click ? View Page Source
+2. Search for meta tags",Source code,"Contains: <title>, <meta name=""description"">, Open Graph tags, canonical URL",
+HOMEPAGE_TC_011,Verify homepage language selector works (if multi-lang),User on homepage,"1. Click language dropdown
+2. Select different language","Languages: EN, FR, ES","Page content translates, URL updates with locale, preference saved in cookie",
+HOMEPAGE_TC_012,Verify currency selector updates prices display,User on homepage,"1. Change currency from USD to EUR
+2. Observe product prices","Currencies: USD, EUR, GBP","All prices update with correct symbol and conversion rate, cart totals update",
+HOMEPAGE_TC_013,Verify homepage loads without JavaScript errors,User opens browser console,"1. Navigate to homepage
+2. Open DevTools Console",Console: Network/Console tabs,"No red error messages, all scripts load successfully, no 404 resources",
+HOMEPAGE_TC_014,Verify homepage images have alt text for accessibility,User inspects homepage images,"1. Right-click images ? Inspect
+2. Check alt attributes","Images: product, banner","All <img> tags have descriptive alt text, decorative images have alt=""""",
+HOMEPAGE_TC_015,Verify homepage keyboard navigation works,User uses keyboard only,"1. Tab through homepage elements
+2. Verify focus indicators","Keyboard: Tab, Shift+Tab","Focus ring visible on interactive elements, logical tab order, skip-to-content link works",
+HOMEPAGE_TC_016,Verify homepage social proof section displays reviews,User scrolls to reviews section,1. Locate testimonials/reviews,Section: Customer Reviews,"Shows star ratings, customer quotes, photos (if applicable), trust badges",
+HOMEPAGE_TC_017,Verify homepage newsletter signup form works,User on homepage,"1. Enter email in footer signup
+2. Click Subscribe",Email: test@example.com,"Success message: ""Thanks for subscribing!"", email added to mailing list, no duplicate submissions",
+HOMEPAGE_TC_018,Verify homepage loads correctly with ad blocker enabled,User has ad blocker active,"1. Enable uBlock Origin/AdBlock
+2. Navigate to homepage",Extensions: ad blocker,"Page loads without broken layout, essential functionality unaffected, non-essential ads hidden",
+HOMEPAGE_TC_019,Verify homepage displays sale/promotion badges on products,User on homepage during sale,1. Observe featured products,Products: on sale,"Products show ""Sale"", ""-20%"", or promotional badges, original/strikethrough prices visible",
+HOMEPAGE_TC_020,Verify homepage quick view modal works for products,User on homepage,"1. Click ""Quick View"" on product card
+2. Observe modal",Product: any featured item,"Modal opens with product image, title, price, variant selector, Add to Cart button",
+PRODUCTS_TC_001,Verify product collection page loads with all items,User navigates to /collections/all,"1. Click ""All Products"" in nav
+2. Observe product grid",Collection: all,Page shows all active products in grid/list view with pagination if >24 items,
+PRODUCTS_TC_002,Verify product grid view displays correctly,User on collection page,"1. Switch to grid view (if toggle exists)
+2. Observe layout",View mode: grid,"Products display in responsive grid (3-4 cols desktop, 2 tablet, 1 mobile)",
+PRODUCTS_TC_003,Verify product list view displays correctly,User on collection page,"1. Switch to list view
+2. Observe layout",View mode: list,Products display in vertical list with larger images and more details per item,
+PRODUCTS_TC_004,Verify product sorting options work (Price Low-High),User on collection page,"1. Open sort dropdown
+2. Select ""Price: Low to High""",Sort: price_low,"Products reorder by price ascending, URL parameter updates (?sort_by=price-low)",
+PRODUCTS_TC_005,Verify product sorting options work (Newest),User on collection page,"1. Open sort dropdown
+2. Select ""Newest""",Sort: created_desc,"Products reorder by creation date descending, newest items appear first",
+PRODUCTS_TC_006,Verify product filtering by availability works,User on collection page,"1. Check ""In Stock"" filter
+2. Apply filters",Filter: available:true,"Only in-stock products display, out-of-stock items hidden, filter badge shows",
+PRODUCTS_TC_007,Verify product filtering by price range works,User on collection page,"1. Set min price: $20
+2. Set max price: $50
+3. Apply",Filter: price 20-50,"Only products within price range display, price slider/inputs update correctly",
+PRODUCTS_TC_008,Verify product filtering by product type works,User on collection page,"1. Check ""Jackets"" in product type filter
+2. Apply",Filter: product_type:Jackets,"Only jacket products display, other types hidden, filter count shows matching items",
+PRODUCTS_TC_009,Verify product filtering by vendor works,User on collection page,"1. Select vendor ""Sauce Labs""
+2. Apply",Filter: vendor:Sauce Labs,"Only products from selected vendor display, vendor filter badge active",
+PRODUCTS_TC_010,Verify multiple filters can be combined,User on collection page,"1. Filter: In Stock + Price $30-60 + Type: Tops
+2. Apply",Filters: multiple,"Products matching ALL criteria display, combined filter badges shown, can remove individually",
+PRODUCTS_TC_011,Verify clear all filters button works,User has active filters,"1. Click ""Clear all"" button
+2. Observe results",Filters: any active,"All filters removed, product grid resets to unfiltered state, URL parameters cleared",
+PRODUCTS_TC_012,Verify filter selections persist on pagination,User on page 2 with filters,"1. Apply filters on page 1
+2. Navigate to page 2
+3. Verify filters still applied",Pagination: page=2,"Filters remain active on page 2, results consistent with filter criteria",
+PRODUCTS_TC_013,Verify search functionality returns relevant results,User uses header search,"1. Type ""jacket"" in search
+2. Press Enter or click search",Query: jacket,"Search results page shows products with ""jacket"" in title, description, or tags",
+PRODUCTS_TC_014,Verify search handles typos with suggestions,User types misspelled query,"1. Type ""jakcet"" in search
+2. Observe results",Query: jakcet (typo),"Results show ""Did you mean: jacket"" suggestion, still returns relevant products",
+PRODUCTS_TC_015,"Verify search shows """"no results"""" state appropriately",User searches for nonexistent item,"1. Search for ""xyz123nonexistent""",Query: nonexistent,"Page shows friendly ""No products found"" message with suggestions to browse or refine search",
+PRODUCTS_TC_016,Verify search results can be sorted and filtered,User on search results page,"1. Perform search
+2. Apply sort and filters",Search + filters,"Results update dynamically, sort/filter work same as collection pages",
+PRODUCTS_TC_017,Verify product tags are clickable and filter results,User viewing product or collection,"1. Click on product tag (e.g., ""Summer"")
+2. Observe navigation",Tag: Summer,"Redirects to collection filtered by that tag, URL includes tag parameter",
+PRODUCTS_TC_018,Verify product comparison feature works (if available),User selects multiple products,"1. Check ""Compare"" on 2-3 products
+2. Click Compare button",Products: 2-3 selected,"Comparison modal/table opens showing specs, prices, features side-by-side",
+PRODUCTS_TC_019,Verify product wishlist/favorites functionality,User logged in,"1. Click heart icon on product
+2. Check account wishlist",Product: any,"Product added to wishlist, heart icon fills, appears in account wishlist page",
+PRODUCTS_TC_020,Verify product share functionality works,User on product page,"1. Click share icon
+2. Select platform (email, social)",Share: any platform,"Share dialog opens with product link, image, title pre-filled for selected platform",
+PRODUCT_DETAIL_TC_001,Verify product detail page loads with all information,User clicks product from collection,"1. Navigate to product page
+2. Observe content",Product: any active,"Page shows: images gallery, title, price, description, variants, Add to Cart, reviews",
+PRODUCT_DETAIL_TC_002,Verify product image gallery supports zoom on hover,User on product page desktop,1. Hover over main product image,Image: main product,"Image magnifies/zooms to show detail, zoom area follows cursor",
+PRODUCT_DETAIL_TC_003,Verify product image gallery supports swipe on mobile,User on product page mobile,1. Swipe left/right on image,Touch: swipe gesture,"Gallery slides to next/previous image smoothly, indicators update",
+PRODUCT_DETAIL_TC_004,Verify product image thumbnails are clickable,User on product page,1. Click thumbnail image below main,Thumbnails: multiple,"Clicked thumbnail becomes main image, active state highlighted",
+PRODUCT_DETAIL_TC_005,Verify product variant selector updates price dynamically,User on product page with variants,"1. Select different size/color variant
+2. Observe price display","Variants: S/M/L, Red/Blue","Price updates if variant has different price, SKU updates, inventory status refreshes",
+PRODUCT_DETAIL_TC_006,Verify out-of-stock variant shows appropriate messaging,User selects unavailable variant,1. Select variant with inventory=0,Variant: out of stock,"Button changes to ""Sold Out"" or ""Notify when available"", disabled state, grayed out",
+PRODUCT_DETAIL_TC_007,Verify quantity selector allows valid range (1-10),User on product page,"1. Change quantity using +/- buttons
+2. Enter value manually",Quantity: 1 to 10,"Input accepts 1-10, blocks <1 or >10, shows error if invalid, updates Add to Cart behavior",
+PRODUCT_DETAIL_TC_008,Verify Add to Cart button adds item with selected options,User configured product,"1. Select variant and quantity
+2. Click Add to Cart","Variant: selected
+Qty: 2","Success toast/notification, cart badge increments, item appears in mini-cart with correct options",
+PRODUCT_DETAIL_TC_009,Verify Add to Cart shows error if variant not selected (required),User on product with required variant,"1. Leave variant unselected
+2. Click Add to Cart",Variant: none selected,"Inline error: ""Please select a size/color"", button doesn't submit, form validation triggers",
+PRODUCT_DETAIL_TC_010,Verify product description expands/collapses for long content,User on product with long description,"1. Click ""Read more"" if description truncated",Description: long text,"Full description expands, button changes to ""Read less"", smooth animation",
+PRODUCT_DETAIL_TC_011,Verify product reviews section loads and displays ratings,User scrolls to reviews,"1. Locate reviews section
+2. Observe content",Reviews: enabled,"Shows average star rating, total review count, individual reviews with author, date, comment",
+PRODUCT_DETAIL_TC_012,Verify user can submit a product review (if logged in),User logged in and purchased product,"1. Scroll to reviews
+2. Click ""Write a review""
+3. Fill form and submit","Rating: 5 stars
+Comment: Great product!","Review submitted, appears after moderation/approval, user receives confirmation",
+PRODUCT_DETAIL_TC_013,Verify product review form validates required fields,User submitting review,"1. Leave rating or comment empty
+2. Try to submit","Rating: none
+Comment: (empty)","Inline errors: ""Please select a rating"", ""Please write a review"", form not submitted",
+PRODUCT_DETAIL_TC_014,Verify related products section displays relevant items,User at bottom of product page,"1. Scroll to ""You may also like""",Section: related products,"Shows 4-6 products from same collection/type, with images, prices, quick add buttons",
+PRODUCT_DETAIL_TC_015,Verify product SKU and inventory status display correctly,User on product page,1. Inspect product details section,Product: with inventory tracking,"Shows: SKU number, ""In stock"" or ""X left in stock"", updates in real-time if possible",
+PRODUCT_DETAIL_TC_016,Verify product shipping/delivery information is visible,User on product page,1. Look for shipping info tab/section,Info: shipping,"Displays: estimated delivery times, shipping costs, free shipping threshold, return policy link",
+PRODUCT_DETAIL_TC_017,Verify product size guide modal opens and displays correctly,User clicks size guide link,"1. Click ""Size Guide"" near variant selector",Link: size guide,"Modal/popup opens with size chart image/table, close button works, accessible via keyboard",
+PRODUCT_DETAIL_TC_018,Verify product page SEO structured data is present,User views page source,"1. View source, search for JSON-LD",Source: structured data,"Contains Product schema: name, image, description, offers (price, availability), aggregateRating",
+PRODUCT_DETAIL_TC_019,Verify product page loads correctly with slow network,User throttles network,"1. Set DevTools to Slow 3G
+2. Load product page",Network: slow 3g,"Page loads progressively, skeleton loaders show, critical content prioritized, no timeout errors",
+PRODUCT_DETAIL_TC_020,Verify product page handles concurrent variant selection correctly,User rapidly changes variants,"1. Quickly click multiple variant options
+2. Observe price/inventory updates",Variants: rapid selection,"Final selected variant state is correct, no race conditions, UI doesn't freeze or show stale data",
+CART_TC_001,Verify cart page displays all added items correctly,User has items in cart,"1. Add 2 different products to cart
+2. Navigate to /cart",Cart: 2 items,"Page shows each item with image, title, variant, price, quantity selector, line total, remove button",
+CART_TC_002,Verify cart item quantity can be updated via +/- buttons,User on cart page,"1. Click + button on item quantity
+2. Observe line total and cart total",Quantity: increase by 1,"Quantity updates, line total recalculates (price × qty), cart subtotal updates immediately",
+CART_TC_003,Verify cart item quantity can be updated by typing value,User on cart page,"1. Click quantity input
+2. Type ""5"" and blur/press Enter",Quantity: manual entry to 5,"Quantity updates to 5, line total recalculates, cart total updates, input validates 1-10 range",
+CART_TC_004,Verify removing item from cart works correctly,User on cart page,"1. Click Remove/X button on item
+2. Confirm if prompted",Item: any in cart,"Item disappears from cart, cart badge decrements, totals recalculate, empty state shown if last item",
+CART_TC_005,Verify cart persists items across page refresh,User has items in cart,"1. Add item to cart
+2. Refresh browser page",Browser: F5/refresh,"Cart still contains the item, quantity and options preserved (localStorage/session/cookie)",
+CART_TC_006,Verify cart persists items after browser close/reopen,User has items in cart,"1. Add item to cart
+2. Close browser tab/window
+3. Reopen site and go to cart",Session: closed/reopened,"Cart items still present (persistent storage), quantities and variants intact",
+CART_TC_007,Verify cart shows accurate subtotal,User has multiple items in cart,"1. Add items with different prices
+2. Navigate to cart
+3. Observe pricing breakdown",Items: varied prices,"Subtotal = sum of line items, tax calculated per region, total = subtotal + tax + shipping (if shown)",
+CART_TC_008,Verify cart applies discount code correctly,User on cart page,"1. Enter valid discount code in promo field
+2. Click Apply",Code: SAVE10 (10% off),"Discount applied, success message shown, subtotal and total update with discount reflected",
+CART_TC_009,Verify cart shows error for invalid/expired discount code,User on cart page,"1. Enter invalid code ""FAKECODE""
+2. Click Apply",Code: invalid,"Error message: ""This code is invalid or has expired"", no discount applied, totals unchanged",
+CART_TC_010,Verify cart prevents applying code multiple times,User already applied discount,"1. Apply valid code once
+2. Try to apply same code again",Code: already used,"Message: ""This code has already been applied"", no duplicate discount, totals stable",
+CART_TC_011,Verify cart updates when product price changes in backend,User has item in cart (price changed admin-side),"1. Add product at $50 to cart
+2. Admin changes price to $60
+3. User refreshes cart",Price change: backend,"Cart shows updated price $60, line total recalculates, notice may show ""Price updated""",
+CART_TC_012,Verify cart handles item going out of stock while in cart,User has item that becomes unavailable,"1. Add last-in-stock item to cart
+2. Another user buys last item
+3. Original user views cart",Inventory: depleted,"Cart shows ""This item is now out of stock"", quantity set to 0 or item removed, checkout blocked",
+CART_TC_013,Verify cart shows free shipping progress bar (if configured),User cart below free shipping threshold,"1. Add items totaling $30 (threshold $50)
+2. Observe cart header/banner",Threshold: $50 free shipping,"Progress bar shows ""$20 away from free shipping"", updates dynamically as items added",
+CART_TC_014,Verify cart allows proceeding to checkout with valid items,User has in-stock items in cart,"1. Ensure all items available
+2. Click ""Proceed to Checkout""",Cart: valid state,"User redirected to checkout page, cart data passed securely, session maintained",
+CART_TC_015,Verify cart blocks checkout if any item is out of stock,User has mixed availability items,"1. Add in-stock and out-of-stock items
+2. Try to checkout",Items: mixed stock,"Error message: ""Some items are no longer available"", checkout button disabled, option to remove unavailable",
+CART_TC_016,Verify cart mini-cart/drawer opens and displays correctly,User clicks cart icon in header,"1. Click cart icon (without going to /cart)
+2. Observe drawer/modal",Trigger: header cart icon,"Mini-cart slides in showing items, quantities, subtotal, checkout button, close/X works",
+CART_TC_017,Verify mini-cart allows updating quantity/removing items,User with open mini-cart,"1. In mini-cart, change quantity or click remove",Mini-cart: open,"Updates reflect immediately in mini-cart and main cart badge, no page reload needed (AJAX)",
+CART_TC_018,Verify cart shows estimated shipping costs before checkout,User on cart page before checkout,"1. Enter zip/postal code in shipping estimator
+2. Click Calculate",Location: valid postal code,"Shows available shipping methods with prices and delivery estimates, can select preferred method",
+CART_TC_019,Verify cart handles guest vs logged-in user cart merging,User adds items as guest then logs in,"1. Add items as guest
+2. Login to account
+3. Check cart",Session: guest?logged in,"Guest cart items merge with account cart, no duplicates, quantities combined if same variant",
+CART_TC_020,Verify cart empty state displays helpful messaging and CTAs,User has empty cart,1. Navigate to /cart with no items,Cart: empty,"Shows friendly message ""Your cart is empty"", suggests browsing collections, prominent ""Continue Shopping"" button",
+CHECKOUT_TC_001,Verify checkout page loads with cart items pre-filled,User proceeds from cart to checkout,"1. Add items to cart
+2. Click Checkout
+3. Observe checkout page",Cart?Checkout flow,"Checkout page loads with order summary showing items, quantities, prices from cart",
+CHECKOUT_TC_002,Verify checkout contact information section validates email,User on checkout contact step,"1. Enter invalid email format
+2. Try to continue",Email: not-an-email,"Inline error: ""Please enter a valid email address"", continue button disabled until fixed",
+CHECKOUT_TC_003,Verify checkout allows guest email entry without account creation,User checking out as guest,"1. Enter email in contact field
+2. Uncheck ""Create account""
+3. Continue","Email: guest@example.com
+Create account: unchecked","Proceeds to shipping step without forcing account creation, email used for order confirmation only",
+CHECKOUT_TC_004,Verify checkout shipping address form validates required fields,User on shipping step,"1. Leave first name empty
+2. Fill other fields
+3. Try to continue",First Name: (empty),"Inline error: ""First name is required"", form highlights missing field, continue blocked",
+CHECKOUT_TC_005,Verify checkout shipping address accepts international formats,User entering non-US address,"1. Select country: Canada
+2. Enter Canadian address format","Country: CA
+Province: ON
+Postal: K1A 0B1","Form adapts fields for country (province vs state, postal code format), validation accepts local formats",
+CHECKOUT_TC_006,Verify checkout calculates shipping costs based on address,User enters shipping address,"1. Enter complete shipping address
+2. Observe shipping options","Address: valid, varied locations",Available shipping methods update with accurate prices and delivery estimates for that location,
+CHECKOUT_TC_007,Verify checkout allows selecting preferred shipping method,User on shipping step with options,"1. View available shipping methods
+2. Select ""Express Delivery""","Shipping options: Standard, Express","Selected method highlighted, order summary updates total with shipping cost, selection persists",
+CHECKOUT_TC_008,Verify checkout payment section shows available methods,User reaches payment step,"1. Scroll to payment section
+2. Observe options",Payment: configured methods,"Shows: Credit Card, PayPal, Apple Pay, Google Pay (based on region/account), icons display correctly",
+CHECKOUT_TC_009,Verify checkout credit card form validates card number,User entering payment info,"1. Enter invalid card number (too short)
+2. Try to submit payment",Card: 123456789,"Inline error: ""Please enter a valid card number"", card type icon doesn't recognize, submit blocked",
+CHECKOUT_TC_010,Verify checkout credit card form validates expiry date,User entering payment info,"1. Enter past expiry date (MM/YY)
+2. Try to submit",Expiry: 01/20 (past),"Inline error: ""Card has expired"", date field highlighted, payment blocked",
+CHECKOUT_TC_011,Verify checkout credit card form validates CVV,User entering payment info,"1. Enter CVV with <3 digits (or <4 for Amex)
+2. Try to submit",CVV: 12,"Inline error: ""Please enter a valid security code"", CVV field highlighted, validation contextual to card type",
+CHECKOUT_TC_012,Verify checkout order summary updates with all costs in real-time,User modifying cart/options during checkout,"1. Change shipping method
+2. Apply discount code
+3. Observe order summary","Changes: shipping, discount","Summary updates instantly: subtotal, shipping, tax, discount, total - no page reload needed",
+CHECKOUT_TC_013,Verify checkout shows tax calculation based on shipping address,User enters taxable jurisdiction address,"1. Enter address in taxed region (e.g., CA, US)
+2. Observe tax line in summary",Address: taxable location,"Tax calculated and displayed as separate line item, rate shown if configured, total includes tax",
+CHECKOUT_TC_014,Verify checkout allows adding order notes/special instructions,User on checkout review step,"1. Locate ""Order notes"" field
+2. Enter text: ""Leave at door""
+3. Continue",Notes: special instructions,"Notes saved with order, visible in order confirmation and admin order details",
+CHECKOUT_TC_015,Verify checkout requires accepting terms & conditions (if configured),User on final checkout step,"1. Leave terms checkbox unchecked
+2. Try to place order",Terms: not accepted,"Error: ""You must agree to the terms and conditions"", checkbox highlighted, order not placed",
+CHECKOUT_TC_016,Verify checkout successfully places order with valid data,User completes all checkout steps,"1. Fill contact, shipping, payment with valid data
+2. Accept terms
+3. Click ""Pay now""",Data: all valid,"Order confirmation page loads with order number, success message, confirmation email sent, cart cleared",
+CHECKOUT_TC_017,Verify checkout handles payment failure gracefully,User submits payment that declines,"1. Use test declining card number
+2. Submit payment",Payment: declined,"Error message: ""Payment failed. Please try another method"", user remains on payment step, cart not cleared",
+CHECKOUT_TC_018,Verify checkout shows order confirmation with details post-purchase,User completed successful order,"1. After payment success
+2. Observe confirmation page",Order: just placed,"Shows: Order #, date, items list, shipping address, payment method, total, estimated delivery, print/save options",
+CHECKOUT_TC_019,Verify checkout sends order confirmation email immediately,User completed order,"1. Place successful order
+2. Check email inbox (including spam)",Email: customer inbox,"Confirmation email received within 1-2 minutes, contains order details, matches on-screen confirmation",
+CHECKOUT_TC_020,Verify checkout cart is cleared only after successful payment,User has items in cart during checkout,"1. Add items, start checkout
+2. Close browser before payment completion
+3. Reopen cart",Session: interrupted checkout,"Cart items still present (not cleared), user can resume checkout, no duplicate orders created",
+PAYMENT_TC_001,Verify credit card payment processes successfully with valid test card,User on payment step,"1. Enter valid test card (Stripe test: 4242...)
+2. Enter valid expiry, CVV, name
+3. Submit","Card: 4242424242424242
+Expiry: 12/30
+CVV: 123","Payment authorized, order confirmed, success redirect, no errors in console",
+PAYMENT_TC_002,Verify PayPal checkout redirects to PayPal and returns correctly,User selects PayPal,"1. Click PayPal button
+2. Login to PayPal sandbox
+3. Approve payment
+4. Return to store",PayPal: sandbox test,"Redirects to PayPal, payment approved, returns to store confirmation page, order created successfully",
+PAYMENT_TC_003,Verify Apple Pay works on supported devices/browsers,User on iOS/macOS Safari,"1. Click Apple Pay button
+2. Authenticate with FaceID/TouchID
+3. Confirm payment",Device: iOS 10+/macOS Sierra+,"Apple Pay sheet appears, payment authorized, order confirmed without leaving checkout page",
+PAYMENT_TC_004,Verify Google Pay works on supported browsers/devices,User on Chrome/Android,"1. Click Google Pay button
+2. Select saved payment method
+3. Confirm","Browser: Chrome, device: Android","Google Pay bottom sheet appears, payment authorized, order confirmed seamlessly",
+PAYMENT_TC_005,Verify payment form is PCI-compliant (no raw card data in logs),Developer inspects network requests,"1. Submit payment
+2. Check Network tab for card data",DevTools: Network/XHR,"Card number/CVV never sent to store server directly (tokenized via Stripe/PayPal), no sensitive data in logs",
+PAYMENT_TC_006,Verify payment page uses HTTPS and secure headers,User views checkout page source,"1. Check URL protocol
+2. Inspect response headers",URL/Headers,"URL starts with https://, headers include: Strict-Transport-Security, X-Content-Type-Options, CSP",
+PAYMENT_TC_007,Verify saved payment methods work for returning customers,User logged in with saved card,"1. Proceed to checkout
+2. Select saved card from dropdown
+3. Submit",Payment: saved card,"Card details pre-filled (masked), CVV required for security, payment processes successfully",
+PAYMENT_TC_008,Verify payment allows editing billing address different from shipping,User on payment step,"1. Check ""Billing address different from shipping""
+2. Enter separate billing address",Addresses: different,"Billing form appears, both addresses saved to order, receipt uses billing, shipping uses delivery address",
+PAYMENT_TC_009,Verify payment handles 3D Secure authentication flow,User with 3DS-enabled card,"1. Use test 3DS card
+2. Submit payment
+3. Complete challenge in modal","Card: 3DS test (e.g., 4000002500003155)","Redirects to 3DS challenge modal/page, user authenticates, returns to store, payment completes",
+PAYMENT_TC_010,Verify payment shows clear error messages for common failures,User submits problematic payment,"1. Use expired card test number
+2. Submit",Card: expired test,"User-friendly error: ""Your card has expired. Please use a different card or update expiry date.""
+PAYMENT_TC_011,Verify payment retry logic works after transient failure,User experiences network error during payment,1. Simulate network failure during submit",
+PAYMENT_TC_012,Verify payment confirms order only after successful authorization,Developer monitors order creation,"1. Submit payment
+2. Check backend logs/timing",Backend: order creation,"Order record created only after payment gateway confirms authorization (not before), no orphaned orders",
+PAYMENT_TC_013,Verify payment supports multiple currencies at checkout,User changes currency before payment,"1. Switch currency to EUR
+2. Proceed to payment
+3. Observe amounts",Currency: EUR,"All amounts display in EUR, payment gateway receives correct currency code, charge in selected currency",
+PAYMENT_TC_014,Verify payment handles partial authorization (if supported),User with gift card + card combo,"1. Apply gift card covering partial amount
+2. Pay remainder with credit card",Payment: split tender,"System charges gift card first, then credit card for balance, both transactions recorded, order confirmed",
+PAYMENT_TC_015,Verify payment receipt/invoice is generated and accessible,User completed order,"1. After confirmation
+2. Click ""View invoice"" or check email",Order: confirmed,"PDF invoice generated with order details, taxes, payment info, downloadable and printable, matches order",
+ORDER_TC_001,Verify order confirmation page displays all order details correctly,User just placed order,"1. Complete checkout successfully
+2. Observe confirmation page",Order: new,"Shows: Order #, date/time, items with variants/prices, shipping address, payment method, totals, estimated delivery",
+ORDER_TC_002,Verify order confirmation email contains accurate details,User receives post-purchase email,"1. Check email after order
+2. Compare to on-screen confirmation",Email vs Page,"Email matches confirmation page exactly: items, prices, addresses, order number, branding, unsubscribe link",
+ORDER_TC_003,Verify order appears in customer account order history,User logged in after purchase,"1. Login to account
+2. Navigate to Order History",Account: order history,"New order listed with status (Processing), order number, date, total, ""View Details"" link works",
+ORDER_TC_004,Verify order details page in account shows full information,User views specific order,"1. Click ""View Details"" on order in history",Order detail view,"Shows complete order: items, shipping tracking (if available), payment status, invoice download, reorder button",
+ORDER_TC_005,Verify order status updates are communicated to customer,Order progresses through fulfillment,"1. Admin updates order to ""Shipped""
+2. Customer checks account/email",Status change: Processing?Shipped,"Customer receives email notification, account order status updates, tracking number/link provided if applicable",
+ORDER_TC_006,Verify customer can cancel order within allowed timeframe,User wants to cancel recent order,"1. Go to order details in account
+2. Click ""Cancel Order"" (if available)
+3. Confirm","Order: recent, unshipped","Cancellation successful, order status updates to Cancelled, refund initiated if paid, confirmation email sent",
+ORDER_TC_007,Verify customer can request return/exchange through account,User wants to return item,"1. Navigate to order details
+2. Click ""Return items""
+3. Select items and reason",Return: valid request,"Return request submitted, RMA number generated, instructions emailed, order status shows ""Return requested""",
+ORDER_TC_008,Verify order tracking link works and shows carrier updates,Order has been shipped,1. Click tracking number/link in account or email,Tracking: valid carrier #,Redirects to carrier site (UPS/FedEx/etc.) showing real-time shipment status and delivery estimate,
+ORDER_TC_009,Verify reorder functionality adds previous order items to cart,User wants to repurchase,"1. In order history, click ""Reorder"" on past order","Order: completed, in-stock items","All available items from original order added to cart with same variants/quantities, out-of-stock items skipped with notice",
+ORDER_TC_010,Verify order invoice can be downloaded as PDF,User needs receipt for records,"1. In order details, click ""Download Invoice""",Invoice: PDF generation,"PDF downloads with professional layout: store branding, order details, tax breakdown, payment confirmation",
+ACCOUNT_TC_001,Verify account dashboard displays welcome message and quick links,User logged in,1. Login and land on /account,Dashboard: authenticated,"Shows: ""Welcome, [Name]"", quick links to Orders, Addresses, Account Details, Logout",
+ACCOUNT_TC_002,Verify account order history lists all customer orders,User has placed orders,1. Navigate to Order History section,History: multiple orders,"Chronological list of orders with number, date, status, total, items count, filter by date/status works",
+ACCOUNT_TC_003,Verify account allows viewing details of a specific order,User selects an order,1. Click on order number in history,Order detail view,"Shows full order information: items, shipping, payment, timeline, actions (track, return, reorder)",
+ACCOUNT_TC_004,Verify account address book allows adding new address,User manages addresses,"1. Go to Addresses
+2. Click ""Add new address""
+3. Fill form and save",Address: valid new,"Address saved successfully, appears in address list, can be set as default for shipping/billing",
+ACCOUNT_TC_005,Verify account address book allows editing existing address,User has saved addresses,"1. Click ""Edit"" on an address
+2. Modify fields
+3. Save changes",Address: updated info,"Changes saved, address list reflects updates, orders using this address show updated info for future orders",
+ACCOUNT_TC_006,Verify account allows setting default shipping/billing address,User has multiple addresses,"1. In address list, click ""Set as default"" for shipping",Address: selected as default,"Default badge appears on selected address, checkout pre-fills this address for future orders",
+ACCOUNT_TC_007,Verify account allows deleting an address (with confirmation),User wants to remove address,"1. Click ""Delete"" on address
+2. Confirm deletion prompt",Address: to remove,"Address removed from list, confirmation message shown, cannot be selected in future checkouts",
+ACCOUNT_TC_008,Verify account profile section allows updating name and phone,User edits personal info,"1. Go to Account Details
+2. Update first/last name, phone
+3. Save",Profile: updated fields,"Changes saved successfully, reflected in account dashboard and future checkout pre-fills",
+ACCOUNT_TC_009,Verify account profile requires current password to change email,User changing email address,"1. Enter new email
+2. Enter wrong current password
+3. Submit",Current password: incorrect,"Error: ""Current password is incorrect"", email not changed, security maintained",
+ACCOUNT_TC_010,Verify account shows saved payment methods (if enabled),User has saved cards,1. Navigate to Payment Methods section,Payment: saved cards,"Lists masked card numbers (•••• 4242), expiry, brand icon, option to set default or remove",
+ACCOUNT_TC_011,Verify account allows removing a saved payment method,User manages payment methods,"1. Click ""Remove"" on a saved card
+2. Confirm",Card: to remove,"Card removed from saved methods, confirmation message, no longer available at checkout",
+ACCOUNT_TC_012,Verify account wishlist/favorites displays saved items,User has favorited products,1. Go to Wishlist/Favorites section,Wishlist: populated,"Grid/list of saved products with images, prices, availability status, quick add to cart/remove buttons",
+ACCOUNT_TC_013,Verify account allows moving wishlist item to cart directly,User wants to purchase saved item,"1. In wishlist, click ""Add to Cart"" on item",Wishlist item: in stock,"Item added to cart with correct variant, success notification, item remains in wishlist or removed per config",
+ACCOUNT_TC_014,Verify account shows account creation date and last login,User views account details,1. Scroll to account info section,Account metadata,"Displays: ""Member since [date]"", ""Last login: [date/time]"" for user awareness and security",
+ACCOUNT_TC_015,Verify account allows exporting order history as CSV,User needs order records,"1. In Order History, click ""Export orders""
+2. Select date range
+3. Download",Export: CSV format,"CSV file downloads with columns: Order #, Date, Items, Total, Status, Shipping Address - usable in spreadsheets",
+ACCOUNT_TC_016,Verify account session management shows active devices (if implemented),User checks security,1. Navigate to Security/Devices section,Session: active logins,"Lists devices/browsers with login time, location (approx), option to ""Sign out"" other sessions remotely",
+ACCOUNT_TC_017,Verify account allows enabling two-factor authentication (2FA),User enhances security,"1. Go to Security settings
+2. Enable 2FA
+3. Scan QR code with authenticator app",2FA: TOTP setup,"2FA enabled, backup codes provided, future logins require code from app, recovery options explained",
+ACCOUNT_TC_018,Verify account login with 2FA requires code after password,User has 2FA enabled,"1. Enter email/password on login
+2. Enter TOTP code from app",2FA code: valid,"Authentication successful, user logged in, session created, code invalid/expired shows error",
+ACCOUNT_TC_019,Verify account recovery flow works if 2FA device lost,User lost authenticator device,"1. On 2FA prompt, click ""Lost access?""
+2. Use backup code or email recovery",Recovery: backup code,"Backup code accepted, 2FA temporarily bypassed, user prompted to re-setup 2FA, security email sent",
+ACCOUNT_TC_020,Verify account deletion process is clear and requires confirmation,User requests account closure,"1. Navigate to Close Account
+2. Read implications
+3. Confirm with password",Deletion: confirmed,"Account soft-deleted (or hard per policy), data anonymized per privacy policy, confirmation email, login no longer possible",
+UI_UX_TC_001,Verify site maintains consistent branding and design system,User navigates across pages,"1. Visit homepage, product page, cart, checkout",Pages: multiple,"Consistent colors, fonts, button styles, spacing, iconography throughout - no visual discrepancies",
+UI_UX_TC_002,Verify all interactive elements have visible hover/focus states,User interacts with UI,"1. Hover over buttons, links, inputs
+2. Tab through with keyboard",Elements: interactive,"Clear visual feedback: color change, underline, shadow, focus ring - meets WCAG 2.1 AA contrast",
+UI_UX_TC_003,Verify site navigation is intuitive and logical,User explores site structure,"1. Try to find a product category
+2. Try to locate account settings","Navigation: primary, footer","Menu labels clear, hierarchy logical, breadcrumbs on inner pages, ""Back"" buttons work as expected",
+UI_UX_TC_004,Verify site loads skeleton loaders during content fetch,User on slow connection,"1. Throttle network to Slow 3G
+2. Navigate to product page",Loading: async content,"Skeleton screens or spinners show while images/data load, prevents layout shift, perceived performance improved",
+UI_UX_TC_005,Verify error messages are helpful and actionable,User triggers validation errors,"1. Submit form with missing required field
+2. Observe error display",Forms: any with validation,"Errors in red, near relevant field, plain language explaining issue and how to fix (not just ""Invalid"")",
+UI_UX_TC_006,Verify success messages confirm user actions clearly,User completes actions,"1. Add to cart, submit review, place order
+2. Observe feedback",Actions: successful,"Green/toast notifications: ""Added to cart!"", ""Review submitted!"", ""Order confirmed!"" with relevant details",
+UI_UX_TC_007,Verify site supports keyboard-only navigation fully,User without mouse,1. Use Tab/Shift+Tab/Enter to navigate entire flow: browse?product?cart?checkout,Keyboard: full flow,"All interactive elements reachable, logical tab order, skip links, no keyboard traps, visible focus indicators",
+UI_UX_TC_008,Verify site is accessible to screen reader users (basic),User with NVDA/VoiceOver,"1. Enable screen reader
+2. Navigate key pages and actions",Screen reader: enabled,"Proper ARIA labels, heading hierarchy, alt text, form labels, live regions for dynamic updates announced",
+UI_UX_TC_009,Verify site text is resizable up to 200% without breaking layout,User adjusts browser zoom,"1. Zoom browser to 200%
+2. Navigate key pages",Zoom: 200%,"Content reflows appropriately, no horizontal scroll, text remains readable, interactive elements still usable",
+UI_UX_TC_010,Verify site color scheme has sufficient contrast for readability,User with visual impairment,1. Use contrast checker tool on text/background pairs,"Colors: primary text, buttons","All text meets WCAG AA (4.5:1 normal, 3:1 large), buttons have contrast against background",
+UI_UX_TC_011,Verify mobile touch targets are at least 44x44px,User on mobile device,"1. Inspect buttons, links, inputs on mobile viewport",Touch targets: interactive elements,"All tappable elements have minimum 44x44px touch area, adequate spacing between targets to prevent mis-taps",
+UI_UX_TC_012,Verify site avoids auto-playing media or disruptive animations,User visits homepage,1. Load homepage and observe behavior,"Media: images, videos","No auto-playing video/audio, animations respect prefers-reduced-motion, no unexpected pop-ups on entry",
+UI_UX_TC_013,Verify site provides clear visual hierarchy and scannable content,User scans product page,1. View product detail page layout,"Content: headings, text, CTAs","Clear heading levels (H1-H3), bullet points for features, prominent CTA buttons, whitespace for readability",
+UI_UX_TC_014,Verify site handles empty states with helpful guidance,User views empty cart/wishlist,1. Navigate to empty cart or wishlist,State: empty data,"Friendly illustration/message, explains why empty, provides clear next steps (""Start shopping"", ""Browse collections"")",
+UI_UX_TC_015,Verify site provides loading states for async actions,User performs actions,"1. Click Add to Cart, Apply Coupon, Place Order",Actions: async,"Buttons show spinner/disabled state while processing, prevents duplicate submissions, user knows action in progress",
+UI_UX_TC_016,Verify site confirms destructive actions before executing,User attempts delete/remove,"1. Click Remove item from cart or Delete address
+2. Observe prompt",Action: destructive,"Modal/confirmation dialog: ""Are you sure? This cannot be undone."" with Cancel/Confirm buttons",
+UI_UX_TC_017,Verify site maintains scroll position after actions like filtering,User paginates or filters,"1. Scroll down collection page
+2. Apply a filter
+3. Observe scroll position",Scroll: post-action,Page maintains approximate scroll position or returns to top with clear indication of results change,
+UI_UX_TC_018,Verify site provides breadcrumb navigation on inner pages,User on product or collection page,1. Navigate to /collections/jackets/product-xyz,Breadcrumbs: visible,"Shows: Home > Collections > Jackets > Product Name, each segment clickable except current page",
+UI_UX_TC_019,Verify site search provides autocomplete suggestions as user types,User uses search bar,"1. Type ""jac"" in search field
+2. Observe dropdown",Search: partial query,"Dropdown shows suggested products/collections matching prefix, with images/prices, clickable to navigate",
+UI_UX_TC_020,Verify site provides clear 404 error page with recovery options,User visits invalid URL,1. Navigate to /products/nonexistent-item,URL: 404,"Custom 404 page: friendly message, search bar, links to popular collections/homepage, no dead-end experience",
+ERROR_EDGE_TC_001,Verify site handles JavaScript errors gracefully without breaking UI,User encounters script error,"1. Simulate JS error via console
+2. Interact with page",Error: uncaught exception,"Core functionality remains usable, error logged to monitoring service, user not shown raw error stack",
+ERROR_EDGE_TC_02,Verify site handles API timeouts with retry or fallback,User on slow/unstable network,"1. Throttle network to offline then restore
+2. Perform add to cart",Network: flaky,"System retries failed requests, shows ""Connection issue - retrying..."" message, doesn't lose user data",
+ERROR_EDGE_TC_003,Verify site prevents duplicate form submissions via double-click,User rapidly clicks submit,"1. On checkout, double-click ""Place Order"" button",Button: payment submit,"Button disabled after first click, shows spinner, prevents duplicate charges/orders, idempotent backend",
+ERROR_EDGE_TC_004,Verify site handles session expiration during checkout gracefully,User idle during checkout,"1. Start checkout, wait 30+ min idle
+2. Try to continue",Session: expired,"Redirects to login with message ""Session expired"", preserves cart contents, user can resume after re-auth",
+ERROR_EDGE_TC_005,Verify site handles concurrent cart modifications correctly,User has multiple tabs open,"1. Add item in Tab A
+2. Remove same item in Tab B
+3. Refresh both",Tabs: concurrent cart,"Cart state syncs correctly, no race conditions, last valid action wins or merge logic applied",
+ERROR_EDGE_TC_006,Verify site validates and sanitizes all user inputs to prevent XSS,User enters script in input fields,"1. Enter <script>alert('xss')</script> in search, review, address fields
+2. Submit",Input: malicious script,"Input sanitized/escaped, script not executed, stored/displayed as plain text, no XSS vulnerability",
+ERROR_EDGE_TC_007,Verify site handles extremely long input values without breaking,User enters max-length+ data,"1. Paste 10,000 character string in name/address field
+2. Submit",Input: extremely long,"Backend truncates or rejects with validation error, frontend has maxlength attribute, no server error/500",
+ERROR_EDGE_TC_008,Verify site handles special characters in user input correctly,User enters unicode/special chars,"1. Enter names/addresses with emojis, accented chars, symbols: José ?? Müller & Co.
+2. Save/submit","Input: unicode, special","Data stored and displayed correctly, no encoding issues, search/filter works with special characters",
+ERROR_EDGE_TC_009,Verify site handles timezone differences for order dates/times,User in different timezone than server,"1. Place order at 11 PM local time
+2. Check order confirmation and account",Timezone: user vs server,"Dates/times displayed in user's local timezone (or clearly labeled), no confusion about order timing",
+ERROR_EDGE_TC_010,Verify site handles daylight saving time transitions correctly,User orders around DST change,"1. Place order during DST transition hour
+2. Verify timestamps",Time: DST boundary,"System handles ambiguous/nonexistent times correctly, logs use UTC, display converts properly to local time",
+ERROR_EDGE_TC_011,Verify site prevents price manipulation via client-side edits,User modifies frontend price,"1. Use browser dev tools to change product price HTML to $0.01
+2. Add to cart and checkout",Price: client-modified,"Backend validates price against database, charges correct price, ignores client-side tampering, logs attempt",
+ERROR_EDGE_TC_012,Verify site prevents adding more inventory than available,User tries to exceed stock,"1. Product has 5 in stock
+2. Try to add quantity 10 to cart
+3. Try to checkout with 6+",Inventory: limited,"Frontend limits quantity selector to available stock, backend validates on add-to-cart and checkout, blocks overage",
+ERROR_EDGE_TC_013,Verify site handles concurrent purchases of last item correctly,Two users buy last item simultaneously,"1. User A and B both have last item in cart
+2. User A checks out first
+3. User B tries to checkout",Inventory: race condition,"First user succeeds, second user gets ""Item no longer available"" error at checkout, inventory never goes negative",
+ERROR_EDGE_TC_014,Verify site handles payment gateway downtime gracefully,Payment service unavailable,"1. Simulate payment API failure
+2. User attempts checkout",Gateway: down,"User sees friendly message ""Payment service temporarily unavailable. Please try again later."" with retry option, order not created",
+ERROR_EDGE_TC_015,Verify site logs errors securely without exposing sensitive data,Developer checks error logs,"1. Trigger various errors
+2. Review server/application logs",Logs: error tracking,"Logs contain error context but NOT: passwords, full card numbers, PII; uses log levels, structured logging",
+ERROR_EDGE_TC_016,Verify site rate-limits abusive requests to prevent DoS,User/bot makes rapid requests,"1. Script sends 100 requests/second to product API
+2. Observe responses",Requests: high frequency,"After threshold, returns 429 Too Many Requests, implements exponential backoff suggestion, protects backend",
+ERROR_EDGE_TC_017,Verify site handles corrupted or malformed cookie data,User has invalid session cookie,"1. Manually edit cookie to invalid JSON/value
+2. Refresh page",Cookie: corrupted,"System detects invalid session, clears bad cookie, redirects to login or starts new guest session, no crash",
+ERROR_EDGE_TC_018,Verify site handles browser back button during checkout appropriately,User navigates back in checkout flow,"1. Proceed to payment step
+2. Click browser Back button
+3. Observe behavior",Navigation: browser back,"Either: stays on current step with warning, or returns to previous step with data preserved, no data loss or duplicate submission",
+ERROR_EDGE_TC_019,Verify site handles copy-paste of formatted text into inputs,User pastes rich text,"1. Copy formatted text from Word/website
+2. Paste into name/address/review field",Input: pasted rich text,"System strips formatting, keeps plain text only, no HTML/CSS injected, displays correctly",
+ERROR_EDGE_TC_020,Verify site provides clear contact/support options when errors occur,User encounters unresolvable error,"1. Trigger 500 error or payment failure
+2. Look for help",Error: unhandled,"Page shows: friendly error message, reference ID for support, link to Help Center, email/chat contact option",
+PERF_SEC_TC_001,Verify homepage loads in under 2 seconds on fast 4G,User on mobile network,"1. Test with Lighthouse/WebPageTest
+2. Simulate Fast 4G",Performance: mobile,"First Contentful Paint <1.8s, Largest Contentful Paint <2.5s, passes Core Web Vitals thresholds",
+PERF_SEC_TC_002,Verify product images are optimized and lazy-loaded,User scrolls product collection,"1. Open Network tab
+2. Scroll down collection page",Images: below fold,"Images load only when near viewport (lazy-load), served in modern format (WebP/AVIF), responsive sizes via srcset",
+PERF_SEC_TC_003,Verify critical CSS is inlined for above-fold content,User loads page,"1. View page source
+2. Check <head> for styles",CSS: critical path,"Critical styles inlined in <style> tag, non-critical CSS loaded async, no render-blocking resources above fold",
+PERF_SEC_TC_004,Verify JavaScript bundles are code-split and lazy-loaded,User navigates site,"1. Check Network tab for JS files
+2. Navigate to checkout",JS: bundling,"Initial load only loads essential JS, checkout-specific code loaded only when needed, reduces initial bundle size",
+PERF_SEC_TC_005,Verify site uses browser caching effectively for static assets,User revisits site,"1. Load page first time
+2. Reload page
+3. Check Cache-Control headers",Assets: static,"Images, CSS, JS have long cache TTL (1 year), versioned filenames, reload uses cache, 304 Not Modified responses",
+PERF_SEC_TC_006,Verify site implements Content Security Policy (CSP) headers,Security audit,"1. Check response headers
+2. Validate CSP directives",Headers: security,"CSP header present with strict-dynamic, nonce for inline scripts, blocks unsafe-eval, reports violations",
+PERF_SEC_TC_007,Verify site uses HTTPS exclusively with HSTS enabled,User accesses site,"1. Try http:// URL
+2. Check Strict-Transport-Security header",Protocol: HTTP?HTTPS,"HTTP redirects to HTTPS automatically, HSTS header with long max-age, preload directive if applicable",
+PERF_SEC_TC_008,Verify site protects against common web vulnerabilities (OWASP Top 10),Security scan,"1. Run automated scan (ZAP, Burp)
+2. Test manual injection attempts",Security: penetration test,"No SQL injection, XSS, CSRF vulnerabilities found; proper input validation, output encoding, CSRF tokens",
+PERF_SEC_TC_009,Verify user passwords are hashed securely in backend,Developer checks database,"1. Register new user
+2. Inspect users table in DB",Storage: passwords,"Passwords stored as bcrypt/Argon2 hashes with salt, never plaintext or weak MD5/SHA1, hashing params logged securely",
+PERF_SEC_TC_010,Verify site implements proper session management,Security review,"1. Login and inspect session cookie
+2. Check session fixation/rotation",Session: cookie,"Session cookie has Secure, HttpOnly, SameSite=Strict flags, session ID regenerated on login, timeout enforced",
+PERF_SEC_TC_011,Verify API endpoints require authentication for protected resources,API security test,"1. Call /api/orders without auth token
+2. Call with valid token",API: protected endpoints,"Unauthenticated requests return 401 Unauthorized, authenticated requests with valid token return data, scope enforced",
+PERF_SEC_TC_012,Verify site rate-limits login attempts to prevent brute force,Security testing,"1. Script attempts 20 login tries with wrong passwords
+2. Observe responses",Auth: brute force,"After 5-10 failures, returns 429 or introduces delay, locks account temporarily, logs suspicious activity",
+PERF_SEC_TC_013,Verify site sanitizes file uploads to prevent malicious files,User uploads profile image,"1. Try to upload .php/.exe file as avatar
+2. Upload valid .jpg/.png",Upload: file validation,"System rejects non-image extensions, validates MIME type server-side, scans for malware, stores outside web root",
+PERF_SEC_TC_014,Verify site uses parameterized queries to prevent SQL injection,Backend code review,"1. Review database query code
+2. Test with SQL injection payloads",Database: queries,"All queries use prepared statements/ORM parameterization, no string concatenation with user input, input validated",
+PERF_SEC_TC_015,Verify site implements proper CORS configuration for APIs,API security,"1. Check CORS headers on API responses
+2. Test cross-origin requests from malicious domain",CORS: configuration,"CORS allows only trusted origins, not wildcard *, credentials handled securely, preflight requests work correctly",
+PERF_SEC_TC_016,Verify site logs security events for monitoring and audit,Security monitoring,"1. Trigger failed logins, admin actions
+2. Check security log stream",Logging: security events,"Logs capture: timestamp, user/IP, action, result; sent to SIEM, retained per policy, alerting on anomalies",
+PERF_SEC_TC_017,Verify site dependencies are scanned for known vulnerabilities,DevOps pipeline,"1. Run npm audit / Snyk / Dependabot
+2. Review reported issues",Dependencies: third-party,"No critical/high CVEs in dependencies, automated PRs for updates, pinned versions, regular dependency reviews",
+PERF_SEC_TC_018,Verify site has a documented security incident response plan,Compliance review,"1. Request security documentation
+2. Review incident response procedure",Documentation: security,"Plan exists with: roles, communication steps, containment procedures, legal/compliance contacts, post-mortem process",
+PERF_SEC_TC_019,Verify site undergoes regular security testing and penetration tests,Security posture,"1. Request latest pentest report summary
+2. Check testing frequency",Testing: schedule,"Annual third-party penetration tests, quarterly vulnerability scans, bug bounty program, findings tracked to resolution",
+PERF_SEC_TC_020,Verify site complies with data privacy regulations (GDPR/CCPA),Privacy audit,"1. Review cookie consent, data export/delete flows
+2. Check privacy policy",Compliance: privacy law,"Clear cookie consent banner, easy data access/deletion requests, data minimization, privacy policy updated, DPO contact",
+MOBILE_RESP_TC_001,Verify site is fully responsive on mobile viewports (320px-414px),User on smartphone,"1. Test at 320px, 375px, 414px widths
+2. Verify layout and interactions",Viewport: mobile,"Content reflows correctly, no horizontal scroll, touch targets adequate, fonts readable, images scale",
+MOBILE_RESP_TC_002,Verify mobile navigation menu is accessible and usable,User on mobile device,"1. Tap hamburger menu
+2. Navigate through categories
+3. Close menu",Navigation: mobile,"Menu opens smoothly, categories expandable, back button works, close/X visible, keyboard doesn't obstruct",
+MOBILE_RESP_TC_003,Verify product images are tappable and zoomable on mobile,User on product page mobile,"1. Tap product image
+2. Swipe through gallery
+3. Pinch to zoom (if supported)",Touch: image interaction,"Image opens in lightbox, swipe gestures work, pinch zoom functional or double-tap to zoom, close button easy to tap",
+MOBILE_RESP_TC_004,Verify mobile checkout form inputs trigger correct keyboards,User enters checkout on mobile,"1. Tap email field
+2. Tap credit card number field
+3. Tap expiry field",Inputs: form fields,"Email: shows @ keyboard, Card: numeric keypad, Expiry: MM/YY picker or numeric, improves data entry speed",
+MOBILE_RESP_TC_005,Verify mobile site avoids horizontal scrolling in content areas,User scrolls product list mobile,"1. Browse collections on mobile
+2. Observe horizontal movement",Layout: mobile content,"No unintended horizontal scroll, content fits viewport width, carousels swipe horizontally intentionally",
+MOBILE_RESP_TC_006,Verify mobile buttons and CTAs are easily tappable (min 44px),User interacts with mobile UI,"1. Attempt to tap Add to Cart, Checkout buttons",Touch targets: mobile CTAs,"All primary buttons have minimum 44x44px touch area, adequate spacing between interactive elements",
+MOBILE_RESP_TC_007,Verify mobile site loads efficiently on 3G networks,User on slow mobile connection,"1. Throttle to Slow 3G in DevTools
+2. Load homepage and product page",Network: mobile 3g,"Critical content loads in <5s, images lazy-load, non-essential JS deferred, perceived performance acceptable",
+MOBILE_RESP_TC_008,Verify mobile site handles orientation changes gracefully,User rotates device,"1. View page in portrait
+2. Rotate to landscape
+3. Rotate back",Orientation: portrait/landscape,"Layout adapts smoothly, no content cutoff, images reflow, form inputs remain usable, no JS errors",
+MOBILE_RESP_TC_009,Verify mobile search is optimized for thumb-friendly use,User searches on mobile,"1. Tap search icon
+2. Type query
+3. Select suggestion",Search: mobile UX,"Search bar expands to full width, keyboard appears with search action button, suggestions easy to tap",
+MOBILE_RESP_TC_010,Verify mobile cart drawer is accessible and doesn't block content,User opens mini-cart mobile,"1. Tap cart icon
+2. View items in drawer
+3. Close drawer",Cart: mobile drawer,"Drawer slides up/in without covering critical info, close button prominent, scrollable if many items",
+MOBILE_RESP_TC_011,Verify mobile product variant selectors are easy to use,User selects options on mobile,1. Tap size/color selectors on product page,Selectors: mobile interaction,"Selectors use native pickers or large tap targets, selected state clear, updates price/inventory visibly",
+MOBILE_RESP_TC_012,Verify mobile checkout flow minimizes steps and typing,User checks out on mobile,1. Proceed through mobile checkout,Checkout: mobile flow,"Autofill enabled, address lookup, saved payment methods, minimal required fields, progress indicator clear",
+MOBILE_RESP_TC_013,Verify mobile site supports browser autofill for forms,User with saved info,1. Tap email/name/address fields in checkout,Autofill: browser saved,"Browser suggests saved info, user can select to auto-fill fields, works for contact, shipping, payment",
+MOBILE_RESP_TC_014,Verify mobile site handles virtual keyboard overlay correctly,User types on mobile,"1. Focus input field
+2. Observe page behavior with keyboard open",Keyboard: mobile virtual,"Page scrolls to keep focused input visible, doesn't hide submit button, layout adjusts for keyboard height",
+MOBILE_RESP_TC_015,Verify mobile site provides clear feedback for touch interactions,User taps buttons/links,1. Tap interactive elements on mobile,Feedback: touch,"Visual feedback on tap (ripple, color change), haptic feedback if supported, confirms action registration",
+MOBILE_RESP_TC_016,Verify mobile site avoids hover-dependent interactions,User on touch device,1. Try to access hover menus on mobile,Interactions: hover vs tap,"No critical functionality requires hover; menus use tap-to-open, tooltips accessible via tap or always visible",
+MOBILE_RESP_TC_017,Verify mobile site loads web fonts efficiently without FOIT/FOUT,User loads page on mobile,1. Observe text rendering during load,Fonts: web font loading,"Uses font-display: swap, critical text in system font fallback, no invisible text flash, fonts load quickly",
+MOBILE_RESP_TC_018,Verify mobile site respects user preferences for reduced motion,User has prefers-reduced-motion,"1. Set OS preference to reduce motion
+2. Visit site",Accessibility: motion preference,"Animations disabled or simplified, no auto-scrolling carousels, transitions respect user setting",
+MOBILE_RESP_TC_019,Verify mobile site provides easy way to return to top of long pages,User scrolls down mobile page,"1. Scroll to bottom of collection
+2. Look for scroll-to-top",Navigation: scroll,"Floating scroll-to-top button appears after scrolling, or sticky header with link, one-tap to return",
+MOBILE_RESP_TC_020,Verify mobile site handles poor connectivity with offline support (basic),User goes offline,"1. Enable offline mode in DevTools
+2. Try to browse cached pages",Connectivity: offline,"Previously visited pages load from cache, clear message when content unavailable, retry option when back online",
