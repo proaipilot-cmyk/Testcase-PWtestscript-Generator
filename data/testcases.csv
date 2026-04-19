@@ -7,10 +7,10 @@ TC_002,Verify login denied for locked out user,User is on the login page,"1. Ent
 3. Click Login button","username: locked_out_user, password: secret_sauce","Error message displayed: Sorry, this user has been locked out."
 TC_003,Verify login fails with invalid username,User is on the login page,"1. Enter invalid username
 2. Enter valid password
-3. Click Login button","username: invalid_user, password: secret_sauce",Error message: Epic sadface: Username and password do not match any user in this service
+3. Click Login button","username: invalid_user, password: secret_sauce","Error message: Epic sadface: Username and password do not match any user in this service"
 TC_004,Verify login fails with invalid password,User is on the login page,"1. Enter valid username
 2. Enter invalid password
-3. Click Login button","username: standard_user, password: wrong_pass",Error message: Epic sadface: Username and password do not match any user in this service
+3. Click Login button","username: standard_user, password: wrong_pass","Error message: Epic sadface: Username and password do not match any user in this service"
 TC_005,Verify user can add item to cart,User is logged in and on Products page,"1. Click on Add to Cart button for Backpack
 2. Verify item is added","item: Backpack, quantity: 1","Item is added to cart, cart count increments to 1"
 TC_006,Verify user can remove item from cart,User has items in cart,"1. Click on Remove button for item

@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "run": {
+    "run_id": "20260419T114916",
+    "started_at": "2026-04-19T11:49:16.374490+00:00",
+    "finished_at": "2026-04-19T11:49:22.320345+00:00",
+    "duration_ms": 5658,
+    "exitstatus": 0,
+    "results_root": "C:/myprojects/Project0/test-results",
+    "summary": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "broken": 0,
+      "skipped": 0,
+      "pass_rate": 100.0
+    },
+    "environment": {
+      "python": "3.14.3",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "pytest": "9.0.3",
+      "cwd": "C:\\myprojects\\Project0",
+      "video_mode": "on-failure",
+      "screenshot_mode": "on-failure",
+      "trace_mode": "on-failure"
+    }
+  },
+  "tests": [
+    {
+      "stable_id": "runs/run_20260419_171915/tests/test_automation.py::test_cart_operations",
+      "nodeid": "runs/run_20260419_171915/tests/test_automation.py::test_cart_operations",
+      "display_name": "test_cart_operations",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 871,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 13
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 723
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 135
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_171915/tests/test_automation.py::test_login_error_scenarios[TC_002]",
+      "nodeid": "runs/run_20260419_171915/tests/test_automation.py::test_login_error_scenarios[TC_002]",
+      "display_name": "test_login_error_scenarios[TC_002]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_002",
+      "parameters": {
+        "username": "'locked_out_user'",
+        "password": "'secret_sauce'",
+        "expected_error": "'Error message displayed: Sorry, this user has been locked out.'"
+      },
+      "status": "passed",
+      "duration_ms": 674,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 17
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 646
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 11
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_171915/tests/test_automation.py::test_login_error_scenarios[TC_003]",
+      "nodeid": "runs/run_20260419_171915/tests/test_automation.py::test_login_error_scenarios[TC_003]",
+      "display_name": "test_login_error_scenarios[TC_003]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_003",
+      "parameters": {
+        "username": "'invalid_user'",
+        "password": "'secret_sauce'",
+        "expected_error": "'Error message: Epic sadface: Username and password do not match any user in this service'"
+      },
+      "status": "passed",
+      "duration_ms": 655,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 16
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 627
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 12
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_171915/tests/test_automation.py::test_login_error_scenarios[TC_004]",
+      "nodeid": "runs/run_20260419_171915/tests/test_automation.py::test_login_error_scenarios[TC_004]",
+      "display_name": "test_login_error_scenarios[TC_004]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_004",
+      "parameters": {
+        "username": "'standard_user'",
+        "password": "'wrong_pass'",
+        "expected_error": "'Error message: Epic sadface: Username and password do not match any user in this service'"
+      },
+      "status": "passed",
+      "duration_ms": 646,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 14
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 621
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 11
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_171915/tests/test_automation.py::test_login_success",
+      "nodeid": "runs/run_20260419_171915/tests/test_automation.py::test_login_success",
+      "display_name": "test_login_success",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 2812,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 1955
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 840
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 17
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    }
+  ]
+}

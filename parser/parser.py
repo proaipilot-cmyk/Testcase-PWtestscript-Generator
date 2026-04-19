@@ -357,8 +357,8 @@ class TestCaseParser:
         if not test_data_raw:
             return test_data
         
-        # Split by both newlines and commas
-        entries = re.split(r'[,\n]', test_data_raw)
+        # Split by commas, newlines, or both - handles: "key: value, key: value" and "key: value\nkey: value"
+        entries = re.split(r'[,\n]+', test_data_raw)
         
         for entry in entries:
             entry = entry.strip()

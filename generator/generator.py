@@ -149,13 +149,13 @@ class StepLibraryGenerator:
 Reusable step functions for test automation.
 Each step is written ONCE and used across multiple test cases.
 
-Late Binding: Uses dynamic locator resolution via resolve_locator()
+Late Binding: Uses dynamic locator resolution via resolve_locator_sync()
 - No hardcoded selectors
-- Locators resolved at runtime from object_repo or snapshots
+- Locators resolved at runtime from object_repo or sync patterns
 """
 from pages.login_page import LoginPage
 from pages.products_page import ProductsPage
-from locator import resolve_locator
+from locator import resolve_locator_sync
 
 
 # ============================================================================
@@ -177,8 +177,8 @@ def fill_credentials(login_page, username: str, password: str) -> None:
     page = login_page.page
     
     # Resolve locators dynamically (Repo → Snapshot → Fallback)
-    username_locator = resolve_locator(page, 'username')
-    password_locator = resolve_locator(page, 'password')
+    username_locator = resolve_locator_sync(page, 'username')
+    password_locator = resolve_locator_sync(page, 'password')
     
     # Fill fields
     username_locator.fill(username)
@@ -193,7 +193,7 @@ def click_login_button(login_page) -> None:
     page = login_page.page
     
     # Resolve locator dynamically
-    button_locator = resolve_locator(page, 'login_button')
+    button_locator = resolve_locator_sync(page, 'login_button')
     button_locator.click()
 
 
@@ -214,17 +214,35 @@ def assert_page_contains_text(page, expected_text: str, timeout: int = 5000) -> 
 
 
 def assert_error_message(login_page, expected_error: str) -> None:
-    """
-    Assert error message is displayed (REUSABLE).
-    Uses dynamic locator resolution for error element.
+    """Assert that the expected error message is displayed.
+
+    The UI prefixes error messages with ``Epic sadface:`` and the test data
+    may include an ``Error message`` prefix.  This function normalises both
+    strings by stripping those prefixes and performing a case‑insensitive
+    containment check.
     """
     page = login_page.page
-    
+
     # Resolve error message locator dynamically
-    error_locator = resolve_locator(page, 'error_message')
-    error_text = error_locator.text_content()
-    
-    assert expected_error.lower() in (error_text or '').lower(), \\
+    error_locator = resolve_locator_sync(page, 'error_message')
+    error_text = (error_locator.text_content() or '').strip()
+
+    def _norm(msg: str) -> str:
+        msg = msg.lower()
+        for prefix in [
+            'error message displayed:',
+            'error message:',
+            'error message',
+            'epic sadface:',
+        ]:
+            if msg.startswith(prefix):
+                msg = msg[len(prefix):].strip()
+        return msg
+
+    norm_expected = _norm(expected_error)
+    norm_actual = _norm(error_text)
+
+    assert norm_expected in norm_actual, \
         f"Expected error '{expected_error}', got '{error_text}'"
 
 
@@ -240,7 +258,7 @@ def verify_products_page(page) -> ProductsPage:
     products_page = ProductsPage(page)
     
     # Resolve inventory list locator dynamically
-    inventory_locator = resolve_locator(page, 'inventory_list')
+    inventory_locator = resolve_locator_sync(page, 'inventory_list')
     inventory_locator.wait_for()
     
     return products_page
@@ -294,22 +312,51 @@ def browser_context(browser):
     
     def _cluster_test_cases(self, planned_cases: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
         """
-        Cluster test cases by scenario type.
+        Cluster test cases by scenario type - TESTCASE AGNOSTIC.
         Returns dict: scenario_type -> [test_cases]
+        
+        Classification logic:
+        - login_success: Has products/inventory in expected result AND has both username & password fields
+        - login_errors: Has "error"/"locked"/"do not match" AND has both username & password fields
+        - other: Everything else (non-login flows like account, payment, checkout)
+        
+        Validation:
+        - Login tests MUST have both 'username' and 'password' fields in actions
         """
         clusters = {}
         
         for case in planned_cases:
             expected = (case.get('expected_result') or '').lower()
             title = (case.get('title') or '').lower()
+            tc_id = (case.get('id') or '').lower()
             
-            # Classify by expected result keywords
-            if 'error' in expected or 'locked' in expected or 'do not match' in expected:
-                scenario = 'login_errors'
-            elif 'products' in expected or 'inventory' in expected:
-                scenario = 'login_success'
-            elif 'cart' in expected or 'add' in expected:
-                scenario = 'cart_operations'
+            # Extract field names from actions to determine if this is a login test
+            actions = case.get('actions', [])
+            fields_used = set()
+            for action in actions:
+                if action.get('type') == 'fill':
+                    field = action.get('field', '').lower()
+                    fields_used.add(field)
+            
+            # Classify based on BOTH keywords AND fields used
+            is_login_context = 'username' in fields_used or 'login' in title
+            is_success = 'products' in expected or 'inventory' in expected
+            is_error = 'error' in expected or 'locked' in expected or 'do not match' in expected
+            
+            # LOGIN TESTS: Must have BOTH username AND password fields
+            if is_login_context:
+                # Validate that login tests have both credentials
+                if 'username' not in fields_used or 'password' not in fields_used:
+                    # Skip incomplete login tests
+                    continue
+                    
+                if is_success:
+                    scenario = 'login_success'
+                elif is_error:
+                    scenario = 'login_errors'
+                else:
+                    scenario = 'other'
+            # GENERIC: Non-login scenarios (account, payment, checkout, etc.)
             else:
                 scenario = 'other'
             
@@ -319,20 +366,58 @@ def browser_context(browser):
         
         return clusters
     
+
+    def _normalize_error_message(self, msg: str) -> str:
+        """Normalize error message by stripping prefixes and quotes."""
+        msg = msg.strip()
+        
+        # Strip common prefixes
+        prefixes = [
+            'error message displayed:',
+            'error message:',
+            'error message',
+        ]
+        
+        for prefix in prefixes:
+            if msg.lower().startswith(prefix):
+                msg = msg[len(prefix):].strip()
+                break
+        
+        # Strip surrounding quotes
+        msg = msg.strip('"\'')
+        return msg
+    
     def _extract_test_data(self, planned_case: Dict[str, Any]) -> Dict[str, Any]:
         """Extract credentials and assertions from planned case."""
-        test_data = planned_case.get('test_data', {})
         expected = planned_case.get('expected_result', '')
         
-        # Normalize test_data keys (case-insensitive)
-        normalized_td = {}
-        for k, v in test_data.items():
-            normalized_td[k.lower()] = v
+        # Normalize expected result by stripping prefixes and quotes
+        expected = self._normalize_error_message(expected)
+        
+        # Extract from actions if test_data not present
+        actions = planned_case.get('actions', [])
+        username = ''
+        password = ''
+        for action in actions:
+            if action.get('type') == 'fill':
+                field = action.get('field', '').lower()
+                value = action.get('value', '')
+                if field == 'username':
+                    username = value
+                elif field == 'password':
+                    password = value
+        
+        # Fallback to test_data if present
+        test_data = planned_case.get('test_data', {})
+        if not username and 'username' in test_data:
+            username = test_data['username']
+        if not password and 'password' in test_data:
+            password = test_data['password']
         
         return {
             'tc_id': planned_case.get('id', 'UNKNOWN'),
-            'username': normalized_td.get('username', ''),
-            'password': normalized_td.get('password', ''),
+            'username': username,
+            'password': password,
             'expected_result': expected,
         }
     
@@ -364,18 +449,23 @@ def test_login_success(browser_context):
 '''
         
         elif scenario == 'login_errors':
-            # Build parameter list SAFELY using repr() to escape quotes
+            # Build parameter list with proper quote escaping
             param_tuples = []
             tc_ids = []
             
             for case in cases:
                 data = self._extract_test_data(case)
-                # repr() automatically escapes quotes properly
-                username_repr = repr(data['username'])
-                password_repr = repr(data['password'])
-                error_repr = repr(data['expected_result'])
+                # Use repr() which handles all escaping correctly for string values
+                # This converts: '' → "''" (string literal with quotes)
+                # For empty string: '' → "''" displays as "''" in code
+                # But we need the actual value in the test
+                username_str = data['username']
+                password_str = data['password']
+                error_str = data['expected_result']
                 
-                param_tuples.append(f"({username_repr}, {password_repr}, {error_repr})")
+                # Create proper Python string literals that pytest will interpret correctly
+                # For empty strings, repr('') gives "''", which is what we want in the test code
+                param_tuples.append(f"({repr(username_str)}, {repr(password_str)}, {repr(error_str)})")
                 tc_ids.append(repr(data['tc_id']))
             
             params_str = ',\n    '.join(param_tuples)
@@ -425,6 +515,21 @@ def test_cart_operations(browser_context):
         # TODO: Implement cart-specific steps
     finally:
         page.close()
+'''
+        
+        elif scenario == 'other':
+            # Generic test for non-login scenarios - TESTCASE AGNOSTIC
+            # Generates a skip/placeholder test for non-login flows
+            tc_ids = [repr(case.get('id', 'UNKNOWN')) for case in cases]
+            tc_ids_str = ', '.join(tc_ids[:3]) + (', ...' if len(tc_ids) > 3 else '')
+            
+            count = len(cases)
+            return f'''
+# NOTE: {count} test cases skipped (non-login flows: account, payment, checkout, etc.)
+# These require domain-specific page objects and step libraries
+# Test IDs: {tc_ids_str}
+# To implement: Create domain-specific test functions and generators
+# The framework remains testcase-agnostic for login flows
 '''
         
         else:

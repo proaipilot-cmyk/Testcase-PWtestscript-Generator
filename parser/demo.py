@@ -17,7 +17,7 @@ from parser import TestCaseParser
 def main():
     """Run parser demo and display results."""
     
-    csv_file = Path(__file__).parent.parent / "data" / "AdditionalCases.csv"
+    csv_file = Path(__file__).parent.parent / "data" / "Source_TestCase.csv"
     
     print("=" * 80)
     print("🚀 PARSER DEMO - Test Case Structure Conversion")
