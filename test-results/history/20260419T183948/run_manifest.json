@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "run": {
+    "run_id": "20260419T183948",
+    "started_at": "2026-04-19T18:39:48.609657+00:00",
+    "finished_at": "2026-04-19T18:40:32.738518+00:00",
+    "duration_ms": 42254,
+    "exitstatus": 1,
+    "results_root": "C:/myprojects/Project0/test-results",
+    "summary": {
+      "total": 6,
+      "passed": 0,
+      "failed": 6,
+      "broken": 0,
+      "skipped": 0,
+      "pass_rate": 0.0
+    },
+    "environment": {
+      "python": "3.14.3",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "pytest": "9.0.2",
+      "cwd": "C:\\myprojects\\Project0",
+      "video_mode": "on-failure",
+      "screenshot_mode": "on-failure",
+      "trace_mode": "on-failure"
+    }
+  },
+  "tests": [
+    {
+      "stable_id": "runs/run_20260420_000941/tests/test_automation.py::test_tc_001",
+      "nodeid": "runs/run_20260420_000941/tests/test_automation.py::test_tc_001",
+      "display_name": "test_tc_001",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "failed",
+      "duration_ms": 8895,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 2818
+        },
+        "call": {
+          "outcome": "failed",
+          "duration_ms": 6062
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 15
+        }
+      },
+      "failure": {
+        "phase": "call",
+        "message": "tests\\test_automation.py:37: AssertionError",
+        "trace": "browser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_001(browser_context):\n        \"\"\"\n        Verify successful login with valid credentials\n        Expected: Products\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Enter username\n            locator = resolve_locator_sync(page, 'username')\n            if locator:\n                locator.fill('standard_user')\n            # Enter password\n            locator = resolve_locator_sync(page, 'password')\n            if locator:\n                locator.fill('secret_sauce')\n            # Click Login button\n            locator = resolve_locator_sync(page, 'login_button')\n            if locator:\n                locator.click()\n            # Assert: Products\n            try:\n>               page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('products')})\",\n                    timeout=5000\n                )\n\ntests\\test_automation.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nC:\\Python314\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:11599: in wait_for_function\n    self._sync(\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_page.py:1110: in wait_for_function\n    return await self._main_frame.wait_for_function(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_frame.py:878: in wait_for_function\n    await self._channel.send(\"waitForFunction\", self._timeout, params)\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:69: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <playwright._impl._connection.Connection object at 0x000001C2602DC050>\ncb = <function Channel.send.<locals>.<lambda> at 0x000001C26037B060>, is_internal = False\ntitle = None\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False, title: str = None\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        st: List[inspect.FrameInfo] = getattr(\n            task, \"__pw_stack__\", None\n        ) or inspect.stack(0)\n    \n        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal, title)\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 5000ms exceeded.\n\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:559: TimeoutError\n\nDuring handling of the above exception, another exception occurred:\n\nbrowser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_001(browser_context):\n        \"\"\"\n        Verify successful login with valid credentials\n        Expected: Products\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Enter username\n            locator = resolve_locator_sync(page, 'username')\n            if locator:\n                locator.fill('standard_user')\n            # Enter password\n            locator = resolve_locator_sync(page, 'password')\n            if locator:\n                locator.fill('secret_sauce')\n            # Click Login button\n            locator = resolve_locator_sync(page, 'login_button')\n            if locator:\n                locator.click()\n            # Assert: Products\n            try:\n                page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('products')})\",\n                    timeout=5000\n                )\n            except Exception:\n                content = page.content().lower()\n>               assert 'products' in content, f\"Expected text {repr('Products')} not found\"\nE               AssertionError: Expected text 'Products' not found\nE               assert 'products' in '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/favicon.ico\"><meta name=\"robots\" content=\"noindex\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#ffffff\"><meta name=\"description\" content=\"sauce labs swag labs app\"><link rel=\"apple-touch-icon\" href=\"/icon/icon-192x192.png\"><link rel=\"manifest\" href=\"/manifest.json\"><script type=\"text/javascript\">!function(n){if(\"/\"===n.search[1]){var a=n.search.slice(1).split(\"&\").map(function(n){return n.replace(/~and~/g,\"&\")}).join(\"?\");window.history.replacestate(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=dm+mono:wght@400;500&amp;family=dm+sans:wght@400;500\"><title>swag labs</title><script defer=\"defer\" src=\"/static/js/main.bcf4bc5f.js\"></script><link href=\"/static/css/main.8a7d64a1.css\" rel=\"stylesheet\"></head><body><noscript>you need to enable javascript to run this app.</noscript><div id=\"root\"><div class=\"login_container\"><div class=\"login_logo\">swag labs</div><div class=\"login_wrapper\" data-test=\"login-container\"><div class=\"login_wrapper-inner\"><div id=\"...tton_container\" class=\"form_column\"><div class=\"login-box\"><form><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"username\" type=\"text\" data-test=\"username\" id=\"user-name\" name=\"user-name\" autocorrect=\"off\" autocapitalize=\"none\" value=\"standard_user\"></div><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"password\" type=\"password\" data-test=\"password\" id=\"password\" name=\"password\" autocorrect=\"off\" autocapitalize=\"none\" value=\"secret_sauce\"></div><div class=\"error-message-container\"></div><input type=\"submit\" class=\"submit-button btn_action\" data-test=\"login-button\" id=\"login-button\" name=\"login-button\" value=\"login\"></form></div></div></div><div class=\"login_credentials_wrap\" data-test=\"login-credentials-container\"><div class=\"login_credentials_wrap-inner\"><div id=\"login_credentials\" class=\"login_credentials\" data-test=\"login-credentials\"><h4>accepted usernames are:</h4>standard_user<br>locked_out_user<br>problem_user<br>performance_glitch_user<br>error_user<br>visual_user<br></div><div class=\"login_password\" data-test=\"login-password\"><h4>password for all users:</h4>secret_sauce</div></div></div></div></div></div></body></html>'\n\ntests\\test_automation.py:37: AssertionError",
+        "exception_type": "AssertionError"
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_000941/tests/test_automation.py::test_tc_002",
+      "nodeid": "runs/run_20260420_000941/tests/test_automation.py::test_tc_002",
+      "display_name": "test_tc_002",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "failed",
+      "duration_ms": 5803,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 19
+        },
+        "call": {
+          "outcome": "failed",
+          "duration_ms": 5772
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 12
+        }
+      },
+      "failure": {
+        "phase": "call",
+        "message": "tests\\test_automation.py:70: AssertionError",
+        "trace": "browser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_002(browser_context):\n        \"\"\"\n        Verify login denied for locked out user\n        Expected: Sorry, this user has been locked out.\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Enter username for locked out user\n            locator = resolve_locator_sync(page, 'username')\n            if locator:\n                locator.fill('locked_out_user')\n            # Enter password\n            locator = resolve_locator_sync(page, 'password')\n            if locator:\n                locator.fill('secret_sauce')\n            # Click Login button\n            locator = resolve_locator_sync(page, 'login_button')\n            if locator:\n                locator.click()\n            # Assert: Sorry, this user has been locked out.\n            try:\n>               page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('sorry, this user has been locked out.')})\",\n                    timeout=5000\n                )\n\ntests\\test_automation.py:64: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nC:\\Python314\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:11599: in wait_for_function\n    self._sync(\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_page.py:1110: in wait_for_function\n    return await self._main_frame.wait_for_function(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_frame.py:878: in wait_for_function\n    await self._channel.send(\"waitForFunction\", self._timeout, params)\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:69: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <playwright._impl._connection.Connection object at 0x000001C2602DC050>\ncb = <function Channel.send.<locals>.<lambda> at 0x000001C26085ECF0>, is_internal = False\ntitle = None\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False, title: str = None\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        st: List[inspect.FrameInfo] = getattr(\n            task, \"__pw_stack__\", None\n        ) or inspect.stack(0)\n    \n        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal, title)\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 5000ms exceeded.\n\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:559: TimeoutError\n\nDuring handling of the above exception, another exception occurred:\n\nbrowser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_002(browser_context):\n        \"\"\"\n        Verify login denied for locked out user\n        Expected: Sorry, this user has been locked out.\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Enter username for locked out user\n            locator = resolve_locator_sync(page, 'username')\n            if locator:\n                locator.fill('locked_out_user')\n            # Enter password\n            locator = resolve_locator_sync(page, 'password')\n            if locator:\n                locator.fill('secret_sauce')\n            # Click Login button\n            locator = resolve_locator_sync(page, 'login_button')\n            if locator:\n                locator.click()\n            # Assert: Sorry, this user has been locked out.\n            try:\n                page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('sorry, this user has been locked out.')})\",\n                    timeout=5000\n                )\n            except Exception:\n                content = page.content().lower()\n>               assert 'sorry, this user has been locked out.' in content, f\"Expected text {repr('Sorry, this user has been locked out.')} not found\"\nE               AssertionError: Expected text 'Sorry, this user has been locked out.' not found\nE               assert 'sorry, this user has been locked out.' in '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/favicon.ico\"><meta name=\"robots\" content=\"noindex\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#ffffff\"><meta name=\"description\" content=\"sauce labs swag labs app\"><link rel=\"apple-touch-icon\" href=\"/icon/icon-192x192.png\"><link rel=\"manifest\" href=\"/manifest.json\"><script type=\"text/javascript\">!function(n){if(\"/\"===n.search[1]){var a=n.search.slice(1).split(\"&\").map(function(n){return n.replace(/~and~/g,\"&\")}).join(\"?\");window.history.replacestate(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=dm+mono:wght@400;500&amp;family=dm+sans:wght@400;500\"><title>swag labs</title><script defer=\"defer\" src=\"/static/js/main.bcf4bc5f.js\"></script><link href=\"/static/css/main.8a7d64a1.css\" rel=\"stylesheet\"></head><body><noscript>you need to enable javascript to run this app.</noscript><div id=\"root\"><div class=\"login_container\"><div class=\"login_logo\">swag labs</div><div class=\"login_wrapper\" data-test=\"login-container\"><div class=\"login_wrapper-inner\"><div id=\"...on_container\" class=\"form_column\"><div class=\"login-box\"><form><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"username\" type=\"text\" data-test=\"username\" id=\"user-name\" name=\"user-name\" autocorrect=\"off\" autocapitalize=\"none\" value=\"locked_out_user\"></div><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"password\" type=\"password\" data-test=\"password\" id=\"password\" name=\"password\" autocorrect=\"off\" autocapitalize=\"none\" value=\"secret_sauce\"></div><div class=\"error-message-container\"></div><input type=\"submit\" class=\"submit-button btn_action\" data-test=\"login-button\" id=\"login-button\" name=\"login-button\" value=\"login\"></form></div></div></div><div class=\"login_credentials_wrap\" data-test=\"login-credentials-container\"><div class=\"login_credentials_wrap-inner\"><div id=\"login_credentials\" class=\"login_credentials\" data-test=\"login-credentials\"><h4>accepted usernames are:</h4>standard_user<br>locked_out_user<br>problem_user<br>performance_glitch_user<br>error_user<br>visual_user<br></div><div class=\"login_password\" data-test=\"login-password\"><h4>password for all users:</h4>secret_sauce</div></div></div></div></div></div></body></html>'\n\ntests\\test_automation.py:70: AssertionError",
+        "exception_type": "AssertionError"
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_000941/tests/test_automation.py::test_tc_003",
+      "nodeid": "runs/run_20260420_000941/tests/test_automation.py::test_tc_003",
+      "display_name": "test_tc_003",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "failed",
+      "duration_ms": 5903,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 18
+        },
+        "call": {
+          "outcome": "failed",
+          "duration_ms": 5873
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 12
+        }
+      },
+      "failure": {
+        "phase": "call",
+        "message": "tests\\test_automation.py:103: AssertionError",
+        "trace": "browser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_003(browser_context):\n        \"\"\"\n        Verify login fails with invalid username\n        Expected: Username and password do not match any user in this service\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Enter invalid username\n            locator = resolve_locator_sync(page, 'username')\n            if locator:\n                locator.fill('invalid_user')\n            # Enter valid password\n            locator = resolve_locator_sync(page, 'password')\n            if locator:\n                locator.fill('secret_sauce')\n            # Click Login button\n            locator = resolve_locator_sync(page, 'login_button')\n            if locator:\n                locator.click()\n            # Assert: Username and password do not match any user in this service\n            try:\n>               page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('username and password do not match any user in this service')})\",\n                    timeout=5000\n                )\n\ntests\\test_automation.py:97: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nC:\\Python314\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:11599: in wait_for_function\n    self._sync(\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_page.py:1110: in wait_for_function\n    return await self._main_frame.wait_for_function(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_frame.py:878: in wait_for_function\n    await self._channel.send(\"waitForFunction\", self._timeout, params)\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:69: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <playwright._impl._connection.Connection object at 0x000001C2602DC050>\ncb = <function Channel.send.<locals>.<lambda> at 0x000001C26085DC70>, is_internal = False\ntitle = None\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False, title: str = None\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        st: List[inspect.FrameInfo] = getattr(\n            task, \"__pw_stack__\", None\n        ) or inspect.stack(0)\n    \n        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal, title)\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 5000ms exceeded.\n\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:559: TimeoutError\n\nDuring handling of the above exception, another exception occurred:\n\nbrowser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_003(browser_context):\n        \"\"\"\n        Verify login fails with invalid username\n        Expected: Username and password do not match any user in this service\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Enter invalid username\n            locator = resolve_locator_sync(page, 'username')\n            if locator:\n                locator.fill('invalid_user')\n            # Enter valid password\n            locator = resolve_locator_sync(page, 'password')\n            if locator:\n                locator.fill('secret_sauce')\n            # Click Login button\n            locator = resolve_locator_sync(page, 'login_button')\n            if locator:\n                locator.click()\n            # Assert: Username and password do not match any user in this service\n            try:\n                page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('username and password do not match any user in this service')})\",\n                    timeout=5000\n                )\n            except Exception:\n                content = page.content().lower()\n>               assert 'username and password do not match any user in this service' in content, f\"Expected text {repr('Username and password do not match any user in this service')} not found\"\nE               AssertionError: Expected text 'Username and password do not match any user in this service' not found\nE               assert 'username and password do not match any user in this service' in '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/favicon.ico\"><meta name=\"robots\" content=\"noindex\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#ffffff\"><meta name=\"description\" content=\"sauce labs swag labs app\"><link rel=\"apple-touch-icon\" href=\"/icon/icon-192x192.png\"><link rel=\"manifest\" href=\"/manifest.json\"><script type=\"text/javascript\">!function(n){if(\"/\"===n.search[1]){var a=n.search.slice(1).split(\"&\").map(function(n){return n.replace(/~and~/g,\"&\")}).join(\"?\");window.history.replacestate(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=dm+mono:wght@400;500&amp;family=dm+sans:wght@400;500\"><title>swag labs</title><script defer=\"defer\" src=\"/static/js/main.bcf4bc5f.js\"></script><link href=\"/static/css/main.8a7d64a1.css\" rel=\"stylesheet\"></head><body><noscript>you need to enable javascript to run this app.</noscript><div id=\"root\"><div class=\"login_container\"><div class=\"login_logo\">swag labs</div><div class=\"login_wrapper\" data-test=\"login-container\"><div class=\"login_wrapper-inner\"><div id=\"...utton_container\" class=\"form_column\"><div class=\"login-box\"><form><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"username\" type=\"text\" data-test=\"username\" id=\"user-name\" name=\"user-name\" autocorrect=\"off\" autocapitalize=\"none\" value=\"invalid_user\"></div><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"password\" type=\"password\" data-test=\"password\" id=\"password\" name=\"password\" autocorrect=\"off\" autocapitalize=\"none\" value=\"secret_sauce\"></div><div class=\"error-message-container\"></div><input type=\"submit\" class=\"submit-button btn_action\" data-test=\"login-button\" id=\"login-button\" name=\"login-button\" value=\"login\"></form></div></div></div><div class=\"login_credentials_wrap\" data-test=\"login-credentials-container\"><div class=\"login_credentials_wrap-inner\"><div id=\"login_credentials\" class=\"login_credentials\" data-test=\"login-credentials\"><h4>accepted usernames are:</h4>standard_user<br>locked_out_user<br>problem_user<br>performance_glitch_user<br>error_user<br>visual_user<br></div><div class=\"login_password\" data-test=\"login-password\"><h4>password for all users:</h4>secret_sauce</div></div></div></div></div></div></body></html>'\n\ntests\\test_automation.py:103: AssertionError",
+        "exception_type": "AssertionError"
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_000941/tests/test_automation.py::test_tc_004",
+      "nodeid": "runs/run_20260420_000941/tests/test_automation.py::test_tc_004",
+      "display_name": "test_tc_004",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "failed",
+      "duration_ms": 5813,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 19
+        },
+        "call": {
+          "outcome": "failed",
+          "duration_ms": 5781
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 13
+        }
+      },
+      "failure": {
+        "phase": "call",
+        "message": "tests\\test_automation.py:136: AssertionError",
+        "trace": "browser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_004(browser_context):\n        \"\"\"\n        Verify login fails with invalid password\n        Expected: Username and password do not match any user in this service\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Enter valid username\n            locator = resolve_locator_sync(page, 'username')\n            if locator:\n                locator.fill('standard_user')\n            # Enter invalid password\n            locator = resolve_locator_sync(page, 'password')\n            if locator:\n                locator.fill('wrong_pass')\n            # Click Login button\n            locator = resolve_locator_sync(page, 'login_button')\n            if locator:\n                locator.click()\n            # Assert: Username and password do not match any user in this service\n            try:\n>               page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('username and password do not match any user in this service')})\",\n                    timeout=5000\n                )\n\ntests\\test_automation.py:130: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nC:\\Python314\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:11599: in wait_for_function\n    self._sync(\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_page.py:1110: in wait_for_function\n    return await self._main_frame.wait_for_function(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_frame.py:878: in wait_for_function\n    await self._channel.send(\"waitForFunction\", self._timeout, params)\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:69: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <playwright._impl._connection.Connection object at 0x000001C2602DC050>\ncb = <function Channel.send.<locals>.<lambda> at 0x000001C25FC4FC10>, is_internal = False\ntitle = None\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False, title: str = None\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        st: List[inspect.FrameInfo] = getattr(\n            task, \"__pw_stack__\", None\n        ) or inspect.stack(0)\n    \n        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal, title)\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 5000ms exceeded.\n\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:559: TimeoutError\n\nDuring handling of the above exception, another exception occurred:\n\nbrowser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_004(browser_context):\n        \"\"\"\n        Verify login fails with invalid password\n        Expected: Username and password do not match any user in this service\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Enter valid username\n            locator = resolve_locator_sync(page, 'username')\n            if locator:\n                locator.fill('standard_user')\n            # Enter invalid password\n            locator = resolve_locator_sync(page, 'password')\n            if locator:\n                locator.fill('wrong_pass')\n            # Click Login button\n            locator = resolve_locator_sync(page, 'login_button')\n            if locator:\n                locator.click()\n            # Assert: Username and password do not match any user in this service\n            try:\n                page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('username and password do not match any user in this service')})\",\n                    timeout=5000\n                )\n            except Exception:\n                content = page.content().lower()\n>               assert 'username and password do not match any user in this service' in content, f\"Expected text {repr('Username and password do not match any user in this service')} not found\"\nE               AssertionError: Expected text 'Username and password do not match any user in this service' not found\nE               assert 'username and password do not match any user in this service' in '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/favicon.ico\"><meta name=\"robots\" content=\"noindex\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#ffffff\"><meta name=\"description\" content=\"sauce labs swag labs app\"><link rel=\"apple-touch-icon\" href=\"/icon/icon-192x192.png\"><link rel=\"manifest\" href=\"/manifest.json\"><script type=\"text/javascript\">!function(n){if(\"/\"===n.search[1]){var a=n.search.slice(1).split(\"&\").map(function(n){return n.replace(/~and~/g,\"&\")}).join(\"?\");window.history.replacestate(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=dm+mono:wght@400;500&amp;family=dm+sans:wght@400;500\"><title>swag labs</title><script defer=\"defer\" src=\"/static/js/main.bcf4bc5f.js\"></script><link href=\"/static/css/main.8a7d64a1.css\" rel=\"stylesheet\"></head><body><noscript>you need to enable javascript to run this app.</noscript><div id=\"root\"><div class=\"login_container\"><div class=\"login_logo\">swag labs</div><div class=\"login_wrapper\" data-test=\"login-container\"><div class=\"login_wrapper-inner\"><div id=\"...button_container\" class=\"form_column\"><div class=\"login-box\"><form><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"username\" type=\"text\" data-test=\"username\" id=\"user-name\" name=\"user-name\" autocorrect=\"off\" autocapitalize=\"none\" value=\"standard_user\"></div><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"password\" type=\"password\" data-test=\"password\" id=\"password\" name=\"password\" autocorrect=\"off\" autocapitalize=\"none\" value=\"wrong_pass\"></div><div class=\"error-message-container\"></div><input type=\"submit\" class=\"submit-button btn_action\" data-test=\"login-button\" id=\"login-button\" name=\"login-button\" value=\"login\"></form></div></div></div><div class=\"login_credentials_wrap\" data-test=\"login-credentials-container\"><div class=\"login_credentials_wrap-inner\"><div id=\"login_credentials\" class=\"login_credentials\" data-test=\"login-credentials\"><h4>accepted usernames are:</h4>standard_user<br>locked_out_user<br>problem_user<br>performance_glitch_user<br>error_user<br>visual_user<br></div><div class=\"login_password\" data-test=\"login-password\"><h4>password for all users:</h4>secret_sauce</div></div></div></div></div></div></body></html>'\n\ntests\\test_automation.py:136: AssertionError",
+        "exception_type": "AssertionError"
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_000941/tests/test_automation.py::test_tc_005",
+      "nodeid": "runs/run_20260420_000941/tests/test_automation.py::test_tc_005",
+      "display_name": "test_tc_005",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "failed",
+      "duration_ms": 7768,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 18
+        },
+        "call": {
+          "outcome": "failed",
+          "duration_ms": 7736
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 14
+        }
+      },
+      "failure": {
+        "phase": "call",
+        "message": "tests\\test_automation.py:166: AssertionError",
+        "trace": "browser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_005(browser_context):\n        \"\"\"\n        Verify user can add item to cart\n        Expected: 1\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Precondition setup: Log in\n            resolve_locator_sync(page, \"username\").fill(\"standard_user\")\n            resolve_locator_sync(page, \"password\").fill(\"secret_sauce\")\n            resolve_locator_sync(page, \"login_button\").click()\n            page.wait_for_load_state(\"networkidle\")\n            # Click on Add to Cart button for Backpack\n            locator = resolve_locator_sync(page, 'add-to-cart-sauce-labs-backpack')\n            if locator:\n                locator.click()\n            # Assert: item is added\n            try:\n>               page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('item is added')})\",\n                    timeout=5000\n                )\n\ntests\\test_automation.py:160: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nC:\\Python314\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:11599: in wait_for_function\n    self._sync(\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_page.py:1110: in wait_for_function\n    return await self._main_frame.wait_for_function(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_frame.py:878: in wait_for_function\n    await self._channel.send(\"waitForFunction\", self._timeout, params)\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:69: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <playwright._impl._connection.Connection object at 0x000001C2602DC050>\ncb = <function Channel.send.<locals>.<lambda> at 0x000001C25DEBA400>, is_internal = False\ntitle = None\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False, title: str = None\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        st: List[inspect.FrameInfo] = getattr(\n            task, \"__pw_stack__\", None\n        ) or inspect.stack(0)\n    \n        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal, title)\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 5000ms exceeded.\n\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:559: TimeoutError\n\nDuring handling of the above exception, another exception occurred:\n\nbrowser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_005(browser_context):\n        \"\"\"\n        Verify user can add item to cart\n        Expected: 1\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Precondition setup: Log in\n            resolve_locator_sync(page, \"username\").fill(\"standard_user\")\n            resolve_locator_sync(page, \"password\").fill(\"secret_sauce\")\n            resolve_locator_sync(page, \"login_button\").click()\n            page.wait_for_load_state(\"networkidle\")\n            # Click on Add to Cart button for Backpack\n            locator = resolve_locator_sync(page, 'add-to-cart-sauce-labs-backpack')\n            if locator:\n                locator.click()\n            # Assert: item is added\n            try:\n                page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('item is added')})\",\n                    timeout=5000\n                )\n            except Exception:\n                content = page.content().lower()\n>               assert 'item is added' in content, f\"Expected text {repr('item is added')} not found\"\nE               AssertionError: Expected text 'item is added' not found\nE               assert 'item is added' in '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/favicon.ico\"><meta name=\"robots\" content=\"noindex\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#ffffff\"><meta name=\"description\" content=\"sauce labs swag labs app\"><link rel=\"apple-touch-icon\" href=\"/icon/icon-192x192.png\"><link rel=\"manifest\" href=\"/manifest.json\"><script type=\"text/javascript\">!function(n){if(\"/\"===n.search[1]){var a=n.search.slice(1).split(\"&\").map(function(n){return n.replace(/~and~/g,\"&\")}).join(\"?\");window.history.replacestate(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=dm+mono:wght@400;500&amp;family=dm+sans:wght@400;500\"><title>swag labs</title><script defer=\"defer\" src=\"/static/js/main.bcf4bc5f.js\"></script><link href=\"/static/css/main.8a7d64a1.css\" rel=\"stylesheet\"></head><body><noscript>you need to enable javascript to run this app.</noscript><div id=\"root\"><div class=\"login_container\"><div class=\"login_logo\">swag labs</div><div class=\"login_wrapper\" data-test=\"login-container\"><div class=\"login_wrapper-inner\"><div id=\"...tton_container\" class=\"form_column\"><div class=\"login-box\"><form><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"username\" type=\"text\" data-test=\"username\" id=\"user-name\" name=\"user-name\" autocorrect=\"off\" autocapitalize=\"none\" value=\"standard_user\"></div><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"password\" type=\"password\" data-test=\"password\" id=\"password\" name=\"password\" autocorrect=\"off\" autocapitalize=\"none\" value=\"secret_sauce\"></div><div class=\"error-message-container\"></div><input type=\"submit\" class=\"submit-button btn_action\" data-test=\"login-button\" id=\"login-button\" name=\"login-button\" value=\"login\"></form></div></div></div><div class=\"login_credentials_wrap\" data-test=\"login-credentials-container\"><div class=\"login_credentials_wrap-inner\"><div id=\"login_credentials\" class=\"login_credentials\" data-test=\"login-credentials\"><h4>accepted usernames are:</h4>standard_user<br>locked_out_user<br>problem_user<br>performance_glitch_user<br>error_user<br>visual_user<br></div><div class=\"login_password\" data-test=\"login-password\"><h4>password for all users:</h4>secret_sauce</div></div></div></div></div></div></body></html>'\n\ntests\\test_automation.py:166: AssertionError",
+        "exception_type": "AssertionError"
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_000941/tests/test_automation.py::test_tc_006",
+      "nodeid": "runs/run_20260420_000941/tests/test_automation.py::test_tc_006",
+      "display_name": "test_tc_006",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "failed",
+      "duration_ms": 8072,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 17
+        },
+        "call": {
+          "outcome": "failed",
+          "duration_ms": 7877
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 178
+        }
+      },
+      "failure": {
+        "phase": "call",
+        "message": "tests\\test_automation.py:202: AssertionError",
+        "trace": "browser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_006(browser_context):\n        \"\"\"\n        Verify user can remove item from cart\n        Expected: shopping_cart_link\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Precondition setup: Log in\n            resolve_locator_sync(page, \"username\").fill(\"standard_user\")\n            resolve_locator_sync(page, \"password\").fill(\"secret_sauce\")\n            resolve_locator_sync(page, \"login_button\").click()\n            page.wait_for_load_state(\"networkidle\")\n            # Setup: Add item if needed\n            resolve_locator_sync(page, \"add-to-cart-sauce-labs-backpack\").click()\n            # Click on Remove button for item\n            locator = resolve_locator_sync(page, 'remove-sauce-labs-backpack')\n            if locator:\n                locator.click()\n            # Assert: shopping_cart_link\n            try:\n>               page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('shopping_cart_link')})\",\n                    timeout=5000\n                )\n\ntests\\test_automation.py:196: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nC:\\Python314\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:11599: in wait_for_function\n    self._sync(\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_page.py:1110: in wait_for_function\n    return await self._main_frame.wait_for_function(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_frame.py:878: in wait_for_function\n    await self._channel.send(\"waitForFunction\", self._timeout, params)\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:69: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <playwright._impl._connection.Connection object at 0x000001C2602DC050>\ncb = <function Channel.send.<locals>.<lambda> at 0x000001C25F973530>, is_internal = False\ntitle = None\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False, title: str = None\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        st: List[inspect.FrameInfo] = getattr(\n            task, \"__pw_stack__\", None\n        ) or inspect.stack(0)\n    \n        parsed_st = _extract_stack_trace_information_from_stack(st, is_internal, title)\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 5000ms exceeded.\n\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:559: TimeoutError\n\nDuring handling of the above exception, another exception occurred:\n\nbrowser_context = <BrowserContext browser=<Browser type=<BrowserType name=chromium executable_path=C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1208\\chrome-win64\\chrome.exe> version=145.0.7632.6>>\n\n    def test_tc_006(browser_context):\n        \"\"\"\n        Verify user can remove item from cart\n        Expected: shopping_cart_link\n        \"\"\"\n        page = browser_context.new_page()\n        try:\n            # Default navigation\n            page.goto('https://www.saucedemo.com')\n            # Precondition setup: Log in\n            resolve_locator_sync(page, \"username\").fill(\"standard_user\")\n            resolve_locator_sync(page, \"password\").fill(\"secret_sauce\")\n            resolve_locator_sync(page, \"login_button\").click()\n            page.wait_for_load_state(\"networkidle\")\n            # Setup: Add item if needed\n            resolve_locator_sync(page, \"add-to-cart-sauce-labs-backpack\").click()\n            # Click on Remove button for item\n            locator = resolve_locator_sync(page, 'remove-sauce-labs-backpack')\n            if locator:\n                locator.click()\n            # Assert: shopping_cart_link\n            try:\n                page.wait_for_function(\n                    f\"document.body.innerText.toLowerCase().includes({repr('shopping_cart_link')})\",\n                    timeout=5000\n                )\n            except Exception:\n                content = page.content().lower()\n>               assert 'shopping_cart_link' in content, f\"Expected text {repr('shopping_cart_link')} not found\"\nE               AssertionError: Expected text 'shopping_cart_link' not found\nE               assert 'shopping_cart_link' in '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/favicon.ico\"><meta name=\"robots\" content=\"noindex\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#ffffff\"><meta name=\"description\" content=\"sauce labs swag labs app\"><link rel=\"apple-touch-icon\" href=\"/icon/icon-192x192.png\"><link rel=\"manifest\" href=\"/manifest.json\"><script type=\"text/javascript\">!function(n){if(\"/\"===n.search[1]){var a=n.search.slice(1).split(\"&\").map(function(n){return n.replace(/~and~/g,\"&\")}).join(\"?\");window.history.replacestate(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=dm+mono:wght@400;500&amp;family=dm+sans:wght@400;500\"><title>swag labs</title><script defer=\"defer\" src=\"/static/js/main.bcf4bc5f.js\"></script><link href=\"/static/css/main.8a7d64a1.css\" rel=\"stylesheet\"></head><body><noscript>you need to enable javascript to run this app.</noscript><div id=\"root\"><div class=\"login_container\"><div class=\"login_logo\">swag labs</div><div class=\"login_wrapper\" data-test=\"login-container\"><div class=\"login_wrapper-inner\"><div id=\"...tton_container\" class=\"form_column\"><div class=\"login-box\"><form><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"username\" type=\"text\" data-test=\"username\" id=\"user-name\" name=\"user-name\" autocorrect=\"off\" autocapitalize=\"none\" value=\"standard_user\"></div><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"password\" type=\"password\" data-test=\"password\" id=\"password\" name=\"password\" autocorrect=\"off\" autocapitalize=\"none\" value=\"secret_sauce\"></div><div class=\"error-message-container\"></div><input type=\"submit\" class=\"submit-button btn_action\" data-test=\"login-button\" id=\"login-button\" name=\"login-button\" value=\"login\"></form></div></div></div><div class=\"login_credentials_wrap\" data-test=\"login-credentials-container\"><div class=\"login_credentials_wrap-inner\"><div id=\"login_credentials\" class=\"login_credentials\" data-test=\"login-credentials\"><h4>accepted usernames are:</h4>standard_user<br>locked_out_user<br>problem_user<br>performance_glitch_user<br>error_user<br>visual_user<br></div><div class=\"login_password\" data-test=\"login-password\"><h4>password for all users:</h4>secret_sauce</div></div></div></div></div></div></body></html>'\n\ntests\\test_automation.py:202: AssertionError",
+        "exception_type": "AssertionError"
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    }
+  ]
+}

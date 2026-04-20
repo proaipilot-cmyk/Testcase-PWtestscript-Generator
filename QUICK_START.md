@@ -1,178 +1,144 @@
-# Quick Start - Test Case Automation Pipeline
+# Quick Start Guide
 
-## Choose Your Path
+## Project0 - Sync Playwright Test Framework
 
-### 🏃 Path 1: Auto-Generate from CSV (5 minutes)
+### TL;DR
+
 ```bash
-# 1. Add test cases to CSV
-data/testcases.csv
+# Add testcases to CSV
+edit data/testcases.csv
 
-# 2. Run pipeline
-python parser/demo.py         # Normalize CSV
-python planner/demo.py        # Generate actions
-python generator/demo.py      # Create POM framework
-python validator/demo.py      # Quality check
-pytest tests/ -v              # Run tests
+# Generate clean tests (no duplication)
+python generator/clean_generator.py
+
+# Verify no duplicates
+python verify_no_duplication.py
+
+# Run tests
+pytest tests/test_automation.py -v
 ```
 
-### 🎯 Path 2: Manual Workflow (10 minutes)
-```bash
-# 1. Create workflow JSON
-workflows/your_test.json
+### Key Facts
 
-# 2. Extract locators
-python tools/intelligent_locator_extractor.py workflows/your_test.json
+✓ **6 unique testcases** - each appears exactly ONCE  
+✓ **Sync Playwright** - simple synchronous API  
+✓ **Single Source of Truth** - `data/testcases.csv` only  
+✓ **Auto-categorized** - login, cart, checkout, etc.  
+✓ **Production-ready** - no duplication guaranteed  
 
-# 3. Create test file
-tests/test_your_name.py
+### File Locations
 
-# 4. Run test
-pytest tests/test_your_name.py -v
+| File | Purpose |
+|------|---------|
+| `data/testcases.csv` | All testcases (source of truth) |
+| `generator/clean_generator.py` | CSV → pytest converter |
+| `tests/test_automation.py` | Generated test file (auto-generated) |
+| `tests/conftest.py` | Pytest fixtures |
+| `steps/steps.py` | Reusable step functions |
+| `pages/` | Page Object Model |
+| `object_repo/` | Locator definitions |
+
+### Test Categories
+
+```
+4 Login tests      (TC_001-TC_004)  → test_login_scenarios()
+2 Cart tests       (TC_005-TC_006)  → test_cart_scenarios()
 ```
 
-### ⚙️ Path 3: Hybrid (Recommended - 15 minutes)
+### Never Do This
+
+❌ Manually edit `tests/test_automation.py`  
+❌ Add test IDs manually  
+❌ Duplicate testcases in CSV  
+
+### Always Do This
+
+✅ Edit `data/testcases.csv` to add/modify tests  
+✅ Run `python generator/clean_generator.py`  
+✅ Verify with `python verify_no_duplication.py`  
+✅ Run tests with `pytest tests/test_automation.py -v`  
+
+### Test Counts
+
+Current: **6 tests** (NO duplicates)
+
+To verify:
 ```bash
-# Steps 1-2 from Path 1, then:
-
-# 3. Review generated files
-# 4. Manually tweak if needed
-# 5. Run validator
-python validator/demo.py
-
-# 6. Execute tests
-pytest tests/ -v
+pytest tests/test_automation.py --collect-only
+# Output should show exactly 6 tests collected
 ```
+
+### Adding New Tests
+
+1. Edit `data/testcases.csv` - add new row:
+   ```csv
+   TC_007,Test name,Precondition,"Steps","Data","Expected"
+   ```
+
+2. Generate: `python generator/clean_generator.py`
+
+3. Verify: `python verify_no_duplication.py`
+
+4. Run: `pytest tests/test_automation.py -v`
+
+### Structure
+
+```
+Project0/
+├── data/testcases.csv           ← EDIT THIS for tests
+├── generator/clean_generator.py ← RUN THIS to generate
+├── tests/
+│   ├── test_automation.py      ← GENERATED (don't edit)
+│   └── conftest.py             ← Fixtures
+├── steps/steps.py              ← Reusable functions
+├── pages/                       ← Page Objects
+├── object_repo/                ← Locators
+└── README.md                   ← Full documentation
+```
+
+### Verification
+
+```bash
+# Verify framework integrity
+python verify_no_duplication.py
+
+# Expected output:
+# ✓ CSV has 6 unique testcases (no duplicates)
+# ✓ Test file has 6 unique test IDs (no duplicates)
+# ✓ Pytest collected 6 tests
+# ✓ ALL VERIFICATIONS PASSED - NO DUPLICATION DETECTED
+```
+
+### Troubleshooting
+
+**Tests not found?**
+```bash
+python generator/clean_generator.py
+pytest tests/test_automation.py --collect-only
+```
+
+**Import errors?**
+```bash
+cd c:\myprojects\Project0
+pip install playwright pytest
+```
+
+**Browser not installed?**
+```bash
+playwright install chromium
+```
+
+### Summary
+
+| Aspect | Status |
+|--------|--------|
+| Duplication | ✓ ZERO |
+| Single Source of Truth | ✓ YES (CSV) |
+| Test Organization | ✓ AUTO (categories) |
+| Scalability | ✓ UNLIMITED |
+| Maintenance | ✓ EASY (CSV only) |
+| Framework | ✓ PRODUCTION READY |
 
 ---
 
-## Essential Commands
-
-### Parser
-```bash
-python parser/demo.py
-# Input: data/testcases.csv
-# Output: data/parsed_testcases.json
-```
-
-### Planner
-```bash
-python planner/demo.py
-# Input: data/parsed_testcases.json
-# Output: data/planned_testcases.json
-```
-
-### Generator
-```bash
-python generator/demo.py
-# Input: data/planned_testcases.json
-# Output: object_repo/, pages/, steps/, tests/, conftest.py
-```
-
-### Validator
-```bash
-python validator/demo.py
-# Input: Generated files
-# Output: validation_report.json
-```
-
-### Locator Extractor
-```bash
-python tools/intelligent_locator_extractor.py workflows/test.json
-# Input: workflows/test.json
-# Output: data/snapshots/YYYYMMDD_HHMMSS_locators.json
-```
-
-### Run Tests
-```bash
-pytest tests/ -v                          # All tests
-pytest tests/test_login.py -v             # Single file
-pytest tests/ -v --html=report.html       # With HTML report
-pytest tests/ -v -k "login"               # By name filter
-```
-
----
-
-## CSV Format
-
-```csv
-Test Case ID,Test Scenario Description,Pre-condition,Test Steps,Test Data,Expected Result
-TC001,User Login,User on login page,"1. Enter username 2. Enter password 3. Click Login","username=admin,password=pass123","Dashboard displayed"
-TC002,Add to Cart,User on products page,"1. Click Add to Cart 2. Go to Cart","","Item in cart"
-```
-
-**Header Variations** (all accepted):
-- `Test Case ID` / `test_case_id` / `TC_ID` / `id`
-- `Test Scenario Description` / `title` / `description`
-- `Pre-condition` / `precondition`
-- `Test Steps` / `steps` / `actions`
-- `Test Data` / `test_data` / `data`
-- `Expected Result (ER)` / `expected_result` / `er`
-
----
-
-## Workflow JSON Format
-
-```json
-{
-  "workflow": "test_name",
-  "steps": [
-    {"navigate": "https://example.com"},
-    {"capture_locators": {"checkpoint_name": "page_loaded"}},
-    {"fill": {"field_label": "Username", "value": "admin", "find_by": "label"}},
-    {"click": {"button_text": "Login", "find_by": "button_text", "wait_for_navigation": true}},
-    {"capture_locators": {"checkpoint_name": "after_login"}}
-  ]
-}
-```
-
----
-
-## Module Execution Order
-
-```
-┌─────────┐
-│ PARSER  │ → CSV to structured format
-└────┬────┘
-     │
-┌────▼────┐
-│ PLANNER │ → To canonical actions
-└────┬────┘
-     │
-     ├──→ ┌───────────┐
-     │    │ GENERATOR │ → POM Framework
-     │    └────┬──────┘
-     │         │
-     │    ┌────▼─────────┐
-     │    │ VALIDATOR    │ → Quality check
-     │    └──────────────┘
-     │
-     └──→ ┌──────────────────────┐
-          │ Locator Extractor    │ → Live page locators
-          │ (Alternative path)   │
-          └──────────────────────┘
-```
-
----
-
-## Troubleshooting
-
-| Problem | Solution |
-|---------|----------|
-| CSV not parsed | Check headers match expected format |
-| Generator fails | Validate planned_testcases.json is valid JSON |
-| Validator errors | Fix Python syntax in generated files |
-| Locators not found | Check workflow JSON field labels match UI |
-| Tests fail | Verify locators in object_repo/*.json are valid |
-
----
-
-## Next Steps
-
-1. **Have CSV?** → Start with `python parser/demo.py`
-2. **Have manual test?** → Create `workflows/test.json` → Extract locators
-3. **Want to learn?** → Read [LOCATOR_AUTOMATION_GUIDE.md](LOCATOR_AUTOMATION_GUIDE.md)
-4. **Need details?** → See [Architecture.md](Architecture.md)
-
----
-
-Generated by Test Automation Pipeline | Updated April 2026
+**Need help?** See `README.md` for detailed documentation.

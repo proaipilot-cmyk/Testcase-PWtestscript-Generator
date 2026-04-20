@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "run": {
+    "run_id": "20260419T183241",
+    "started_at": "2026-04-19T18:32:41.513788+00:00",
+    "finished_at": "2026-04-19T18:32:50.300249+00:00",
+    "duration_ms": 8439,
+    "exitstatus": 1,
+    "results_root": "C:/myprojects/Project0/test-results",
+    "summary": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "broken": 0,
+      "skipped": 0,
+      "pass_rate": 0.0
+    },
+    "environment": {
+      "python": "3.14.3",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "pytest": "9.0.2",
+      "cwd": "C:\\myprojects\\Project0",
+      "video_mode": "on-failure",
+      "screenshot_mode": "on-failure",
+      "trace_mode": "on-failure"
+    }
+  },
+  "tests": [
+    {
+      "stable_id": "runs/run_20260419_235949/tests/test_automation.py::test_tc_002",
+      "nodeid": "runs/run_20260419_235949/tests/test_automation.py::test_tc_002",
+      "display_name": "test_tc_002",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "failed",
+      "duration_ms": 8439,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 2274
+        },
+        "call": {
+          "outcome": "failed",
+          "duration_ms": 6013
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 152
+        }
+      },
+      "failure": {
+        "phase": "call",
+        "message": "E   assert 'sorry, this user has been locked out.' in '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/favicon.ico\"><meta name=\"robots\" content=\"noindex\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#ffffff\"><meta name=\"description\" content=\"sauce labs swag labs app\"><link rel=\"apple-touch-icon\" href=\"/icon/",
+        "trace": "runs\\run_20260419_235949\\tests\\test_automation.py:60: in test_tc_002\n    page.wait_for_function(\nC:\\Python314\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:11599: in wait_for_function\n    self._sync(\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_page.py:1110: in wait_for_function\n    return await self._main_frame.wait_for_function(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_frame.py:878: in wait_for_function\n    await self._channel.send(\"waitForFunction\", self._timeout, params)\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:69: in send\n    return await self._connection.wrap_api_call(\nC:\\Python314\\Lib\\site-packages\\playwright\\_impl\\_connection.py:559: in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE   playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 5000ms exceeded.\n\nDuring handling of the above exception, another exception occurred:\nruns\\run_20260419_235949\\tests\\test_automation.py:67: in test_tc_002\n    assert 'sorry, this user has been locked out.' in content, f\"Expected text {repr('Sorry, this user has been locked out.')} not found\"\nE   AssertionError: Expected text 'Sorry, this user has been locked out.' not found\nE   assert 'sorry, this user has been locked out.' in '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/favicon.ico\"><meta name=\"robots\" content=\"noindex\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"theme-color\" content=\"#ffffff\"><meta name=\"description\" content=\"sauce labs swag labs app\"><link rel=\"apple-touch-icon\" href=\"/icon/icon-192x192.png\"><link rel=\"manifest\" href=\"/manifest.json\"><script type=\"text/javascript\">!function(n){if(\"/\"===n.search[1]){var a=n.search.slice(1).split(\"&\").map(function(n){return n.replace(/~and~/g,\"&\")}).join(\"?\");window.history.replacestate(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=dm+mono:wght@400;500&amp;family=dm+sans:wght@400;500\"><title>swag labs</title><script defer=\"defer\" src=\"/static/js/main.bcf4bc5f.js\"></script><link href=\"/static/css/main.8a7d64a1.css\" rel=\"stylesheet\"></head><body><noscript>you need to enable javascript to run this app.</noscript><div id=\"root\"><div class=\"login_container\"><div class=\"login_logo\">swag labs</div><div class=\"login_wrapper\" data-test=\"login-container\"><div class=\"login_wrapper-inner\"><div id=\"...on_container\" class=\"form_column\"><div class=\"login-box\"><form><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"username\" type=\"text\" data-test=\"username\" id=\"user-name\" name=\"user-name\" autocorrect=\"off\" autocapitalize=\"none\" value=\"locked_out_user\"></div><div class=\"form_group\"><input class=\"input_error form_input\" placeholder=\"password\" type=\"password\" data-test=\"password\" id=\"password\" name=\"password\" autocorrect=\"off\" autocapitalize=\"none\" value=\"secret_sauce\"></div><div class=\"error-message-container\"></div><input type=\"submit\" class=\"submit-button btn_action\" data-test=\"login-button\" id=\"login-button\" name=\"login-button\" value=\"login\"></form></div></div></div><div class=\"login_credentials_wrap\" data-test=\"login-credentials-container\"><div class=\"login_credentials_wrap-inner\"><div id=\"login_credentials\" class=\"login_credentials\" data-test=\"login-credentials\"><h4>accepted usernames are:</h4>standard_user<br>locked_out_user<br>problem_user<br>performance_glitch_user<br>error_user<br>visual_user<br></div><div class=\"login_password\" data-test=\"login-password\"><h4>password for all users:</h4>secret_sauce</div></div></div></div></div></div></body></html>'",
+        "exception_type": "AssertionError"
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    }
+  ]
+}

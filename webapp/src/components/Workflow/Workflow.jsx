@@ -1,76 +1,64 @@
 import React from 'react';
 import styles from './Workflow.module.css';
 import { useWorkflow } from '../../context/WorkflowContext';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const Workflow = () => {
-  const { tasks, loadingTasks, refreshData } = useWorkflow();
+  const { tasks, currentStage, loading } = useWorkflow();
 
-  if (loadingTasks || tasks.length === 0) {
+  if (tasks.length === 0) {
     return (
       <div className={`${styles.workflowContainer} glass-panel`}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>Pipeline Progress</h2>
-        </div>
-        <p>Loading pipeline data...</p>
+        <h2 className={styles.title}>Pipeline Pipeline</h2>
+        <p>No active pipeline data.</p>
       </div>
     );
   }
   
   const completed = tasks.filter(t => t.status === 'Completed').length;
   const percentage = Math.round((completed / tasks.length) * 100);
-
-  // Directly map the tasks to our stepper phases
-  const phases = tasks.map((t, index) => {
-    // Determine status purely from the task status for simplicity
-    let statusId = 'pending';
-    if (t.status === 'Completed') statusId = 'completed';
-    if (t.status === 'In Progress') statusId = 'inProgress';
-    
-    // Shorten the labels
-    let label = t.name;
-    if (t.name.includes('Parser')) label = 'Parse';
-    if (t.name.includes('Planner')) label = 'Plan';
-    if (t.name.includes('Generator')) label = 'Generate';
-    if (t.name.includes('Validator')) label = 'Validate';
-
-    return {
-      id: index + 1,
-      label,
-      statusId
-    };
-  });
+  const isProcessing = currentStage !== 'Idle' && currentStage !== 'Error';
 
   return (
-    <div className={`${styles.workflowContainer} glass-panel`}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>Conversion Pipeline Progress</h2>
-        <div style={{display: 'flex', gap: '1rem', alignItems: 'center'}}>
-           <span className={styles.progressText}>{percentage}% Completed ({completed}/{tasks.length} steps)</span>
-           <button 
-             onClick={refreshData} 
-             style={{padding: '0.25rem 0.75rem', background: 'var(--primary)', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '0.8rem'}}
-           >
-             Refresh
-           </button>
+    <>
+      <LoadingSpinner isVisible={isProcessing} progress={percentage} />
+      <div className={`${styles.workflowContainer} glass-panel`}>
+        <div className={styles.header}>
+          <div>
+            <h2 className={styles.title}>Conversion Pipeline</h2>
+            <p className={styles.subtitle}>Track progress from CSV to Git deployment</p>
+          </div>
+          <div className={styles.stats}>
+             <span className={styles.progressText}>{percentage}% Complete</span>
+             <div className={styles.miniProgress}>
+               <div className={styles.miniBar} style={{ width: `${percentage}%` }}></div>
+             </div>
+          </div>
+        </div>
+
+        <div className={styles.stepper}>
+          {tasks.map((task, index) => {
+            const isCompleted = task.status === 'Completed';
+            const isCurrent = task.status === 'In Progress' || currentStage === task.name;
+            
+            return (
+              <div key={task.id} className={`${styles.step} ${isCompleted ? styles.completed : ''} ${isCurrent ? styles.active : ''}`}>
+                <div className={styles.stepHeader}>
+                  <div className={styles.circle}>
+                    {isCompleted ? '✓' : index + 1}
+                  </div>
+                  <div className={styles.line}></div>
+                </div>
+                <div className={styles.labelContainer}>
+                  <span className={styles.label}>{task.name}</span>
+                  <span className={styles.status}>{task.status}</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-
-      <div className={styles.stepper}>
-        <div 
-          className={styles.progressLine} 
-          style={{ width: `${percentage}%` }}
-        ></div>
-        
-        {phases.map((phase) => (
-          <div key={phase.id} className={`${styles.step} ${styles[phase.statusId]}`}>
-            <div className={styles.circle}>
-              {phase.statusId === 'completed' ? '✓' : phase.id}
-            </div>
-            <span className={styles.label}>{phase.label}</span>
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 

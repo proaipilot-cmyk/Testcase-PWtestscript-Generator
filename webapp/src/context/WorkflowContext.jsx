@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
-import { fetchTasks, updateTaskStatus, fetchLogs } from '../services/api';
+import React, { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
+import { fetchProgress, uploadFile, runTests, pushToGit, clearLogs, resetWorkflow } from '../services/api';
 
 const WorkflowContext = createContext();
 
@@ -8,60 +8,95 @@ export const useWorkflow = () => useContext(WorkflowContext);
 export const WorkflowProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [logs, setLogs] = useState([]);
-  const [loadingTasks, setLoadingTasks] = useState(true);
-  const [loadingLogs, setLoadingLogs] = useState(true);
+  const [currentStage, setCurrentStage] = useState('Idle');
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const pollingRef = useRef(null);
 
   const loadData = useCallback(async () => {
     try {
-      setLoadingTasks(true);
-      setLoadingLogs(true);
-      const [fetchedTasks, fetchedLogs] = await Promise.all([
-        fetchTasks(),
-        fetchLogs()
-      ]);
-      setTasks(fetchedTasks);
-      setLogs(fetchedLogs);
+      const data = await fetchProgress();
+      setTasks(data.tasks);
+      setLogs(data.logs);
+      setCurrentStage(data.current_stage || 'Idle');
       setError(null);
     } catch (err) {
       setError(err.message || 'Failed to fetch data');
     } finally {
-      setLoadingTasks(false);
-      setLoadingLogs(false);
+      setLoading(false);
     }
   }, []);
 
   useEffect(() => {
     loadData();
+    pollingRef.current = setInterval(loadData, 2000);
+    return () => clearInterval(pollingRef.current);
   }, [loadData]);
 
-  const updateTask = async (id, newStatus) => {
-    // Optimistic UI update
-    const previousTasks = [...tasks];
-    const previousLogs = [...logs];
-    
-    setTasks(tasks.map(t => t.id === id ? { ...t, status: newStatus, lastUpdated: new Date().toISOString() } : t));
-    
-    // Optimistically add log
-    const taskName = tasks.find(t => t.id === id)?.name;
-    setLogs([{
-      id: `temp-${Date.now()}`,
-      message: `${taskName} marked as ${newStatus}`,
-      time: new Date().toISOString()
-    }, ...logs]);
-
+  const handleUpload = async (file) => {
     try {
-      // API call
-      await updateTaskStatus(id, newStatus);
-      // We could refetch logs here but we already optimistically updated
-      // A more robust app would fetch the real updated log list
-      const updatedLogs = await fetchLogs();
-      setLogs(updatedLogs);
+      setLoading(true);
+      setError(null);
+      const response = await uploadFile(file);
+      if (response.error) {
+        setError('Upload failed: ' + response.error);
+      }
+      await loadData();
     } catch (err) {
-      // Revert on error
-      setTasks(previousTasks);
-      setLogs(previousLogs);
-      setError('Failed to update task. Changes reverted.');
+      setError('Upload failed: ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRun = async () => {
+    try {
+      setError(null);
+      const response = await runTests();
+      if (response.error) {
+        setError('Run failed: ' + response.error);
+      }
+      await loadData();
+    } catch (err) {
+      setError('Run failed: ' + err.message);
+    }
+  };
+
+  const handleGitPush = async (gitData) => {
+    try {
+      setError(null);
+      // Validate Git URL before pushing
+      if (!gitData.url) {
+        setError('Git URL is required');
+        return;
+      }
+      const response = await pushToGit(gitData);
+      if (response.error) {
+        setError('Git push failed: ' + response.error);
+      }
+      await loadData();
+    } catch (err) {
+      setError('Git push failed: ' + err.message);
+    }
+  };
+
+  const handleClearLogs = async () => {
+    try {
+      setError(null);
+      await clearLogs();
+      await loadData();
+    } catch (err) {
+      setError('Failed to clear logs: ' + err.message);
+    }
+  };
+
+  const handleReset = async () => {
+    try {
+      setError(null);
+      await resetWorkflow();
+      await loadData();
+    } catch (err) {
+      setError('Failed to reset workflow: ' + err.message);
     }
   };
 
@@ -69,10 +104,14 @@ export const WorkflowProvider = ({ children }) => {
     <WorkflowContext.Provider value={{
       tasks,
       logs,
-      loadingTasks,
-      loadingLogs,
+      currentStage,
+      loading,
       error,
-      updateTask,
+      handleUpload,
+      handleRun,
+      handleGitPush,
+      handleClearLogs,
+      handleReset,
       refreshData: loadData
     }}>
       {children}

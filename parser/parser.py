@@ -121,6 +121,8 @@ class TestCaseParser:
         last_exc: Optional[Exception] = None
 
         for enc in encodings_to_try:
+            self.test_cases = []
+            self.errors = []
             try:
                 with open(self.file_path, 'r', encoding=enc, newline='') as file:
                     reader = csv.DictReader(file)

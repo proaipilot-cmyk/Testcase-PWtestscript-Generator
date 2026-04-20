@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "run": {
+    "run_id": "20260419T185349",
+    "started_at": "2026-04-19T18:53:49.859637+00:00",
+    "finished_at": "2026-04-19T18:53:58.325092+00:00",
+    "duration_ms": 8268,
+    "exitstatus": 0,
+    "results_root": "C:/myprojects/Project0/test-results",
+    "summary": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "broken": 0,
+      "skipped": 0,
+      "pass_rate": 100.0
+    },
+    "environment": {
+      "python": "3.14.3",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "pytest": "9.0.2",
+      "cwd": "C:\\myprojects\\Project0",
+      "video_mode": "on-failure",
+      "screenshot_mode": "on-failure",
+      "trace_mode": "on-failure"
+    }
+  },
+  "tests": [
+    {
+      "stable_id": "runs/run_20260420_002342/tests/test_automation.py::test_tc_001",
+      "nodeid": "runs/run_20260420_002342/tests/test_automation.py::test_tc_001",
+      "display_name": "test_tc_001",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 3236,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 2229
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 985
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 22
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_002342/tests/test_automation.py::test_tc_002",
+      "nodeid": "runs/run_20260420_002342/tests/test_automation.py::test_tc_002",
+      "display_name": "test_tc_002",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 841,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 20
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 802
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 19
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_002342/tests/test_automation.py::test_tc_003",
+      "nodeid": "runs/run_20260420_002342/tests/test_automation.py::test_tc_003",
+      "display_name": "test_tc_003",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 881,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 19
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 845
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 17
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_002342/tests/test_automation.py::test_tc_004",
+      "nodeid": "runs/run_20260420_002342/tests/test_automation.py::test_tc_004",
+      "display_name": "test_tc_004",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 1017,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 19
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 979
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 19
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_002342/tests/test_automation.py::test_tc_005",
+      "nodeid": "runs/run_20260420_002342/tests/test_automation.py::test_tc_005",
+      "display_name": "test_tc_005",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 976,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 22
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 936
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 18
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260420_002342/tests/test_automation.py::test_tc_006",
+      "nodeid": "runs/run_20260420_002342/tests/test_automation.py::test_tc_006",
+      "display_name": "test_tc_006",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 1317,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 20
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 1104
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 193
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    }
+  ]
+}

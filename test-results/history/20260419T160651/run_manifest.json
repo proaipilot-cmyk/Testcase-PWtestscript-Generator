@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "run": {
+    "run_id": "20260419T160651",
+    "started_at": "2026-04-19T16:06:51.545606+00:00",
+    "finished_at": "2026-04-19T16:07:03.347031+00:00",
+    "duration_ms": 11366,
+    "exitstatus": 0,
+    "results_root": "C:/myprojects/Project0/test-results",
+    "summary": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "broken": 0,
+      "skipped": 0,
+      "pass_rate": 100.0
+    },
+    "environment": {
+      "python": "3.14.3",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "pytest": "9.0.3",
+      "cwd": "C:\\myprojects\\Project0",
+      "video_mode": "on-failure",
+      "screenshot_mode": "on-failure",
+      "trace_mode": "on-failure"
+    }
+  },
+  "tests": [
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_02_0]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_02_0]",
+      "display_name": "test_login_error_scenarios[TC_02_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_02_0",
+      "parameters": {
+        "username": "'locked_out_user'",
+        "password": "'secret_sauce'",
+        "expected_error": "'Sorry, this user has been locked out.'"
+      },
+      "status": "passed",
+      "duration_ms": 856,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 24
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 816
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 16
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_02_1]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_02_1]",
+      "display_name": "test_login_error_scenarios[TC_02_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_02_1",
+      "parameters": {
+        "username": "'locked_out_user'",
+        "password": "'secret_sauce'",
+        "expected_error": "'Sorry, this user has been locked out.'"
+      },
+      "status": "passed",
+      "duration_ms": 846,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 18
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 814
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 14
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_02_2]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_02_2]",
+      "display_name": "test_login_error_scenarios[TC_02_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_02_2",
+      "parameters": {
+        "username": "'locked_out_user'",
+        "password": "'secret_sauce'",
+        "expected_error": "'Sorry, this user has been locked out.'"
+      },
+      "status": "passed",
+      "duration_ms": 848,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 17
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 818
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 13
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_03_0]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_03_0]",
+      "display_name": "test_login_error_scenarios[TC_03_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_03_0",
+      "parameters": {
+        "username": "'invalid_user'",
+        "password": "'secret_sauce'",
+        "expected_error": "'Epic sadface: Username and password do not match any user in this service'"
+      },
+      "status": "passed",
+      "duration_ms": 878,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 20
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 844
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 14
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_03_1]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_03_1]",
+      "display_name": "test_login_error_scenarios[TC_03_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_03_1",
+      "parameters": {
+        "username": "'invalid_user'",
+        "password": "'secret_sauce'",
+        "expected_error": "'Epic sadface: Username and password do not match any user in this service'"
+      },
+      "status": "passed",
+      "duration_ms": 861,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 17
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 830
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 14
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_03_2]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_03_2]",
+      "display_name": "test_login_error_scenarios[TC_03_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_03_2",
+      "parameters": {
+        "username": "'invalid_user'",
+        "password": "'secret_sauce'",
+        "expected_error": "'Epic sadface: Username and password do not match any user in this service'"
+      },
+      "status": "passed",
+      "duration_ms": 776,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 16
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 744
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 16
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_04_0]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_04_0]",
+      "display_name": "test_login_error_scenarios[TC_04_0]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_04_0",
+      "parameters": {
+        "username": "'standard_user'",
+        "password": "'wrong_pass'",
+        "expected_error": "'Epic sadface: Username and password do not match any user in this service'"
+      },
+      "status": "passed",
+      "duration_ms": 908,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 15
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 875
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 18
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_04_1]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_04_1]",
+      "display_name": "test_login_error_scenarios[TC_04_1]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_04_1",
+      "parameters": {
+        "username": "'standard_user'",
+        "password": "'wrong_pass'",
+        "expected_error": "'Epic sadface: Username and password do not match any user in this service'"
+      },
+      "status": "passed",
+      "duration_ms": 786,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 19
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 752
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 15
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_04_2]",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_error_scenarios[TC_04_2]",
+      "display_name": "test_login_error_scenarios[TC_04_2]",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": "TC_04_2",
+      "parameters": {
+        "username": "'standard_user'",
+        "password": "'wrong_pass'",
+        "expected_error": "'Epic sadface: Username and password do not match any user in this service'"
+      },
+      "status": "passed",
+      "duration_ms": 1157,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 17
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 914
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 226
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    },
+    {
+      "stable_id": "runs/run_20260419_213649/tests/test_automation.py::test_login_success",
+      "nodeid": "runs/run_20260419_213649/tests/test_automation.py::test_login_success",
+      "display_name": "test_login_success",
+      "module": "test_automation",
+      "class_name": "",
+      "param_id": null,
+      "parameters": {},
+      "status": "passed",
+      "duration_ms": 3450,
+      "outcome_by_phase": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "phases": {
+        "setup": {
+          "outcome": "passed",
+          "duration_ms": 2354
+        },
+        "call": {
+          "outcome": "passed",
+          "duration_ms": 1069
+        },
+        "teardown": {
+          "outcome": "passed",
+          "duration_ms": 27
+        }
+      },
+      "failure": {
+        "phase": null,
+        "message": "",
+        "trace": "",
+        "exception_type": ""
+      },
+      "artifacts": {
+        "screenshot": null,
+        "trace": null,
+        "video": []
+      },
+      "output": {},
+      "page": {
+        "url": "-"
+      },
+      "internal_errors": []
+    }
+  ]
+}

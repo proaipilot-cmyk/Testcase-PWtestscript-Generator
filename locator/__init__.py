@@ -113,38 +113,43 @@ def resolve_locator_sync(page, target: str, context_data: Dict[str, Any] = None)
         # If any part of the repo lookup fails we silently continue to heuristics
         pass
 
-    # ---------------------------------------------------------------------
-    # Heuristic strategies (original logic, unchanged but kept after repo)
-    # ---------------------------------------------------------------------
+    # Generate naming variations for better matching
+    variations = [
+        target,
+        target.replace('_', '-'),
+        target.replace('-', '_'),
+        target.replace('_', ' '),
+        target.replace('-', ' '),
+    ]
+    # Deduplicate while preserving order
+    variations = list(dict.fromkeys(variations))
+
     # Strategy 1: Try ID
-    try:
-        locator = page.locator(f'#{target}')
-        if locator.count() == 1:
-            return locator
-    except Exception:
-        pass
+    for var in variations:
+        try:
+            locator = page.locator(f'#{var}')
+            if locator.count() == 1:
+                return locator
+        except Exception:
+            pass
 
     # Strategy 2: Try data-test-id
-    try:
-        locator = page.locator(f'[data-test-id="{target}"]')
-        count = locator.count()
-        if count == 1:
-            return locator
-        if count > 1:
-            return locator.first
-    except Exception:
-        pass
+    for var in variations:
+        try:
+            locator = page.locator(f'[data-test-id="{var}"]')
+            if locator.count() >= 1:
+                return locator.first
+        except Exception:
+            pass
 
     # Strategy 3: Try data-test
-    try:
-        locator = page.locator(f'[data-test="{target}"]')
-        count = locator.count()
-        if count == 1:
-            return locator
-        if count > 1:
-            return locator.first
-    except Exception:
-        pass
+    for var in variations:
+        try:
+            locator = page.locator(f'[data-test="{var}"]')
+            if locator.count() >= 1:
+                return locator.first
+        except Exception:
+            pass
 
     # Strategy 4: Try by placeholder
     try:
