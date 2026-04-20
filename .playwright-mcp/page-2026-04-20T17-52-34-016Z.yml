@@ -1,0 +1,83 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: P0
+      - heading "AutoTest Dashboard" [level=1] [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e12]: Parser
+      - generic [ref=e16]: Planner
+      - generic [ref=e20]: Generator
+      - generic [ref=e24]: Run
+      - generic [ref=e28]: Git Push
+    - generic [ref=e29]:
+      - button "Reset Workflow" [ref=e30] [cursor=pointer]: 🔄
+      - button "Toggle Theme" [ref=e31] [cursor=pointer]: 🌙
+  - generic [ref=e32]:
+    - complementary [ref=e33]:
+      - generic [ref=e34]:
+        - heading "Processing" [level=3] [ref=e35]
+        - button "📤 Upload Test File" [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: 📤
+            - generic [ref=e39]: Upload Test File
+        - paragraph [ref=e40]: "Supported formats: .csv, .xlsx, .json"
+      - generic [ref=e41]:
+        - heading "Help & Resources" [level=3] [ref=e42]
+        - list [ref=e43]:
+          - listitem [ref=e44] [cursor=pointer]:
+            - generic [ref=e45]: 📖
+            - text: Documentation
+          - listitem [ref=e46] [cursor=pointer]:
+            - generic [ref=e47]: 🛠️
+            - text: Settings
+          - listitem [ref=e48] [cursor=pointer]:
+            - generic [ref=e49]: 💬
+            - text: Support
+    - main [ref=e50]:
+      - generic [ref=e51]:
+        - paragraph [ref=e52]: Network response was not ok
+        - button "Retry" [ref=e53] [cursor=pointer]
+      - generic [ref=e54]:
+        - heading "Pipeline Pipeline" [level=2] [ref=e55]
+        - paragraph [ref=e56]: No active pipeline data.
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - heading "Execution Controls" [level=3] [ref=e61]
+              - paragraph [ref=e62]: Run the generated POM framework to verify test cases.
+            - button "▶️ Run Automation" [disabled] [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e65]: ▶️
+                - generic [ref=e66]: Run Automation
+            - generic [ref=e67]: Generation must complete first
+          - generic [ref=e68]:
+            - heading "Deploy Framework" [level=3] [ref=e69]
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - generic [ref=e72]: Git Repository URL
+                - textbox "https://github.com/user/repo.git" [disabled] [ref=e73]
+              - generic [ref=e74]:
+                - generic [ref=e75]: Target Branch
+                - textbox "main" [disabled] [ref=e76]
+            - generic [ref=e77]:
+              - generic [ref=e78]: Personal Access Token (optional for public repo)
+              - textbox "ghp_xxxxxxxxxxxx" [disabled] [ref=e79]
+            - generic [ref=e80]:
+              - generic [ref=e81]: Select Target for Push
+              - combobox [disabled] [ref=e82]:
+                - option "tests/test_automation.py" [selected]
+                - option "Pages Object folder"
+                - option "Full Framework"
+            - button "🚀 Push to Git" [disabled] [ref=e83]:
+              - generic [ref=e84]:
+                - generic [ref=e85]: 🚀
+                - generic [ref=e86]: Push to Git
+            - generic [ref=e87]:
+              - paragraph [ref=e88]: Deployment will add, commit, and push selected files to the target branch.
+              - paragraph [ref=e89]: ⚠️ Complete automation run first
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - heading "Activity Log" [level=2] [ref=e93]
+            - button "🧹 Clear" [ref=e94] [cursor=pointer]
+          - paragraph [ref=e95]: No activity recorded yet.

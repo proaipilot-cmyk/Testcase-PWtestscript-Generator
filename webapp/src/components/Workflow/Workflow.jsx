@@ -16,12 +16,21 @@ const Workflow = () => {
   }
   
   const completed = tasks.filter(t => t.status === 'Completed').length;
+  const inProgress = tasks.filter(t => t.status === 'In Progress').length;
   const percentage = Math.round((completed / tasks.length) * 100);
+  
+  // Enhanced progress: completed tasks + partial progress for in-progress task
+  let enhancedProgress = percentage;
+  if (inProgress > 0) {
+    // Add 20% for the current in-progress task
+    enhancedProgress = Math.min(100, percentage + 20);
+  }
+  
   const isProcessing = currentStage !== 'Idle' && currentStage !== 'Error';
 
   return (
     <>
-      <LoadingSpinner isVisible={isProcessing} progress={percentage} />
+      <LoadingSpinner isVisible={isProcessing} progress={enhancedProgress} />
       <div className={`${styles.workflowContainer} glass-panel`}>
         <div className={styles.header}>
           <div>
